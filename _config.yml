@@ -21,6 +21,10 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+sass:
+  sass_dir: _sass
+  style: compressed
+
 # paginate: 10
 # paginate_path: "/page:num/"
 #
