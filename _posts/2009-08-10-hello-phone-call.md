@@ -2,7 +2,6 @@
 layout: post
 title:  "哈罗，摩托"
 date:   2009-08-10 10:26:05
-categories: jekyll update
 ---
 
 来O记一个月，有一件事情一直弄不明白，跟电话有关。

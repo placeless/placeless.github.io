@@ -2,7 +2,6 @@
 layout: post
 title:  "年和岁"
 date:   2010-02-22 10:26:05
-categories: jekyll update
 ---
 
 回家过年。

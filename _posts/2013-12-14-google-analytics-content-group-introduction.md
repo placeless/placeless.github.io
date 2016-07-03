@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "GA 期盼已久的 Content Groups 功能"
-tags:
-  - Google Analytics
 ---
 
 一直以来, 在 Google Analytics 报告当中, 无论是想对内容进行分组统计, 还是对比分析, 都需要人工折腾一番, 耗尽心血得来的结果, 还不见得坦然.

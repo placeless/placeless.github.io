@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "创新者的会议"
-tags:
-  - 文艺
 ---
 
 三十几只蚂蚁在商议

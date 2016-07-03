@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "夜奔"
-tags:
-  - 文艺
 ---
 
 北京的夜，黑一块黄一块

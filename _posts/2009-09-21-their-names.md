@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "他们的年代"
-tags:
-  - 文艺
 ---
 
 小的时候，

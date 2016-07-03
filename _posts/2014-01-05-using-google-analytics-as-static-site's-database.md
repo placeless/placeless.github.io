@@ -1,9 +1,6 @@
 ---
 layout: post
 title:  "将 GA 当作静态网站的数据库用"
-tags:
-  - Google Analytics
-  - 笔记
 ---
 
 > update: 此功能目前已移除

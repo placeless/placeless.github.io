@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "乳来伸手"
-tags:
-  - 文艺
 ---
 
 子曰：

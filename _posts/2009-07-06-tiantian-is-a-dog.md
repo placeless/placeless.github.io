@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "带只狗，不成行"
-tags:
-  - 文艺
 ---
 
 ![田田是只狗](/files/2009/07/06/tiantian_is_a_dog.jpg)

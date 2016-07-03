@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "Tutsplus 的免费课程"
-tags:
-  - Online Course
 ---
 
 Tutsplus 是一家线上视频授课网站, 涵盖设计开发, 以及各类工具技巧, 质量非常高. 最近在改版网站, Beta 版访问速度大幅提升, 闲逛时发现不少免费的基础课程, 非常适合我这种启蒙用户.

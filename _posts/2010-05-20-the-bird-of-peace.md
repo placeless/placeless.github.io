@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "鸽子"
-tags:
-  - 文艺
 ---
 
 ![鸽子](/files/2010/05/20/bird_of_peace.jpg)

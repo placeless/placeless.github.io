@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "莫奈何"
-tags:
-  - 文艺
 ---
 
 ![happy birthday to me](/files/2010/02/02/happy_birthday.png)

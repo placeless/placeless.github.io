@@ -2,7 +2,6 @@
 layout: post
 title:  "人老珠黄"
 date:   2009-10-05 10:26:05
-categories: jekyll update
 ---
 
 > 直到现在，人们也不觉得那是正途...

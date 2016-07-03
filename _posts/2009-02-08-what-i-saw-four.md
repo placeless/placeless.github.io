@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "开会"
-tags:
-  - 文艺
 ---
 
 野兽们要开大会

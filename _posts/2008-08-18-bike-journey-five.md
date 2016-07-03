@@ -2,7 +2,6 @@
 layout: post
 title:  "年轻时候(五) - 盖州记"
 date:   2008-08-18 10:26:05
-categories: jekyll update
 ---
 
 ![盖州入口](/files/2008/08/18/gaizhou.jpg)

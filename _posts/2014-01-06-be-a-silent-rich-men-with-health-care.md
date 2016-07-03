@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "医保折的零钱可以取"
-tags:
-  - 生计
 ---
 
 ![医保存折](/files/2014/01/06/health-care.jpg)

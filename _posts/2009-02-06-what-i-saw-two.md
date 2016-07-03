@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "夏日的午后"
-tags:
-  - 文艺
 ---
 
 这个夏日的午后

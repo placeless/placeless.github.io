@@ -1,9 +1,6 @@
 ---
 title:  "AppStore Reporting Instructions"
 layout: post
-tags:
-  - App
-
 ---
 
 ![AppStoreDashboard](/files/2013/05/17/AppStoreDashboard.png)

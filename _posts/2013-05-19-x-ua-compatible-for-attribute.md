@@ -1,9 +1,6 @@
 ---
 layout: post
 title:  "X-UA-Compatible for Attribute"
-tags:
-  - Open Standard
-
 ---
 
 这网站一搭好之后，就去做了[W3C HTML5验证]，提示了一个之前完全没有意识到的错误：

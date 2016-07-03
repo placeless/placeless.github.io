@@ -2,7 +2,6 @@
 layout: post
 title:  "海边的卡夫卡"
 date:   2009-06-20 10:26:05
-categories: jekyll update
 ---
 
 田田说要去北京了，出差。

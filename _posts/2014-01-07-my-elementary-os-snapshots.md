@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "我的 Elementary OS"
-tags:
-  - OS
 ---
 
 <iframe src="http://www.flickr.com/photos/113667285@N05/11814842494/in/set-72157639510546973/player/" width="640" height="400" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
