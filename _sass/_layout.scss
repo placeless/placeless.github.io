@@ -186,4 +186,5 @@
  */
 .post-header { margin-bottom: $spacing-unit; }
 .post a:hover { border-bottom: solid 1px $grey-color; }
-.post ul, .post ol { list-style: circle; }
+.post ul, { list-style: circle; }
+.post ul li, .post ol li { margin-bottom: $spacing-unit / 6; }
