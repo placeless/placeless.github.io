@@ -188,3 +188,4 @@
 .post a:hover { border-bottom: solid 1px $grey-color; }
 .post ul, { list-style: circle; }
 .post ul li, .post ol li { margin-bottom: $spacing-unit / 6; }
+.post { letter-spacing: .5px; }
