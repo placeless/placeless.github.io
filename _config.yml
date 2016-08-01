@@ -8,7 +8,7 @@
 # Site settings
 title: placeless
 email: placeless@outlook.com
-description: question came and went, like a helicopter over head...
+description: "question came and went, like a helicopter over head..."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://placeless.net" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
