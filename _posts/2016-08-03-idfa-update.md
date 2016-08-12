@@ -210,12 +210,14 @@ date:   2016-08-03 22:05 +0800
 
 </style>
 
+<figcaption>CSS 模拟界面</figcaption>
+
 从 iOS 6 开始，苹果在 iPhone 上引入了 IDFA 和 Limit Ad Tracking，用以更好地保护用户隐私。在最近 beta 的 iOS 10 上，事情又有了新变化。从 iOS 10 开始，只要用户开启了 Limit Ad Tracking，系统将干脆不再提供真正的 IDFA，而是代之以一串 00000000-0000-0000-0000-000000000000，从而确保 IDFA 不再被滥用。
 
 [来源: https://fpf.org/2016/08/02/ios-10-feature-stronger-limit-ad-tracking/](https://fpf.org/2016/08/02/ios-10-feature-stronger-limit-ad-tracking/)
 
-IDFA 用于取代之前的 UDID，开发者不再被允许获取手机的 UDID，识别用户只能通过新的 IDFA（Identifier for Advertising）。生成算法也不一样，UDID 是 SHA1(serial + ECID/IMEI + wifiMac + bluetoothMac)，而 IDFA 是一个由 iPhone 随机生成的匿名 ID，广告网络依然可以用其定位用户，投送定制广告，就像对待 Cookie 一样，只不过 Cookie 不跨域，而 IDFA 是可以跨 App 的，但用户也可以自己手动重置，达到类似清除 Cookie 的目的。
+iOS 6 引入的 IDFA 用于取代之前的 UDID，开发者不再被允许获取手机的 UDID，识别用户只能通过新的 IDFA（Identifier for Advertising）。生成算法也不一样，UDID 是 SHA1(serial + ECID/IMEI + wifiMac + bluetoothMac)，而 IDFA 是一个由 iPhone 随机生成的匿名 ID，广告网络依然可以用其定位用户，投送定制广告，就像对待 Cookie 一样，只不过 Cookie 不跨域，而 IDFA 是可以跨 App 的，但用户也可以自己手动重置，达到类似清除 Cookie 的目的。
 
 Limit Ad Tracking 则更进一步，它允许用户通过开启这一功能，去限制开发者和广告网络对自己 IDFA 的应用。它是一个君子协定，跟 DNT 一样，开启之后，会发送一个标记给采集者，告诉他们，依照苹果开发者条款，你们可以继续使用这一 IDFA 去做一些用户统计、转化跟踪、广告欺诈分析等，但不能再去投送定向广告。可能有的完全遵守，有的部分遵守，比如不再投送行为或兴趣定向广告，但继续做地域定向，继续做一些跨设备用户识别（我猜是搭配一些强帐号体系）。
 
-而 iOS 带来的更为严格的 Limit Ad Tracking 机制，从根本上避免了类似 DNT 的尴尬。对于数据采集和用户识别来说，确实更为艰难了，但国内现今的各项 Web、Mobile 服务均要求手机注册，近乎实名，除了配合审查，估计也是早看不上 Cookie 类的东西。像运营商的劫持广告，对待用户几如韭菜，哪里谈得上隐私和尊重，最终还得靠利益链条内的冲突环节来缓和问题。
+而 iOS 10 带来的更为严格的 Limit Ad Tracking 机制，从根本上避免了类似 DNT 的尴尬。对于数据采集和用户识别来说，确实更为艰难了，但国内现今的各项 Web、Mobile 服务均要求手机注册，近乎实名，除了配合审查，估计也是早看不上 Cookie 类的东西。像运营商的劫持广告，对待用户几如韭菜，哪里谈得上隐私和尊重，最终还得靠利益链条内的冲突环节来缓和问题。
