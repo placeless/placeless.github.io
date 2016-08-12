@@ -27,6 +27,41 @@
     {
       "type": "Feature",
       "properties": {
+        "名称": "安客诚",
+        "地址": "上海市黄浦区保屯路399号",
+        "概况": "原汉堡馆，现在楼下是汉堡之家餐厅，楼上是我工作过的地方。",
+        "marker-symbol": "building",
+        "marker-size": "small",
+        "marker-color": "#008000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.48939332729282,
+          31.204198429165075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "名称": "西藏南路地铁一号口一家",
+        "概况": "算是瞿小明的邻居当中，活的较为体面自在的5只猫",
+        "marker-symbol": "zoo",
+        "marker-size": "small",
+        "marker-color": "#ffb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.48939332729282,
+          31.204198429165075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "名称": "上海当代艺术博物馆",
         "地址": "上海市黄浦区花园港路200号",
         "网站": "http://powerstationofart.com",
