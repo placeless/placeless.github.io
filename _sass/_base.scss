@@ -71,8 +71,8 @@ img {
     max-width: 100%;
     display: block;
     margin: 0 auto;
-    vertical-align: middle;
-    // margin-bottom: : $spacing-unit / 2;
+    // vertical-align: middle;
+    // margin-bottom: $spacing-unit / 2;
 }
 
 
@@ -86,6 +86,7 @@ figcaption {
     font-size: $small-font-size * 0.875;
     margin-bottom: $spacing-unit;
     text-align: center;
+    width: 100%;
 }
 
 
@@ -242,3 +243,11 @@ pre {
  * Frame
  */
 iframe { margin-bottom: $spacing-unit / 2; }
+
+/**
+ * Video Tag
+ */
+ video {
+     width: 100%;
+     margin-bottom: $spacing-unit / 2;
+ }
