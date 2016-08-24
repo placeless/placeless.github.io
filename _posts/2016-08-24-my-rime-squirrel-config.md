@@ -163,11 +163,27 @@ patch:
     ascii_mode: true
   app_options/com.googlecode.iterm2:
     ascii_mode: true
-  app_options/com.apple.Finder:
+  app_options/com.apple.finder:
     ascii_mode: true
   app_options/com.sublimetext.3:
     ascii_mode: true
   app_options/com.github.atom:
+    ascii_mode: true
+  app_options/com.apple.appstore:
+    ascii_mode: true
+  app_options/com.apple.calculator:
+    ascii_mode: true
+  app_options/com.apple.iBooksX:
+    ascii_mode: true
+  app_options/com.apple.iTunes:
+    ascii_mode: true
+  app_options/com.apple.launchpad.launcher:
+    ascii_mode: true
+  app_options/com.apple.systempreferences:
+    ascii_mode: true
+  app_options/com.apple.keychainaccess:
+    ascii_mode: true
+  app_options/com.apple.Safari:
     ascii_mode: true
 
   us_keyboard_layout: true
@@ -213,3 +229,18 @@ patch:
     hilited_candidate_text_color: 0xf57c75 #第一候选项
 ```
 
+## 3. 黑魔法
+
+在 macOS 10.9 以前，是可以去掉系统默认输入法，只保留一个常用的，比如「鼠须管」，中英文一个键切换。方法就是额外勾选一个比如「越南输入法」，这时候，美式英语的可删除状态就不再是不可点击的灰色，而是可以直接删除的黑色。
+
+但是这个方法在之后的 macOS 不再可用了，后来在一个远古国外 BBS 上发现一个古老的方法，一直适用到现在，就是稍微有一点麻烦，需要需改系统文件，弄得不好，可能会有些小 bug。
+
+一共四个步骤：
+
+1. 备份 `~/Library/Preferences/com.apple.HIToolbox.plist`
+2. 终端运行`plutil -convert xml1 ~/Library/Preferences/com.apple.HIToolbox.plist`
+3. 用 vim、sublime text 或者其他编辑器，打开`com.apple.HIToolbox.plist`，删除掉`AppleEnabledInputSources`键下不需要的输入法`dict`
+4. 重启
+
+
+注意：在`squirrel.custom.yaml`内搭配好需要开启`ascii_mode`的应用程序，避免在密码输入框等场景下，中文状态不好上屏，西文状态又是大写的尴尬，尤其是对于跟我一样喜欢改 Shift 而用 CapsLock 键切状态的用户，可参考上文 2.2 和 2.5 章节的内容。
