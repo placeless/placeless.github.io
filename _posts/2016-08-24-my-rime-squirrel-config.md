@@ -34,24 +34,23 @@ Rime 鼠须管已经很久没有更新版本了，当前的最新版停留在 20
 如果想要把编译好的 APP 留到下一次重装系统之后，全新安装使用，也不难，只需两步，根据 Makefile 和 postflight 文件可以推导出来。
 
 ```reStructuredText
-# 1. 把编译好的 Squirrel.app 复制到 /Library/Input Methods目录下：
+# 1. 把编译好的 Squirrel.app 复制到 /Library/Input Methods 目录下：
 cp -R YOUR_PATH/Squirrel.app "/Library/Input Methods"
 
 # 2. 然后跑一下 postflight 脚本即可：
 sudo /Library/Input\ Methods/Squirrel.app/Contents/Resources/postflight
 ```
 
-
+或者，把保存好的 Squirrel.app 直接复制到 `/Library/Input Methods` 目录下，再注销一下，重新登入，然后将其加入输入法选单，点击「部署」即可。两个方法的差别在于，postflight 是把数据文件生成在 `/Library/Input Methods/Squirrel.app/Contents/SharedSupport/` 目录下，而后一种方法是把数据文件生成在 `~/Library/Rime/` 目录下。
 
 ## 2. 配置
 
-只自定义了 5 个文件，没有涉及外部词库、emoji 等内容。
+只自定义了 4 个文件，没有涉及外部词库、emoji 等内容。
 
 ```reStructuredText
 - installation.yaml  # 同步和备份
 - default.custom.yaml  # 候选词数、快捷键、及输入方案
 - double_pinyin_flypy.custom.yaml  # 小鹤双拼
-- luna_pinyin_simp.custom.yaml  # 朙月拼音，全拼
 - squirrel.custom.yaml  # 鼠须管外观、ascii 模式
 ```
 
@@ -104,46 +103,31 @@ patch:
 ```yaml
 # double_pinyin_flypy.custom.yaml, 只对小鹤双拼生效
 patch:
-  translator/preedit_format: {}     # 输入双拼码的时候不转化为全拼码
-  recognizer/patterns/reverse_lookup: # 关闭 ` 键反查功能
-
-  # 启用罕见字過濾，避免字库不全时，候选字出现「口/？」字符号
-  engine/filters:
-    - simplifier
-    - uniquifier
-    - cjk_minifier
-  engine/translator/enable_charset_filter: true
-
+  schema/dependencies:
   switches:
     - name: ascii_mode
       reset: 0
       states: ["中文", "西文"]
     - name: full_shape
       states: ["半角", "全角"]
-    - name: simplification
-      reset: 1  # 增加這一行：默認啓用「繁→簡」轉換。
-      states: ["漢字", "汉字"]
+    - name: zh_simp      # 启用罕见字過濾
+      reset: 1
+      states: [ 漢字, 汉字 ]
     - name: ascii_punct
       states: ["。，", "．，"]
-```
 
-### 2.4 luna_pinyin_simp.custom.yaml 
+  recognizer/patterns/reverse_lookup:    # 关闭 ` 键反查功能
+  reverse_lookup:
 
-默认西文输出，并过滤罕见字。
-
-```yaml
-patch:
-  switches/@0/reset: 0
-
-  # 启用罕见字過濾
   engine/filters:
-    - simplifier
-    - uniquifier
-    - cjk_minifier
-  engine/translator/enable_charset_filter: true
+      - simplifier@zh_simp      # 启用罕见字過濾
+      - uniquifier
+  translator/dictionary: pinyin_simp      # 启用罕见字過濾
 ```
 
-### 2.5 squirrel.custom.yaml 
+原来采用 `cjk_minifier` 和 `enable_charset_filter` 来实现「罕见字过滤」的方式，在当前的开发版上，似乎不再适用，已经提了 [issue](https://github.com/rime/squirrel/issues/120)，并说明了我的尝试，等待确认。以上 `pinyin_simp` 加 `zh_simp` 算是我的一个 workaround，并不能确定是否长期可靠。
+
+### 2.4 squirrel.custom.yaml 
 
 自己做了横排和竖排两个定制外观，示例如下图，左边是方案一，右边为方案二，范例文字是猫输入的。调整`style/color_scheme: placeless`，切换外观。
 
@@ -155,78 +139,78 @@ yaml 文件如下，自定义配色时注意：順序是**藍綠紅0xBBGGRR**。
 patch:
   # 通知栏显示方式以及 ascii_mode 应用，与外观无关
   show_notifications_via_notification_center: true
-  app_options/com.apple.dt.Xcode:
-    ascii_mode: true
-  app_options/com.runningwithcrayons.Alfred-3:
-    ascii_mode: true
-  app_options/com.apple.Terminal:
-    ascii_mode: true
-  app_options/com.googlecode.iterm2:
-    ascii_mode: true
-  app_options/com.apple.finder:
-    ascii_mode: true
-  app_options/com.sublimetext.3:
-    ascii_mode: true
-  app_options/com.github.atom:
-    ascii_mode: true
-  app_options/com.apple.appstore:
-    ascii_mode: true
-  app_options/com.apple.calculator:
-    ascii_mode: true
-  app_options/com.apple.iBooksX:
-    ascii_mode: true
-  app_options/com.apple.iTunes:
-    ascii_mode: true
-  app_options/com.apple.launchpad.launcher:
-    ascii_mode: true
-  app_options/com.apple.systempreferences:
-    ascii_mode: true
-  app_options/com.apple.keychainaccess:
-    ascii_mode: true
-  app_options/com.apple.Safari:
-    ascii_mode: true
+  app_options:
+    com.apple.dt.Xcode:
+      ascii_mode: true
+    com.runningwithcrayons.Alfred-3:
+      ascii_mode: true
+    com.apple.Terminal:
+      ascii_mode: true
+    com.googlecode.iterm2:
+      ascii_mode: true
+    com.apple.finder:
+      ascii_mode: true
+    com.sublimetext.3:
+      ascii_mode: true
+    com.github.atom:
+      ascii_mode: true
+    com.apple.appstore:
+      ascii_mode: true
+    com.apple.calculator:
+      ascii_mode: true
+    com.apple.iBooksX:
+      ascii_mode: true
+    com.apple.iTunes:
+      ascii_mode: true
+    com.apple.launchpad.launcher:
+      ascii_mode: true
+    com.apple.systempreferences:
+      ascii_mode: true
+    com.apple.keychainaccess:
+      ascii_mode: true
+    # com.apple.Safari:
+    #   ascii_mode: true
+    com.apple.Spotlight:
+      ascii_mode: true
 
   us_keyboard_layout: true
 
   # 外观配置
-  style/color_scheme: placeless # 选择配色方案
-
-  # 方案一
-  "preset_color_schemes/placeless":
-    color_scheme: placeless
-    name: "秋田／Placeless"
-    author: "jed <placeless@outlook.com>"
-    horizontal: false # 竖排
-    corner_radius: 6 # 窗口圆角半径
-    border_height: 0 # 窗口边界高度，大于圆角半径才有效果
-    border_width: 12 # 窗口边界宽度，大于圆角半径才有效果
-    font_face: "Lantinghei SC"
-    font_point: 15 # 字号
+  style:
+    color_scheme: placeless            # 选择配色方案
+    horizontal: false                  # 候选窗横向显示
+    inline_preedit: true               # 关闭内嵌编码，这样就可以显示首行的拼音
+    corner_radius: 6                   # 窗口圆角半径
+    border_height: 0                   # 窗口边界高度，大于圆角半径才有效果
+    border_width: 12                   # 窗口边界宽度，大于圆角半径才有效果
+    line_spacing: 5                    # 候选词的行间距
+    spacing: 10                        # 在非内嵌编码模式下，预编辑和候选词之间的间距
+    font_face: "Lantinghei SC"         # 字体名称
+    font_point: 15                     # 字号
+    # label_font_face: 'STHeitiTC-Medium'
+    #candidate_format: '%c. %@'
     label_font_point: 12
-    back_color: 0xFFFFFF #背景
-    text_color: 0xFFFFFF # 編碼行文字顏色，24位色值，用十六進制書寫方便些，順序是藍綠紅0xBBGGRR
-    candidate_text_color: 0x000000 #非第一候选项
-    hilited_candidate_back_color: 0xf57c75 #第一候选项背景
-    hilited_candidate_text_color: 0xFFFFFF #第一候选项
-    line_spacing: 5
 
-  # 方案二
-  "preset_color_schemes/placeless2":
-    color_scheme: placeless2
-    name: "荷田／Placeless"
-    author: "jed <placeless@outlook.com>"
-    horizontal: true # 横排
-    corner_radius: 6 # 窗口圆角半径
-    border_height: 0 # 窗口边界高度，大于圆角半径才有效果
-    border_width: 10 # 窗口边界宽度，大于圆角半径才有效果
-    font_face: "Lantinghei SC"
-    font_point: 15 # 字号
-    label_font_point: 12
-    back_color: 0xFFFFFF #背景
-    text_color: 0x000000 # 編碼行文字顏色，24位色值，用十六進制書寫方便些，順序是藍綠紅0xBBGGRR
-    candidate_text_color: 0x666666 #非第一候选项
-    hilited_candidate_back_color: 0xFFFFFF #第一候选项背景
-    hilited_candidate_text_color: 0xf57c75 #第一候选项
+  preset_color_schemes:
+    # 方案一 horizontal: false
+    placeless:
+      name: "秋田／Placeless"
+      author: "jed <placeless@outlook.com>"
+      back_color: 0xFFFFFF #背景
+      text_color: 0xFFFFFF # 編碼行文字顏色，24位色值，用十六進制書寫方便些，順序是藍綠紅0xBBGGRR
+      candidate_text_color: 0x000000 #非第一候选项
+      hilited_candidate_back_color: 0xf57c75 #第一候选项背景
+      hilited_candidate_text_color: 0xFFFFFF #第一候选项
+
+    # 方案二 horizontal: true
+    placeless2:
+      name: "荷田／Placeless"
+      author: "jed <placeless@outlook.com>"
+      back_color: 0xFFFFFF #背景
+      text_color: 0x000000 # 編碼行文字顏色，24位色值，用十六進制書寫方便些，順序是藍綠紅0xBBGGRR
+      candidate_text_color: 0x666666 #非第一候选项
+      hilited_candidate_back_color: 0xFFFFFF #第一候选项背景
+      hilited_candidate_text_color: 0xf57c75 #第一候选项
 ```
 
 ## 3. 黑魔法
@@ -235,12 +219,13 @@ patch:
 
 但是这个方法在之后的 macOS 不再可用了，后来在一个远古国外 BBS 上发现一个古老的方法，一直适用到现在，就是稍微有一点麻烦，需要需改系统文件，弄得不好，可能会有些小 bug。
 
-一共四个步骤：
+一共五个步骤：
 
 1. 备份 `~/Library/Preferences/com.apple.HIToolbox.plist`
-2. 终端运行`plutil -convert xml1 ~/Library/Preferences/com.apple.HIToolbox.plist`
-3. 用 vim、sublime text 或者其他编辑器，打开`com.apple.HIToolbox.plist`，删除掉`AppleEnabledInputSources`键下不需要的输入法`dict`
-4. 重启
+2. 将当前活跃输入法选为「英文」输入法
+3. 终端运行`plutil -convert xml1 ~/Library/Preferences/com.apple.HIToolbox.plist`
+4. 用 vim、sublime text 或者其他编辑器，打开`com.apple.HIToolbox.plist`，删除掉`AppleEnabledInputSources`键下不需要的输入法`dict`
+5. 重启
 
 
 注意：在`squirrel.custom.yaml`内搭配好需要开启`ascii_mode`的应用程序，避免在密码输入框等场景下，中文状态不好上屏，西文状态又是大写的尴尬，尤其是对于跟我一样喜欢改 Shift 而用 CapsLock 键切状态的用户，可参考上文 2.2 和 2.5 章节的内容。
