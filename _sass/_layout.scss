@@ -1,6 +1,11 @@
 /**
  * Site header
  */
+ #logo {
+    padding-top: 8px;
+    float: left;
+ }
+
 .site-header {
     // border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
@@ -22,6 +27,9 @@
     // &:visited {
     //     color: $grey-color-dark;
     // }
+    span {
+        margin-left: 8px;
+    }
 }
 
 .site-nav {
@@ -44,7 +52,7 @@
 
     @include media-query-min($on-screen) {
         position: absolute;
-        top: 9px;
+        top: 5px;
         right: $spacing-unit / 2;
         background-color: $background-color;
         // border: 1px solid $grey-color-light;
