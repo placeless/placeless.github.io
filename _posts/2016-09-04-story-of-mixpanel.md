@@ -52,7 +52,7 @@ date:   2016-09-04 01:59 +0800
 要知道，最开始，他们连前端界面也没有，一百块钱一个月，自己拉取数据，通过 Gtalk 服务着有限的几个客户。到申请并进入 YC，到筹集到 $77M 的风投，到 2012 年实现盈利，到现在每月分析 67 billion actions，以及惠及了许多后来者的[开源项目]，Mixpanel 正实践着他们承诺的使命：
 
 - We've built the most advanced analytics product for mobile & web.
-- UR MISSION IS TO HELP THE WORLD LEARN FROM ITS DATA.
+- OUR MISSION IS TO HELP THE WORLD LEARN FROM ITS DATA.
 
 [Suhail Doshi]: https://twitter.com/suhail	"Suhai Doshi Twitter"
 [The Macro: Startup School - Mixpanel]: http://www.themacro.com/articles/2016/08/startup-school-mixpanel/?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=website	"Startup School Mixpanel"
