@@ -170,6 +170,7 @@
 .post-list {
     margin-left: 2em;
     list-style: circle;
+    list-style-position: inside;
     color: $text-color;
     // > li {
     //     margin-bottom: $spacing-unit / 5;
