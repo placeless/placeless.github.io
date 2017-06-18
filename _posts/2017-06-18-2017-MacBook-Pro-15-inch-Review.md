@@ -37,3 +37,5 @@ Touch Bar。esc 由按键变成了触摸，指尖的感觉完全不同了，不�
 - Trackpad 的颜色跟机身并不完全一致
 - Kindle for Mac 这个应用为何还启动独立显卡
 
+
+![Kindle App Using Discrete Graphic Card](/files/2017/06/18/kindle.png)
