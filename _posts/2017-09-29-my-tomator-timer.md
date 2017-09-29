@@ -10,16 +10,25 @@ date:   2017-09-29 09:06 +0800
 
 ```
 import time
+import sys
 
-T = abs(int({query}))
+T = abs(int(sys.argv[1].split()[2]))
 
-if T <= 30:
+if T <= 60:
   time.sleep(T * 60)
   exit
 else:
   exit
 ```
 
-Workflow 后面的 bash 是一行简单的统计脚本，通过 API 往 Google Analytics 发送我的打卡记录，用于将来的自我审视。
+Workflow 图形如下，后面的 bash 是一行简单的统计脚本，通过 API 往 Google Analytics 发送我的打卡记录，用于将来的自我审视。
 
 ![tomator timer](/files/2017/09/29/tomator_timer.png)
+
+根据我的输入，大致的数据形式，是如下的样子：
+
+| Event Category | Event Action | Event Lable               | Total Events | Unique Events | Event Value |
+| :------------- | :----------- | :------------------------ | :----------: | :-----------: | :---------: |
+| timer          | play         | dota                      |      2       |       1       |     46      |
+| timer          | read         | the_beginning_of_infinity |      3       |       1       |     138     |
+
