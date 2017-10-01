@@ -8,13 +8,25 @@
 # Site settings
 title: minefield
 email: placeless@outlook.com
-description: "question came and went, like a helicopter over head..."
+author: "Jietang Xu"
+logo: "./apple-touch-icon.png"
+lang: "zh-cmn-Hans"
+# description: "question came and went, like a helicopter over head..."
+description: "with great power comes great explosion"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://placeless.net" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 # github_username:  jekyll
 timezone: Asia/Shanghai
 encoding: UTF-8
+
+social:
+  name: placeless
+  links:
+    - https://twitter.com/placeless
+
+webmaster_verifications:
+  google: "FXBCg8JJZhpiTTJFHOpZMzP6I1pTetBhPpHMsE-Lvj0"
 
 # Build settings
 markdown: kramdown
@@ -24,6 +36,10 @@ kramdown:
 sass:
   sass_dir: _sass
   style: compressed
+
+plugins:
+  - jekyll-seo-tag
+
 
 # paginate: 10
 # paginate_path: "/page:num/"
