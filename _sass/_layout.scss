@@ -17,7 +17,7 @@
 }
 
 .site-title {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 300;
     line-height: 56px;
     letter-spacing: -1px;
@@ -28,15 +28,15 @@
     // &:visited {
     //     color: $grey-color-dark;
     // }
-    span {
-        margin-left: 8px;
-    }
+    // span {
+    //     margin-left: 8px;
+    // }
 }
 
 .site-nav {
     float: right;
     line-height: 56px;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: -1px;
 
     .page-link {
