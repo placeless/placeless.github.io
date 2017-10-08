@@ -87,7 +87,8 @@ img {
 figure > img { display: block; }
 
 figcaption {
-    font-size: $small-font-size * 0.875;
+    // font-size: $small-font-size * 0.875;
+    font-size: 10px;
     margin-bottom: $spacing-unit;
     text-align: center;
     width: 100%;
