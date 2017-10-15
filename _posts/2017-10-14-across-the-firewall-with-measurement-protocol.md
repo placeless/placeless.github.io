@@ -130,14 +130,20 @@ function cachebuster() {
   return Math.ceil(Math.random() * 1000000)
 }
 
-var cid = getcookie('cid') || uuidv4()
-if (!document.cookie) { document.cookie = 'cid=' + cid }
+function setcookie() {
+  var d = new Date()
+  d.setTime(d.getTime() + 1000*60*60*24*365*2)
+  var expires = 'expires=' + d.toGMTString()
+  var cid = getcookie('cid') || uuidv4()
+  if (!document.cookie) { document.cookie = 'cid=' + cid + '; ' + expires + '; path=/' }
+}
 
 document.onreadystatechange = function() {
   if (document.readyState === 'complete') {
+    setcookie()
     var data = encodeURI(
       'v=1&tid=UA-xxxxxxxx-y'
-      + '&cid=' + cid
+      + '&cid=' + getcookie('cid')
       + '&t=pageview'
       + '&dl=' + document.location
       + '&dr=' + document.referrer
