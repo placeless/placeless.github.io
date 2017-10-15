@@ -13,6 +13,52 @@
       </div>
     </div>
 
+    <script>
+      // https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
+      function uuidv4() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8)
+          return v.toString(16)
+        })
+      }
+
+      // https://stackoverflow.com/questions/10730362/get-cookie-by-name
+      function getcookie(name) {
+        var value = '; ' + document.cookie
+        var parts = value.split('; ' + name + '=')
+        if (parts.length == 2) { return parts.pop().split(';').shift() }
+      }
+
+      function cachebuster() {
+        return Math.ceil(Math.random() * 1000000)
+      }
+
+      var cid = getcookie('cid') || uuidv4()
+      if (!document.cookie) { document.cookie = 'cid=' + cid }
+
+      document.onreadystatechange = function() {
+        if (document.readyState === 'complete') {
+          var data = encodeURI(
+            'v=1&tid=UA-101491967-2'
+            + '&cid=' + cid
+            + '&t=pageview'
+            + '&dl=' + document.location
+            + '&dr=' + document.referrer
+            + '&ul=' + (navigator.language || navigator.userLanguage)
+            + '&dp=' + (window.location.pathname + window.location.search)
+            + '&dt=' + document.title
+            + '&sd=' + screen.colorDepth
+            + '&sr=' + (screen.width + 'x' + screen.height)
+            + '&vp=' + (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) + 'x' + Math.max(document.documentElement.clientHeight, window.innerHeight || 0))
+            + '&z=' + cachebuster()
+          )
+          var xhr = new XMLHttpRequest()
+          xhr.open('POST', 'https://www.google-analytics.com/collect')
+          xhr.send(data)
+        }
+      }
+    </script>
+
   </body>
 
 </html>
