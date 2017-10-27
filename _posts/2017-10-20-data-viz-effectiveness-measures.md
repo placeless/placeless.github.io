@@ -49,3 +49,8 @@ date:   2017-10-20 17:34 +0800
 对于这幅可视化作品，除了 Intuitiveness，其他各项，Stephen 均给了满分，详情请参考原文。
 
 最后，今天看到一个图，可以作为眼力练习：[New York Historical Weather](https://bl.ocks.org/emeeks/raw/b57f4cc89dacd38fcdcd/)
+
+更新：
+
+- 10/27，今天看到 GIJN 官方编译的[中文版本](https://cn.gijn.org/2017/10/27/怎么标准化数据可视化之美？-数据新闻精选/)了，解读的比我好
+
