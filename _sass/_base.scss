@@ -46,9 +46,9 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-h1 { font-size: 1.25em; }
-h2 { font-size: 1.125em; }
-h3 { font-size: 1.05em; }
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.25em; }
+h3 { font-size: 1.125em; }
 h2, h3 { margin: 2em 0; }
 h4, h5, h6 {
     font-size: 1em;
@@ -103,9 +103,11 @@ figcaption {
 ul, ol {
     // margin-left: $spacing-unit + 10;
     // margin-left: 1.1em;
-    list-style-position: inside;
-    text-indent: -1em;
-    padding-left: 1em;
+    // list-style-position: inside;
+    // text-indent: -1em;
+    list-style-type: circle;
+    padding-left: 2em;
+    margin: 0 0 1.5em;
 }
 
 li {
@@ -172,7 +174,7 @@ code {
     font-size: 85%;
     line-height: 1.45;
     background-color: #f7f7f7;
-    border-radius: 3px;
+    // border-radius: 3px;
 }
 
 code { padding: 1px 5px; }
