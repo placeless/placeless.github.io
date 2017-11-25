@@ -58,9 +58,13 @@
             + '&vp=' + (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) + 'x' + Math.max(document.documentElement.clientHeight, window.innerHeight || 0))
             + '&z=' + cachebuster()
           )
-          var xhr = new XMLHttpRequest()
-          xhr.open('POST', 'https://www.google-analytics.com/collect')
-          xhr.send(data)
+          if (navigator.sendBeacon) {
+            navigator.sendBeacon('https://www.google-analytics.com/collect', data)
+          } else {
+            var xhr = new XMLHttpRequest()
+            xhr.open('POST', 'https://www.google-analytics.com/collect')
+            xhr.send(data)
+          }
         }
       }
     </script>
