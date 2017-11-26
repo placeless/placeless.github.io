@@ -28,6 +28,8 @@ date:   2017-11-27 00:21 +0800
 </p>
 </div>
 
+上面的截图都是在 iPhone 完成的，但实际情况是，iOS 截至目前还并不完全支持 PWA，没有 offline support，没有 push notifications，没有 loading screen，没有 service worker 等等，上面展现的只是优化过的移动网页，或者说半截 PWA，并不是真正的 PWA 完全体。墙外有一个 [PWA Checklist](https://developers.google.com/web/progressive-web-apps/checklist) 列出了完美状态 PWA 功能和技术点。
+
 手机屏幕有限，必需的 App 终究少数，能占据一小块桌面的 App，好比能舔到收藏夹内的网页，两者「入口」含义相同，组织方式也相差无几，但开放的 Web 更擅长于连接。
 
 Web App 能贴到桌面，原生 App 也大把性能低下，产品和服务长成什么形式，原生还是 Web，可能逐渐不那么重要了。而态度上，不喜欢高墙花园，开放的 Web 真好。
