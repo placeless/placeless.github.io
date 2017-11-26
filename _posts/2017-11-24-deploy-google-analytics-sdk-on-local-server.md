@@ -100,4 +100,6 @@ date:   2017-11-24 14:44 +0800
 router.afterEach((to, from) => { gtag('event', 'page_view', { /* ... */ }) })
 ```
 
+注意：目前 Beacon 并不是所有浏览器都支持，尤其 Safari。这一标准的出现，主要是为了满足浏览器端分析和诊断数据的发送。而 GA 引入这一 Hit 发送模式，也正是为了解决其他两个模式（image & xhr）的固有问题：占用并依赖 HTTP 响应；受 `unload` 事件影响。这里的 Beacon 模式在不支持的浏览器内，会自动回退为兼容的旧式 Hit 发送模式，不用担心数据丢失。
+
 在这次试验中，暂时还没有考虑通过 webpack 的 code splitting 和 lazy loading 等的方式去打包 GA，之后可以试试看。
