@@ -42,11 +42,13 @@ date:   2017-10-20 17:34 +0800
 - Aesthetics：比较取悦眼睛，但柱子顶上挤到一起的数据标签有所失分
 - Engagement：整个图表让人分神，使人忽略对数据的校验和解读，这块问题也大
 
-之后，Stephen 又提到了[桑基图](https://en.m.wikipedia.org/wiki/Sankey_diagram)的始祖，[Charles Minard](https://en.m.wikipedia.org/wiki/Charles_Minard) 的知名大作：拿破仑进军莫斯科。
+之后，Stephen 又提到了[桑基图](https://en.m.wikipedia.org/wiki/Sankey_diagram)的始祖，[Charles Minard](https://en.m.wikipedia.org/wiki/Charles_Minard) 的知名大作：拿破仑进军莫斯科。其实这张图远远不只桑基图这么简单，它是一个时间序列，它是一张局部地图，它是一个完整的故事，它还布满了详尽的数字，它在二维空间里置入了军队人数、军队位置、行军方向、距离、时间、温度等多个变量，「它可能是有史以来最好的统计图形—《The Visual Display of Quantitative Data》」。
 
 ![Minard](https://upload.wikimedia.org/wikipedia/commons/2/29/Minard.png)
 
 对于这幅可视化作品，除了 Intuitiveness，其他各项，Stephen 均给了满分，详情请参考原文。
+
+上面是法文原版，当初只是一个双色的小海报，它的英译版可以在[这里](https://en.m.wikipedia.org/wiki/Charles_Joseph_Minard)找到。这次对俄作战，法军损失惨重。1812 年 6 月，拿破仑 42 万 2 千人从波俄边境的尼门河出发，形状的宽度代表军队体量，9 月抵达莫斯科，还剩下 10 万人。接下来转折的黑色代表撤军路线，天寒地冻，持续减员，到 Bobr 之时，仅剩 2 万人，但之前分派出来护卫侧翼的 3 万余部加入，队伍重新扩充至 5 万人，很快气温骤降，渡过 Studzionka 河后，又剩不到 3 万，最后 4000 人活着回到 Karnas 跟殿后的 6000 残部凑成 1 万，仓惶逃出俄国。
 
 最后，今天看到一个图，可以作为眼力练习：[New York Historical Weather](https://bl.ocks.org/emeeks/raw/b57f4cc89dacd38fcdcd/)
 
