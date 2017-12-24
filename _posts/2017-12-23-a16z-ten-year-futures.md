@@ -63,7 +63,11 @@ a16z 的 [Benedict Evans](https://www.ben-evans.com/) 最近做了一个题为[
 
 ## 加密货币
 
-比特币不到一个月从 $7200 飙到 $19000，这才两天又暴跌至 $12000，😺。但 Benedict Evans 将它比作 1994 年的 HTML，你以为你已经完全错过了，但它还远远没发力呢。
+比特币不到一个月从 $7200 飙到 $19000，这才两天又暴跌至 $12000，😺。但 Benedict Evans 将它比作 1994 年的 HTML，你以为你已经完全错过了，但它还远远没发力呢。这伙计爱打比方，喜欢把很多东西比作 HTML。这里的意思，应该只是指二者的处境相似，像爆发前的 Web，万事俱备只欠东风的阶段。
+
+![oh my btc](/files/2017/12/22/ohmybtc.png)
+
+<figcaption>src: <a href = "https://ohmyco.in/charts/#/gemini/BTC-USD">ohmyco.in</a></figcaption>
 
 ## Autonomy
 
