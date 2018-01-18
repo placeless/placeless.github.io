@@ -148,7 +148,7 @@
 .page-content {
     padding: $spacing-unit 0;
     margin-bottom: 40px;
-    text-align: justify;
+    // text-align: justify;
     @include media-query-max($on-screen) {
         font-size:1.125em;
         padding-left: 0.3em;
