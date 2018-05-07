@@ -4,6 +4,28 @@ title:  "Sublime Text Adaptive Theme 定制"
 date:   2017-05-22 22:22 +0800
 ---
 
+2018-05-07 更新：
+
+Sublime Text 发 3.1 了，再玩，发现「定制」主题不用这么麻烦，[官方文档](https://www.sublimetext.com/docs/3/themes.html#customization)写的很详细。比如，想要给 Adaptive 主题打个补丁，实现标题栏与编辑区域同色，获得前文的 Frameless 体验，只需在 `~/Library/Application Support/Sublime Text 3/Packages/User` 目录下新建 Adaptive 主题的同名文件：`Adaptive.sublime-theme`，然后加入相关配置即可（代码范例如下），相当方便，无需其他插件。具体哪些配置项可调，可参考官方的主题文档，也可从 `/Applications/Sublime Text.app/Contents/MacOS/Packages` 目录下，拷贝主题文件 `Theme - Default.sublime-package`，更改后缀为 zip，解压后即可查阅、参考 JSON 格式原主题配置。
+
+比如修改黑色标题栏为 Mariana Color Scheme 背景色：
+
+```json
+[
+    {
+        "class": "title_bar",
+        "fg": ["background", 255, 255, 255, 0.7],
+        "bg": ["background", 52, 61, 70, 0.4]
+    }
+]
+```
+
+
+
+旧文：
+
+----
+
 一直都羡慕 Atom、VS Code 编辑器更「现代的」的界面，稍作调整，即可实现自 macOS Yosemite 引入的 Frameless 窗口，整个观感非常的一体，很有 Google Chrome 浏览器那个简洁美。
 
 ![atom editor](http://github-atom-io-herokuapp-com.global.ssl.fastly.net/assets/screenshot-main@2x-f5f56d18fa8896b3d987d24fc903d03f.png)
