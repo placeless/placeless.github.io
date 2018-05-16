@@ -26,3 +26,4 @@ date:   2018-05-16 22:46 +0800
 
 <figcaption>decode 一下</figcaption>
 
+Hard 模式下的「租房阶级」本就已经深受各大流氓互联网公司的奴役，美名曰「隐私换便利」。很巧，uBlock Origin 这一拦截工具也有一个 [Hard 模式](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode)，有一点置之死地而后生的意思，是行走网路江湖的利器。
