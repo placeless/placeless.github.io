@@ -20,6 +20,8 @@ date:   2018-05-16 22:46 +0800
 
 <figcaption>换个方式又回来了</figcaption>
 
+不知是 Wordpress 有漏洞被利用了，还是他们使用了问题插件，亦或是运维失察，总之，有人扭曲之时，希望还有人在坚持。
+
 ![4](/files/2018/05/16/js-nicify.png)
 
 <figcaption>decode 一下</figcaption>
