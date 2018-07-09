@@ -13,69 +13,79 @@
       </div>
     </div>
 
-    <script>
-      // https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
-      function uuidv4() {
-        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-          var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8)
-          return v.toString(16)
-        })
-      }
-
-      // https://stackoverflow.com/questions/10730362/get-cookie-by-name
-      function getcookie(name) {
-        var value = '; ' + document.cookie
-        var parts = value.split('; ' + name + '=')
-        if (parts.length == 2) { return parts.pop().split(';').shift() }
-      }
-
-      function cachebuster() {
-        return Math.ceil(Math.random() * 1000000)
-      }
-
-      function setcookie() {
-        var d = new Date()
-        d.setTime(d.getTime() + 1000*60*60*24*365*2)
-        var expires = 'expires=' + d.toGMTString()
-        var cid = getcookie('cid') || uuidv4()
-        if (!document.cookie) { document.cookie = 'cid=' + cid + '; ' + expires + '; path=/' }
-      }
-
-      document.onreadystatechange = function() {
-        if (document.readyState === 'complete') {
-          setcookie()
-          var data = encodeURI(
-            'v=1&tid=UA-101491967-2'
-            + '&cid=' + getcookie('cid')
-            + '&t=pageview'
-            + '&dl=' + document.location
-            + '&dr=' + document.referrer
-            + '&ul=' + (navigator.language || navigator.userLanguage)
-            + '&dp=' + (window.location.pathname + window.location.search)
-            + '&dt=' + document.title
-            + '&sd=' + screen.colorDepth
-            + '&sr=' + (screen.width + 'x' + screen.height)
-            + '&vp=' + (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) + 'x' + Math.max(document.documentElement.clientHeight, window.innerHeight || 0))
-            + '&z=' + cachebuster()
-          )
-          if (navigator.sendBeacon) {
-            navigator.sendBeacon('https://www.google-analytics.com/collect', data)
-          } else {
-            var xhr = new XMLHttpRequest()
-            xhr.open('POST', 'https://www.google-analytics.com/collect')
-            xhr.send(data)
-          }
-        }
-      }
-    </script>
-
     <script src="https://unpkg.com/zooming/build/zooming.min.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        new Zooming().listen('.post-content img')
-      })
+      (function() {
+
+        // open outbound links in new tab
+        var origin = document.location.origin
+        var links = document.getElementsByTagName('a')
+        for (link of links) {
+          if (link.href && link.href.indexOf(origin) != 0) link.setAttribute('target', '_blank')
+        }
+
+        // image zooming
+        document.addEventListener('DOMContentLoaded', function () {
+          new Zooming().listen('.post-content img')
+        })
+
+        // traffic counting
+        // https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
+        function uuidv4() {
+          return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8)
+            return v.toString(16)
+          })
+        }
+
+        // https://stackoverflow.com/questions/10730362/get-cookie-by-name
+        function getcookie(name) {
+          var value = '; ' + document.cookie
+          var parts = value.split('; ' + name + '=')
+          if (parts.length == 2) { return parts.pop().split(';').shift() }
+        }
+
+        function cachebuster() {
+          return Math.ceil(Math.random() * 1000000)
+        }
+
+        function setcookie() {
+          var d = new Date()
+          d.setTime(d.getTime() + 1000*60*60*24*365*2)
+          var expires = 'expires=' + d.toGMTString()
+          var cid = getcookie('cid') || uuidv4()
+          if (!document.cookie) { document.cookie = 'cid=' + cid + '; ' + expires + '; path=/' }
+        }
+
+        document.onreadystatechange = function() {
+          if (document.readyState === 'complete') {
+            setcookie()
+            var data = encodeURI(
+              'v=1&tid=UA-101491967-2'
+              + '&cid=' + getcookie('cid')
+              + '&t=pageview'
+              + '&dl=' + document.location
+              + '&dr=' + document.referrer
+              + '&ul=' + (navigator.language || navigator.userLanguage)
+              + '&dp=' + (window.location.pathname + window.location.search)
+              + '&dt=' + document.title
+              + '&sd=' + screen.colorDepth
+              + '&sr=' + (screen.width + 'x' + screen.height)
+              + '&vp=' + (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) + 'x' + Math.max(document.documentElement.clientHeight, window.innerHeight || 0))
+              + '&z=' + cachebuster()
+            )
+            if (navigator.sendBeacon) {
+              navigator.sendBeacon('https://www.google-analytics.com/collect', data)
+            } else {
+              var xhr = new XMLHttpRequest()
+              xhr.open('POST', 'https://www.google-analytics.com/collect')
+              xhr.send(data)
+            }
+          }
+        }
+      })()
     </script>
-    
+
   </body>
 
 </html>
