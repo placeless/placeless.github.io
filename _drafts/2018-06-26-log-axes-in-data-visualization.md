@@ -6,18 +6,20 @@ date:   2018-06-26 18:34 +0800
 
 ![piano frequencies](https://upload.wikimedia.org/wikipedia/commons/2/2e/Piano_Frequencies.svg)
 
-<figcaption>琴键与频率</figcaption>
+<figcaption><a href="https://zh.wikipedia.org/zh-hans/%E9%8B%BC%E7%90%B4%E9%8D%B5%E9%A0%BB%E7%8E%87">琴键与频率</a></figcaption>
 
 > Don’t compare percentage change on a linear scale; use a log scale instead. -50% (0.5×) is as big a change as +100% (2×). 比较比例变化，不要在线性尺度上，而要在对数尺度上。因为减少了 50% 与增加了 100% 是一样大的变动。
 
 上面的引文，是 5 月初 [Mike Bostock](https://en.m.wikipedia.org/wiki/Mike_Bostock) 的[一条推特](https://twitter.com/mbostock/status/991517711250305024)，但我当时并没有看明白他是啥意思，在心里一直留了一个疑问。它引发了很多的后续讨论，除了推上断断续续的松散对答，还有人花时间撰写了长文，比如 5 月 31 日至 6 月 14 日之间 [Lisa Charlotte Rost](https://twitter.com/lisacrost) 就在 Datawrapper Blog 上连作 3 篇关于「How to read a log scale」的文章阐述自己的看法，分别是 [Growth rate](https://blog.datawrapper.de/weeklychart-logscale/)、[The chart that can’t start at zero](https://blog.datawrapper.de/weeklychart-logscale2/)、[What Mike Bostock means](https://blog.datawrapper.de/weeklychart-logscale3/)。对于这些讨论，Mike Bostock 在 6 月 16 日又写了一篇文章，亲自阐述那条 tweet 的含义，名为：[Methods of Comparison, Compared](https://beta.observablehq.com/@mbostock/methods-of-comparison-compared)。
 
-Log Scale，Linear Scale，Percentage Change，Rate Change，Growth Rate 等等大大小小提及的概念还不少，那么，他们到底在谈些什么呢？
-
-其实，我感觉上面两人讲的并不是完全是一个东西，归结起来大致是两项（还是有点绕）：
+Log Scale，Linear Scale，Percentage Change，Rate Change，Growth Rate 等等大大小小提及的概念还不少，那么，他们到底在谈些什么呢？其实，我感觉上面两人讲的并不是完全是一个东西，归结起来大致是两项（还是有点绕）：
 
 - 如何对比新旧数据之间**比例的变化**
 - 数据可视化中的**坐标尺度**的选择
+
+Lisa 行文更偏重于解释图表坐标里的「Log 刻度」，第一篇引用了新西兰游客人数逐年变化的例子，很直观讲了对数刻度是什么以及使用它有什么好处；第二篇则引用了摩尔定律涉及的晶体管数量变化，讲了使用对数刻度的场合和需要注意的情况，；
+
+
 
 ## 工具
 
@@ -40,9 +42,24 @@ Mike Bostock 是 D3 的作者，他演示用的代码都是 D3，操作平台也
 
 哪一个更好？他说，没有直接答案，因为方法并无高下之分，推荐大家根据自身的需求，去选择最合适的表现方式。
 
+<details>
+<summary>Code</summary>
+<pre>
+<code>
+alt.renderers.enable('notebook')
+alt.Chart(df).mark_line().encode(
+    x='Date:T',
+    y=alt.Y('Close')
+)
+</code>
+</pre>
+</details>
+
 ## 坐标尺度
 
 这里的坐标指的是图表中的 `x`、`y` 轴
+
+vega_datasets 缺 46102 county
 
 ## Linear vs. logarithmic
 
