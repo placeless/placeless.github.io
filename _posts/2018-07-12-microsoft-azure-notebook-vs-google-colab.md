@@ -20,6 +20,44 @@ date:   2018-07-12 00:41 +0800
 
 第三条，文件管理，Azure Notebook 略胜。因为它操作起来，跟使用网盘差不多，调用自己上传的数据文件，跟加载本地文件一样自然；但 Colab 没法直接上传数据文件，而且调用自家 Google Drive 里面的数据，也需经过一番引用和配置，有一点复杂，有一点耗时。
 
+<details>
+<summary>展开查看 Colab 上传文件范例</summary>
+<pre>
+<code>
+#
+# Python
+#
+from google.colab import files
+
+uploaded = files.upload()
+
+for fn in uploaded.keys():
+  print('User uploaded file "{name}" with length {length} bytes'.format(
+      name=fn, length=len(uploaded[fn])))
+      
+#
+# Output
+#
+data-MKOez.csv(text/csv) - 6039 bytes, last modified: n/a - 100% done
+data-OHT21.csv(text/csv) - 19267 bytes, last modified: n/a - 100% done
+data-OXy0O.csv(text/csv) - 105926 bytes, last modified: n/a - 100% done
+
+Saving data-MKOez.csv to data-MKOez.csv
+Saving data-OHT21.csv to data-OHT21.csv
+Saving data-OXy0O.csv to data-OXy0O.csv
+User uploaded file "data-MKOez.csv" with length 6039 bytes
+User uploaded file "data-OHT21.csv" with length 19267 bytes
+User uploaded file "data-OXy0O.csv" with length 105926 bytes
+
+#
+# Bash
+#
+$ !ls
+datalab  data-MKOez.csv  data-OHT21.csv  data-OXy0O.csv
+</code>
+</pre>
+</details>
+
 ![Google Colaboratory](https://research.google.com/colaboratory/screenshot.png)
 
 <figcaption>👆这里有一张来自于 https://research.google.com/colaboratory/ 的图片，你看见了吗</figcaption>
