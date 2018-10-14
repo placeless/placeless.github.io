@@ -72,3 +72,8 @@ date:   2017-05-18 16:51 +0800
 
 
 总之，Transform Data by Example 至少提供了一个，类似「点击两下」即能帮你在 Excel 中，处理好一些常见数据清理问题的方案，而且可扩展的，基于搜索的，随其知识库的扩充，肯定会越来越趁手。
+
+
+最后，推荐一部 Youtube 视频。它是由 Stack Overflow 的创立者、著名软件工程师、前 Microsoft Excel 的产品经理 Joel Spolsky 上传的，来源于 2015 他的一次名为《[You Suck at Excel with Joel Spolsky](https://www.youtube.com/watch?v=0nbkaYsR94c)》的内部演讲，非常有意思。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0nbkaYsR94c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
