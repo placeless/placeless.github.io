@@ -66,7 +66,10 @@ ul, ol, dl, figure,
 iframe, video, hr, details,
 %vertical-rhythm { margin-bottom: $spacing-unit / 2; }
 
-
+iframe {
+    display: block;
+    margin: $spacing-unit / 2 auto;
+}
 
 /**
  * Images
