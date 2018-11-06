@@ -203,3 +203,15 @@
 // .post ul, { list-style: circle; }
 // .post ul li, .post ol li { margin-bottom: $spacing-unit / 6; }
 // .post { letter-spacing: .5px; }
+
+/**
+ * Keyboard Key
+ */
+
+kbd {
+    color: #fff;
+    padding: 0 3px;
+    background-color: #333;
+    font-size: 0.8em;
+    border: 1px solid #333;
+}
