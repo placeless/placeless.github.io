@@ -41,7 +41,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-permalinks: /blog/:title
+permalink: /blog/:title
 
 # paginate: 10
 # paginate_path: "/page:num/"
