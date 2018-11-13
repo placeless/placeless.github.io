@@ -14,7 +14,7 @@ lang: "zh-cmn-Hans"
 # description: "question came and went, like a helicopter over head..."
 description: "with great power comes great explosion"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://placeless.net" # the base hostname & protocol for your site
+url: "https://placeless.net" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 # github_username:  jekyll
 timezone: Asia/Shanghai
