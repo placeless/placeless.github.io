@@ -3,7 +3,7 @@ layout: post
 title:  "GA SDK 的本地部署"
 date:   2017-11-24 14:44 +0800
 ---
-上回说到 GTM 遭到拦截，导致网页加载和数据采集遇到困难。我们提到过一种思路，即 [采用 MP 来规避](/2017/10/14/across-the-firewall-with-measurement-protocol.html#article)。其中有一个遗留问题，即：自己实现数据采集方案，通过 MP 管道传递数据至 GA，只适用于少量维度，多了，实现复杂度成指数上升。所以一旦遇到复杂的行为数据采集需求，还是希望借助 GA SDK 来实现数据的自动采集。
+上回说到 GTM 遭到拦截，导致网页加载和数据采集遇到困难。我们提到过一种思路，即 [采用 MP 来规避](/blog/across-the-firewall-with-measurement-protocol.html#article)。其中有一个遗留问题，即：自己实现数据采集方案，通过 MP 管道传递数据至 GA，只适用于少量维度，多了，实现复杂度成指数上升。所以一旦遇到复杂的行为数据采集需求，还是希望借助 GA SDK 来实现数据的自动采集。
 
 因此，这一次，尝试在本地服务器端布署 GA SDK，打算实现两个目的：
 
@@ -70,7 +70,7 @@ date:   2017-11-24 14:44 +0800
     window.dataLayer = window.dataLayer || []
     function gtag(){dataLayer.push(arguments)}
     gtag('js', new Date())
-    
+
     gtag('config', 'XXXXXXXXX-Y', {
       'send_page_view': false,
       'transport_type': 'beacon',
@@ -81,7 +81,7 @@ date:   2017-11-24 14:44 +0800
     })
   </script>
   <!-- 👆 -->
-  
+
 </head>
 
 <body>

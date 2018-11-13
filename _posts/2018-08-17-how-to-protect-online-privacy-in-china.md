@@ -8,7 +8,7 @@ date:   2018-08-17 15:38 +0800
 
 首先，我们搞明白敌人是谁，威胁形式都有哪些。就我个人的情况，主要是以下 4 个方面：屏蔽垃圾广告、屏蔽数据采集工具、躲开链路劫持与偷窥、保障穿墙的安全与通畅。
 
-其次，再来对症下药。之前其实也零碎写过一些，比如：[电信劫持一例](https://placeless.net/2016/06/21/china-telecom-hijack-internet-traffic.html#article)、[电信劫持·续](https://placeless.net/2016/06/28/shame-on-you-china-telecom.html#article)、[广告拦截](https://placeless.net/2016/08/02/adblocking-experience.html#article)、[uBlock Origin 的拦截模式](https://placeless.net/2017/08/15/blocking-mode-in-ublock-origin.html#article)、[挖矿脚本一例](https://placeless.net/2018/05/16/cryptojacking.html#article) 等等，这次主要做一个总结。
+其次，再来对症下药。之前其实也零碎写过一些，比如：[电信劫持一例](/blog/china-telecom-hijack-internet-traffic.html#article)、[电信劫持·续](/blog/shame-on-you-china-telecom.html#article)、[广告拦截](/blog/adblocking-experience.html#article)、[uBlock Origin 的拦截模式](/blog/blocking-mode-in-ublock-origin.html#article)、[挖矿脚本一例](/blog/cryptojacking.html#article) 等等，这次主要做一个总结。
 
 一般来讲，我们通常有两个上网方式/场景，如下图，一是在家里或是其他室内，通过有线或是 Wi-Fi，走宽带运营商连接网络；一是借助手机等移动设备，走移动运营商连接网络。在此，通过这两种通路分类，简述一下**非专业的个人经验**。
 
@@ -59,7 +59,7 @@ graph LR
 
 ## 运营商劫持
 
-- 这一点不好防，我的斗争经历见 [电信劫持一例](https://placeless.net/2016/06/21/china-telecom-hijack-internet-traffic.html#article)、[电信劫持·续](https://placeless.net/2016/06/28/shame-on-you-china-telecom.html#article)
+- 这一点不好防，我的斗争经历见 [电信劫持一例](/blog/china-telecom-hijack-internet-traffic.html#article)、[电信劫持·续](/blog/shame-on-you-china-telecom.html#article)
 - 尽量只访问 HTTPS 网站
 - 通畅的前提下，自定义安全 DNS，比如 8.8.8.8， 1.1.1.1 等
 - 抛弃 2G 网络

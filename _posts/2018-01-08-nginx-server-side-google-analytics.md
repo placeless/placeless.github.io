@@ -6,8 +6,8 @@ date:   2018-01-08 19:40 +0800
 
 为了更可靠的数据采集，之前已经尝试过两种非标准的 GA Hits 发送方式：
 
-- [借助 Measurement Protocol 防 GA 拦截](/2017/10/14/across-the-firewall-with-measurement-protocol.html#article)
-- [GA SDK 的本地部署](/2017/11/24/deploy-google-analytics-sdk-on-local-server.html#article)
+- [借助 Measurement Protocol 防 GA 拦截](/blog/across-the-firewall-with-measurement-protocol.html#article)
+- [GA SDK 的本地部署](/blog/deploy-google-analytics-sdk-on-local-server.html#article)
 
 
 今天在收藏夹翻到一篇《[Ng­inx 内配置 Google An­a­lyt­ics 指南](https://darknode.in/network/nginx-google-analytics/)》，于是搭了一个虚拟机，也尝试了一下。试验环境简介及搭建：
