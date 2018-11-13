@@ -2,6 +2,8 @@
 layout: post
 title:  "对称和称呼"
 date:   2017-11-01 13:52 +0800
+redirect_from:
+  - 2017/11/01/duichen-and-chenghu
 ---
 
 读到：

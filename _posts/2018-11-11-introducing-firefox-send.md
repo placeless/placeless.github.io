@@ -2,6 +2,8 @@
 layout: post
 title:  "文件分享完美方案：Firefox Send"
 date:   2018-11-11 18:06 +0800
+redirect_from:
+  - 2018/11/11/introducing-firefox-send
 ---
 
 周五下班，问一同事怎么还没走。他说，还得一会，他在等 PM 下载一个东西，PM 给他，他给设计………… Cool！

@@ -2,6 +2,8 @@
 layout: post
 title:  "uBlock Origin 的拦截模式"
 date:   2017-08-15 18:22 +0800
+redirect_from:
+  - 2017/08/15/blocking-mode-in-ublock-origin
 ---
 
 uBlock Origin 有 5 个拦截模式：

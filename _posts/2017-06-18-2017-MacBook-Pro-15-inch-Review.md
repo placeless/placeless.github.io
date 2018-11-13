@@ -2,6 +2,8 @@
 layout: post
 title:  "2017 款 15 寸 MacBook Pro 使用感受"
 date:   2017-06-18 13:41 +0800
+redirect_from:
+  - 2017/06/18/2017-MacBook-Pro-15-inch-Review
 ---
 
 新款 MacBook Pro 买来并使用 3 天了，除了几个小细节，总体上我非常喜欢这台笔记本。

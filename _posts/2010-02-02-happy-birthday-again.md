@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "莫奈何"
+redirect_from:
+  - 2010/02/02/happy-birthday-again
 ---
 
 ![happy birthday to me](/files/2010/02/02/happy_birthday.png)

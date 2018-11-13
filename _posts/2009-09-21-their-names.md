@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "他们的年代"
+redirect_from:
+  - 2009/09/21/their-names
 ---
 
 小的时候，

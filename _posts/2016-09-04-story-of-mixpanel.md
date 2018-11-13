@@ -2,6 +2,8 @@
 layout: post
 title:  "Mixpanel 的故事"
 date:   2016-09-04 01:59 +0800
+redirect_from:
+  - 2016/09/04/story-of-mixpanel
 ---
 
 <img alt="YC Analytics Technologies" src="http://themacro.com/images/articles/YC_Stacks_3-9a905b72.png" width="80%">

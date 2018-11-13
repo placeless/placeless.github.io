@@ -2,6 +2,8 @@
 layout: post
 title:  "Atom 打开长行文件失去响应的解决方案"
 date:   2016-07-03 14:15 +0800
+redirect_from:
+  - 2016/07/03/fix-atom-hangs-caused-by-files-with-long-lines
 ---
 
 > 这是一个一知半解的尝试。

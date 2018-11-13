@@ -2,6 +2,8 @@
 layout: post
 title:  MacBook Pro 独显与集显的一个细微差别
 date:   2018-05-02 15:17 +0800
+redirect_from:
+  - 2018/05/02/a-subtle-difference-between-dedicated-graphics-card-and-integrated-graphics-card-on-macbook-pro
 ---
 
 ![shadow of the active window](/files/2018/05/02/shadow.png)

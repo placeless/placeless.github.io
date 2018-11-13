@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "开会"
+redirect_from:
+  - 2009/02/08/what-i-saw-four
 ---
 
 野兽们要开大会

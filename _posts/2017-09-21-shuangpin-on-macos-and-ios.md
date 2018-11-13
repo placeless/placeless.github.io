@@ -2,6 +2,8 @@
 layout: post
 title:  "macOS 10.13 及 iOS 11 上的双拼"
 date:   2017-09-21 13:50 +0800
+redirect_from:
+  - 2017/09/21/shuangpin-on-macos-and-ios
 ---
 
 终于统一了。

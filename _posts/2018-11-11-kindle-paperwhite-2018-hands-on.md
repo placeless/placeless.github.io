@@ -2,6 +2,8 @@
 layout: post
 title:  "Kindle Paperwhite 2018 上手体验"
 date:   2018-11-11 21:39 +0800
+redirect_from:
+  - 2018/11/11/kindle-paperwhite-2018-hands-on
 ---
 
 其实我自己不太需要 Kindle Paperwhite，但是受广告影响，心水其中的纯平墨水屏和 300 PPI，一是因为手头的第二代 PPI 只有 212，二是从 iPad 那边已经体会过非全贴合与全贴合屏幕之间的差异。

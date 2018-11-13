@@ -2,6 +2,8 @@
 layout: post
 title:  "SPA 埋点的两个问题"
 date:   2017-10-13 20:59 +0800
+redirect_from:
+  - 2017/10/13/track-single-page-application-with-google-tag-manager
 ---
 
 这几天，朋友打算上一个创业项目，我帮忙做一点数据采集的事情。遇到两个问题，一难一易，孰难孰易，一时到不易辨别。

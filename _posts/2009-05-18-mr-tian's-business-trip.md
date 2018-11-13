@@ -2,6 +2,8 @@
 layout: post
 title:  "海边的卡夫卡"
 date:   2009-06-20 10:26:05
+redirect_from:
+  - 2009/05/18/mr-tian's-business-trip
 ---
 
 田田说要去北京了，出差。

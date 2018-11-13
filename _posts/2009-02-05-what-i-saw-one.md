@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "创新者的会议"
+redirect_from:
+  - 2009/02/05/what-i-saw-one
 ---
 
 三十几只蚂蚁在商议

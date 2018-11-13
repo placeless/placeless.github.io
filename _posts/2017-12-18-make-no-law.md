@@ -2,6 +2,8 @@
 layout: post
 title:  《批评官员的尺度》
 date:   2017-12-18 23:23 +0800
+redirect_from:
+  - 2017/12/18/make-no-law
 ---
 
 > Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.

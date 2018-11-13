@@ -2,6 +2,8 @@
 layout: post
 title:  Mixpanel 的用户 ID 管理
 date:   2018-08-17 15:38 +0800
+redirect_from:
+  - 2018/10/08/user-id-management-in-mixpanel
 ---
 
 针对自有账户体系的平台，成熟的数据采集工具一般都提供了登录前后以及跨设备的 ID 关联功能，今天，想具体了解一下 Mixpanel 的方案。

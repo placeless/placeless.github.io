@@ -2,6 +2,8 @@
 layout: post
 title:  "a16z: 未来十年"
 date:   2017-12-23 00:08 +0800
+redirect_from:
+  - 2017/12/23/a16z-ten-year-futures
 ---
 
  

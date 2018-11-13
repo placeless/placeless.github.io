@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Sublime Text: 不同类型文档指定不同语法高亮"
+redirect_from:
+  - 2014/01/14/sublime-text-specific-syntax
 ---
 
 Sublime Text 不仅内置了众多漂亮的语法高亮主题（Color Scheme），而且还有不少开发者贡献了更加针对某一类语言的主题，比如 [Railscasts] 之于 Rails。但是并非一套主题放到所有类型的文档上都好看，像 [Espresso Soda]，用于 HTML 和 CSS 编辑时，时髦又易用，但放到 Ruby on Rails 上，那就一身痒了，如下图:

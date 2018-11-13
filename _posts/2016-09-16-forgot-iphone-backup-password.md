@@ -2,6 +2,8 @@
 layout: post
 title:  "还原 iPhone 备份时，忘记密码"
 date:   2016-09-16 15:34 +0800
+redirect_from:
+  - 2016/09/16/forgot-iphone-backup-password
 ---
 
 昨天升级 iOS 10。大版本迭代，我总是习惯先备份，然后 DFU 全新安装。

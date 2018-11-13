@@ -2,6 +2,8 @@
 layout: post
 title:  "High Sierra Spotlight 输入闪退"
 date:   2017-09-28 14:04 +0800
+redirect_from:
+  - 2017/09/28/spotlight-search-crash-on-high-sierra
 ---
 
 升级 macOS 到 High Sierra 之后，发现输入任何东西都会直接导致 Spotlight Search 崩溃，浮窗一闪而过，不能正常使用。

@@ -2,6 +2,8 @@
 layout: post
 title:  "人老珠黄"
 date:   2009-10-05 10:26:05
+redirect_from:
+  - 2009/10/05/their-hands
 ---
 
 > 直到现在，人们也不觉得那是正途...

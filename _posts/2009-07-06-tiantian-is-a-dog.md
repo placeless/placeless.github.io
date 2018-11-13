@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "带只狗，不成行"
+redirect_from:
+  - 2009/07/06/tiantian-is-a-dog
 ---
 
 ![田田是只狗](/files/2009/07/06/tiantian_is_a_dog.jpg)

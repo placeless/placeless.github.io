@@ -2,6 +2,8 @@
 layout: post
 title:  Azure notebook vs Google colab
 date:   2018-07-12 00:41 +0800
+redirect_from:
+  - 2018/07/12/microsoft-azure-notebook-vs-google-colab
 ---
 
 ![Jupyter Notebook](http://jupyter.org/assets/jupyterpreview.png)

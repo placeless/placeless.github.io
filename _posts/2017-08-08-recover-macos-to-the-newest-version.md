@@ -2,6 +2,8 @@
 layout: post
 title:  "恢复模式安装最新版 macOS"
 date:   2017-08-08 16:23 +0800
+redirect_from:
+  - 2017/08/08/recover-macos-to-the-newest-version
 ---
 
 之前重装 macOS 总遇到一个问题：Recovery 模式恢复的系统不是最新的版本。

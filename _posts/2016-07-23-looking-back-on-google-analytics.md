@@ -2,6 +2,8 @@
 layout: post
 title:  "回顾 Google Analytics"
 date:   2016-07-23 04:40 +0800
+redirect_from:
+  - 2016/07/23/looking-back-on-google-analytics
 ---
 
 GA 已经是个 10 多岁老家伙了。

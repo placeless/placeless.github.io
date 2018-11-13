@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "夏日的午后"
+redirect_from:
+  - 2009/02/06/what-i-saw-two
 ---
 
 这个夏日的午后

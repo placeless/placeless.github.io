@@ -2,6 +2,8 @@
 layout: post
 title:  "怎么把知乎帐号给忘了？"
 date:   2016-07-22 03:03 +0800
+redirect_from:
+  - 2016/07/22/how-did-i-forget-my-zhihu-account
 ---
 
 怎么会把知乎帐号给忘记了？因为上的少了。

@@ -2,6 +2,8 @@
 layout: post
 title:  "CDEC Dota1 大师赛的匹配机制问题"
 date:   2017-10-22 16:57 +0800
+redirect_from:
+  - 2017/10/22/cdec-dota1-matching-issue
 ---
 
 看到不少人抱怨这届 CDEC 匹配机制有问题。好奇，打算从数据上验证一下。

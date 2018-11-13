@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "将 GA 当作静态网站的数据库用"
+redirect_from:
+  - 2014/01/05/using-google-analytics-as-static-site's-database
 ---
 
 > update: 此功能目前已移除

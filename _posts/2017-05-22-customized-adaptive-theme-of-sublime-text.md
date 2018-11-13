@@ -2,6 +2,8 @@
 layout: post
 title:  "Sublime Text Adaptive Theme 定制"
 date:   2017-05-22 22:22 +0800
+redirect_from:
+  - 2017/05/22/customized-adaptive-theme-of-sublime-text
 ---
 
 2018-05-07 更新：

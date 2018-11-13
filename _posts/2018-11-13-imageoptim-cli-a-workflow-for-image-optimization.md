@@ -2,6 +2,8 @@
 layout: post
 title:  "图片压缩：ImageOptim-CLI"
 date:   2018-11-13 19:26 +0800
+redirect_from:
+  - 2018/11/13/imageoptim-cli-a-workflow-for-image-optimization
 ---
 
 ![image tool stack](/files/2018/image-tool-stack.png)

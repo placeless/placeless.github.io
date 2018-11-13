@@ -2,6 +2,8 @@
 layout: post
 title:  "GA SDK 的本地部署"
 date:   2017-11-24 14:44 +0800
+redirect_from:
+  - 2017/11/24/deploy-google-analytics-sdk-on-local-server
 ---
 上回说到 GTM 遭到拦截，导致网页加载和数据采集遇到困难。我们提到过一种思路，即 [采用 MP 来规避](/blog/across-the-firewall-with-measurement-protocol.html#article)。其中有一个遗留问题，即：自己实现数据采集方案，通过 MP 管道传递数据至 GA，只适用于少量维度，多了，实现复杂度成指数上升。所以一旦遇到复杂的行为数据采集需求，还是希望借助 GA SDK 来实现数据的自动采集。
 

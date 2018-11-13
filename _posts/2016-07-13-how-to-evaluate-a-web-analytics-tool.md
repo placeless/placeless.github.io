@@ -2,6 +2,8 @@
 layout: post
 title:  "如何评价一个监测分析工具"
 date:   2016-07-13 17:24 +0800
+redirect_from:
+  - 2016/07/13/how-to-evaluate-a-web-analytics-tool
 ---
 
 近期在琢磨几个监测分析产品的高下，我在想，到底如何去评价一个监测分析工具，才是客观理性的？

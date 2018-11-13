@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "乳来伸手"
+redirect_from:
+  - 2009/04/21/everybody-is-poor
 ---
 
 子曰：

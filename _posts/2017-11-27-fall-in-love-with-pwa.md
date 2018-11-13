@@ -2,6 +2,8 @@
 layout: post
 title:  "体验 PWA"
 date:   2017-11-27 00:21 +0800
+redirect_from:
+  - 2017/11/27/fall-in-love-with-pwa
 ---
 
 ![低端人口](/files/2017/11/27/beijing.jpg)

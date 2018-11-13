@@ -2,6 +2,8 @@
 layout: post
 title:  "上海小跑：黄埔滨江"
 date:   2017-07-13 16:30 +0800
+redirect_from:
+  - 2017/07/13/running-in-shanghai-version-2
 ---
 
 <script src="https://embed.github.com/view/geojson/placeless/placeless.github.io/master/files/data/running_20170712.geojson?height=420&width=740"></script>

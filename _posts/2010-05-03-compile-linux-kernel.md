@@ -2,6 +2,8 @@
 layout: post
 title:  "曲线救国"
 date:   2010-05-03 10:26:05
+redirect_from:
+  - 2010/05/03/compile-linux-kernel
 ---
 
 > 历史已明，证科学的战胜非科学的，乃是一种必然趋势，所以，要救国，除了提倡科学精神外, 没有第二剂良药了

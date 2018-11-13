@@ -2,6 +2,8 @@
 layout: post
 title:  "Diversity"
 date:   2016-10-25 13:38 +0800
+redirect_from:
+  - 2016/10/25/diversity
 ---
 
 ![why so serious](/files/2016/10/25/joker.png)

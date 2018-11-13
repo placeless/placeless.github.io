@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "我们大家的小样.续"
+redirect_from:
+  - 2009/05/06/our-little-brother-rising-up
 ---
 
 我们大家的小样，显然没有像某鱼所预言的，将在莫名其妙的沉沦里，终老于铁路系统。最新的消息是紫禁城皇恩浩荡，这B咸鱼翻身，鸡犬得道。

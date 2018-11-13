@@ -2,6 +2,8 @@
 layout: post
 title:  如何保障线上数据隐私
 date:   2018-08-17 15:38 +0800
+redirect_from:
+  - 2018/08/17/how-to-protect-online-privacy-in-china
 ---
 
 分享了 @fenng 的一篇《[有些电商网站怎么诡异的猜到你要买什么东西的？](https://mp.weixin.qq.com/s/DjC0O0krAPbzICJFp78TAg)》到同学群里，于是有朋友在问：如何保障自己的数据隐私，你的做法是什么？

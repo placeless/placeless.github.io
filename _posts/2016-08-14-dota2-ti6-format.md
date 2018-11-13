@@ -2,6 +2,8 @@
 layout: post
 title:  "Dota 2 TI6 赛制"
 date:   2016-08-14 12:22 +0800
+redirect_from:
+  - 2016/08/14/dota2-ti6-format
 ---
 
 <img src="/files/2016/08/14/Wings.png" width="200" height="200" alt="Wings Gaming">

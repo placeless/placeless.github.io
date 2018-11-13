@@ -2,6 +2,8 @@
 layout: post
 title:  "怎么会人人都是受害者"
 date:   2016-05-27 12:22 +0800
+redirect_from:
+  - 2016/05/27/culture-of-victims
 ---
 
 ![无花无酒锄作田](/files/avatar/tbh1.jpg)

@@ -2,6 +2,8 @@
 layout: post
 title:  "上海小跑"
 date:   2016-08-12 18:32 +0800
+redirect_from:
+  - 2016/08/12/running-in-shanghai
 ---
 
 <script src="https://embed.github.com/view/geojson/placeless/placeless.github.io/master/files/data/running.geojson?height=420&width=740"></script>

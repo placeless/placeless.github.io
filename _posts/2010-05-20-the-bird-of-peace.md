@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "鸽子"
+redirect_from:
+  - 2010/05/20/the-bird-of-peace
 ---
 
 ![鸽子](/files/2010/05/20/bird_of_peace.jpg)

@@ -2,6 +2,8 @@
 layout: post
 title:  "Python vs Ruby"
 date:   2017-07-23 23:27 +0800
+redirect_from:
+  - 2017/07/23/my-experience-in-python-and-ruby
 ---
 
 我使用这两门编程语言的水平有限，只是拿来做一些简单的网络请求、文件处理等，比如信息爬取、数据分析、以及写一写 Alfred Workflow 之类的。

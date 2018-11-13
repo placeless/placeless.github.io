@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "zsh: git_prompt_info 错误"
+redirect_from:
+  - 2014/01/04/git-prompt-info-error
 ---
 
 最近使用 oh-my-zsh 终端 cd 到 git 本地仓库时, 总出现两行错误提示, 碍眼的很.

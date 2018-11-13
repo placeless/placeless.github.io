@@ -2,6 +2,8 @@
 layout: post
 title:  "年和岁"
 date:   2010-02-22 10:26:05
+redirect_from:
+  - 2010/02/22/xin-nian-hao
 ---
 
 回家过年。

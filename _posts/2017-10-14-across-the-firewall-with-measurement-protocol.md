@@ -2,6 +2,8 @@
 layout: post
 title:  "借助 Measurement Protocol 防 GA 拦截"
 date:   2017-10-14 23:48 +0800
+redirect_from:
+  - 2017/10/14/across-the-firewall-with-measurement-protocol
 ---
 
 [上次的问题](/blog/track-single-page-application-with-google-tag-manager.html#article)：由于网络不畅，导致 gtm.js 长时间加载，最终影响整个页面的响应。

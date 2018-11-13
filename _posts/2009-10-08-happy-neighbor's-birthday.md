@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "夜奔"
+redirect_from:
+  - 2009/10/08/happy-neighbor's-birthday
 ---
 
 北京的夜，黑一块黄一块

@@ -2,6 +2,8 @@
 layout: post
 title:  "GA 新功能：听得懂你的话"
 date:   2017-07-21 20:35 +0800
+redirect_from:
+  - 2017/07/21/ask-google-analytics-intelligence
 ---
 
 Google Analytics Intelligence 是一系列基于机器学习的 GA 辅助功能组合。最近，在现有的 automated insights、session quality 等特性之外，GA 又新增一项功能：应答你的问话。

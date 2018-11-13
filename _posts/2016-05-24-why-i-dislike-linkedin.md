@@ -2,6 +2,8 @@
 layout: post
 title:  "为什么我不爱用 LinkedIn"
 date:   2016-05-24 04:11 +0800
+redirect_from:
+  - 2016/05/24/why-i-dislike-linkedin
 ---
 
 最近有几件事跟 LinkedIn 有关：

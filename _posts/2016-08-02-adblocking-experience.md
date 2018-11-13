@@ -2,6 +2,8 @@
 layout: post
 title:  "广告拦截"
 date:   2016-08-02 06:01 +0800
+redirect_from:
+  - 2016/08/02/adblocking-experience
 ---
 
 拦截网页广告已经过十年，动力有三：去除干扰、加速装载、保护私隐。方法折腾过很多，大体分为四类：DNS，Hosts，独立程序，浏览器扩展。目前主要使用的还是浏览器扩展：Adguard for Safari，uBlock Origin for Firefox & Chrome。

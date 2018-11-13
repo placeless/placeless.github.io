@@ -2,6 +2,8 @@
 layout: post
 title:  "广告有无政治正确"
 date:   2016-05-30 03:01 +0800
+redirect_from:
+  - 2016/05/30/ad-political-correctness
 ---
 
 纯银昨天在《[关于广告的政治正确](http://www.jianshu.com/p/e22a5d8c1d98?utm_campaign=maleskine&utm_content=note&utm_medium=writer_share&utm_source=weibo)》一文中，列出了几条用户与平台之间，关于广告问题的「能与不能」，并以问答形式做了个人意见的陈述，非常有意思。

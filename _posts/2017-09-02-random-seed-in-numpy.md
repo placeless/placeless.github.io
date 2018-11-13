@@ -2,6 +2,8 @@
 layout: post
 title:  "numpy.random.seed()"
 date:   2017-09-02 05:44 +0800
+redirect_from:
+  - 2017/09/02/random-seed-in-numpy
 ---
 
 看《Python Data Science Handbook》[第二章](https://jakevdp.github.io/PythonDataScienceHandbook/02.02-the-basics-of-numpy-arrays.html)遇到一个疑问。

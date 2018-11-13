@@ -2,6 +2,8 @@
 layout: post
 title:  "家庭共享 Kindle 书籍"
 date:   2018-11-13 14:53 +0800
+redirect_from:
+  - 2018/11/13/family-sharing-on-kindle
 ---
 
 苹果的 App Store 有一个非常贴心的功能，叫作 Family Sharing（家庭共享），它使得购买了 macOS/iOS App 的用户无需再花一份钱，使得 App 可以直接共享给家庭成员使用，很人性，很数字，也很互联网。这一功能同样支持苹果的 iBooks 商店，只不过，这个书店，它如今跟 Google、Twitter 一样，在我们这不存在。

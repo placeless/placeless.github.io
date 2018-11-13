@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "我们大家的小样"
+redirect_from:
+  - 2009/04/09/our-little-brother
 ---
 
 > 农历三月十四，甲申   大利正南。

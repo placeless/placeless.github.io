@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "医保折的零钱可以取"
+redirect_from:
+  - 2014/01/06/be-a-silent-rich-men-with-health-care
 ---
 
 ![医保存折](/files/2014/01/06/health-care.jpg)

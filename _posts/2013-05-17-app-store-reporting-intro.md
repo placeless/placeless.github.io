@@ -1,6 +1,8 @@
 ---
 title:  "AppStore Reporting Instructions"
 layout: post
+redirect_from:
+  - 2013/05/17/app-store-reporting-intro
 ---
 
 ![AppStoreDashboard](/files/2013/05/17/AppStoreDashboard.png)

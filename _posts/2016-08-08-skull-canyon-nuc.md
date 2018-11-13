@@ -2,6 +2,8 @@
 layout: post
 title:  "Knock, Knock, Skull Canyon"
 date:   2016-08-08 19:20 +0800
+redirect_from:
+  - 2016/08/08/skull-canyon-nuc
 ---
 
 Intel Skull Canyon NUC6i7KYK，是英特尔第 6 代 NUC（Next Unit of Computing）的 i7 版本。相对于早出生的兄弟们，除了 CPU 等硬件升级，Skull Canyon 在设计上也有了很大的变化，非常酷。

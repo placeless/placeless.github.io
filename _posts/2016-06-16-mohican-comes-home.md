@@ -2,6 +2,8 @@
 layout: post
 title:  "莫西干回到故乡"
 date:   2016-06-16 23:35 +0800
+redirect_from:
+  - 2016/06/16/mohican-comes-home
 ---
 
 嗯，一定是影院风大。

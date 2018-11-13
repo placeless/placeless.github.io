@@ -2,6 +2,8 @@
 layout: post
 title:  "可视化工具：Rawgraphs"
 date:   2017-10-30 13:16 +0800
+redirect_from:
+  - 2017/10/30/rawgraphs-intro
 ---
 
 数据有什么用？数据新闻是明证之一。[Global Investigative Journalism Network](https://gijn.org/)（[全球深度报道网络](https://cn.gijn.org)）上面有许多精彩报道，是通过数据分析结合可视化呈现出来的，严谨、优美、交互性又强，阅读起来令人陶醉。

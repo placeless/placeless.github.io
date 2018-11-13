@@ -2,6 +2,8 @@
 layout: post
 title:  "Firebase Analytics 与 GA 有什么不同？"
 date:   2016-05-23 16:31:10 +0800
+redirect_from:
+  - 2016/05/23/differences-between-firebase-analytics-and-ga
 ---
 
 * TOC

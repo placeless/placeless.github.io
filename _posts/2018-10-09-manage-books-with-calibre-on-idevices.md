@@ -2,6 +2,8 @@
 layout: post
 title:  苹果平台上的书籍管理
 date:   2018-10-09 15:01 +0800
+redirect_from:
+  - 2018/10/09/manage-books-with-calibre-on-idevices
 ---
 
 书籍来源，无非三处，iBooks Store、Amazon、网络搜索。iBooks Store 国内已经关张，不谈。剩下的，粗略一分，大部分来自亚马逊，问题跟通过网络搜索得来的书一样，格式和排版我不喜欢，阅读体验差。

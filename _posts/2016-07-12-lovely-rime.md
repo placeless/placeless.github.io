@@ -2,6 +2,8 @@
 layout: post
 title:  "我需要一个什么样的输入法"
 date:   2016-07-12 17:45 +0800
+redirect_from:
+  - 2016/07/12/lovely-rime
 ---
 
 ![rime](/files/2016/07/12/rime.png)

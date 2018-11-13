@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "为文章添加新浪微博分享功能"
+redirect_from:
+  - 2014/01/02/social-sharing-sina-weibo
 ---
 
 时至今日, 新浪微博的[开放接口]已经数不胜数, 我这里暂时只是应 [@cloga] 要求, 为网站文章添加一个分享功能, 免去用户复制粘贴, 自己写文案的痛苦.

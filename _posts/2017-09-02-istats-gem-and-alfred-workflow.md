@@ -2,6 +2,8 @@
 layout: post
 title:  "无需 App，即时了解 Mac 温度"
 date:   2017-09-02 06:35 +0800
+redirect_from:
+  - 2017/09/02/istats-gem-and-alfred-workflow
 ---
 
 MacBook Pro 的散热，见仁见智。但面板烫手时，还是想看看 CPU、电池的具体温度的，一是好奇，二是持续高温有损电池寿命。

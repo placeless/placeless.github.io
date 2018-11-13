@@ -2,6 +2,8 @@
 layout: post
 title:  "Matplotlib.basemap 地理数据可视化"
 date:   2017-09-11 05:20 +0800
+redirect_from:
+  - 2017/09/11/matplotlib
 ---
 
 想玩一下地理数据的可视化。

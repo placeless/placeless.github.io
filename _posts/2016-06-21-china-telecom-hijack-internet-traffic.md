@@ -2,6 +2,8 @@
 layout: post
 title:  "电信劫持一例"
 date:   2016-06-21 13:53 +0800
+redirect_from:
+  - 2016/06/21/china-telecom-hijack-internet-traffic
 ---
 
 ![Overwatch Animated Short Recall Screenshot](/files/2016/06/21/Overwatch_Animated_Short_Recall_Screenshot.jpg)

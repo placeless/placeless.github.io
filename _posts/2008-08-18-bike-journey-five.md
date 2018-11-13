@@ -2,6 +2,8 @@
 layout: post
 title:  "年轻时候(五) - 盖州记"
 date:   2008-08-18 10:26:05
+redirect_from:
+  - 2008/08/18/bike-journey-five
 ---
 
 ![盖州入口](/files/2008/08/18/gaizhou.jpg)

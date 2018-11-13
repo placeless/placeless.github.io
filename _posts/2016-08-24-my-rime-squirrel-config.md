@@ -2,6 +2,8 @@
 layout: post
 title:  "我的鼠须管配置"
 date:   2016-08-24 18:34 +0800
+redirect_from:
+  - 2016/08/24/my-rime-squirrel-config
 ---
 
 鼠须管是我的常用输入法，时不时的，都要翻到配置文件夹，做一番折腾，过程消耗时间，但有很多乐趣。

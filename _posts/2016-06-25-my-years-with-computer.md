@@ -2,6 +2,8 @@
 layout: post
 title:  "内存上电"
 date:   2016-06-25 17:05 +0800
+redirect_from:
+  - 2016/06/25/my-years-with-computer
 ---
 
 又在把家用服务器，一个老旧的笔记本，从 Arch 换到 Lubuntu，主要原因是最近看「知识图谱」相关东西，很多示例都是在 Ubuntu 上跑的，如果用 Arch，则难免要多花一些时间去搜索替代方案。

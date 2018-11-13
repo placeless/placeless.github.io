@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "白猫抚绿水"
+redirect_from:
+  - 2010/06/03/missing-days
 ---
 
 明天是敏感日，今天特意路过信访办的门口，昨天，这里没有开门。

@@ -2,6 +2,8 @@
 layout: post
 title:  "IDFA 新变化备忘"
 date:   2016-08-03 22:05 +0800
+redirect_from:
+  - 2016/08/03/idfa-update
 ---
 
 <div id="forfun">

@@ -2,6 +2,8 @@
 layout: post
 title:  数据可视化：对数刻度
 date:   2018-06-26 18:34 +0800
+redirect_from:
+  - 2018/06/26/log-scale-in-data-visualization
 ---
 
 给定美国各个县 1980-2014 的酒精滥用致死率，请问如何对比出这两个年份的变化？

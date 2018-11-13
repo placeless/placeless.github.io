@@ -2,6 +2,8 @@
 layout: post
 title:  "什么是 Sourced Traffic"
 date:   2016-05-28 01:57 +0800
+redirect_from:
+  - 2016/05/28/what-is-sourced-traffic
 ---
 
 ![什么他妈的叫惊喜](/files/2016/05/28/smtmdjjx.jpg)

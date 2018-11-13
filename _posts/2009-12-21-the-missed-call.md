@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "她的电话"
+redirect_from:
+  - 2009/12/21/the-missed-call
 ---
 
 天气很冷，没有下雪，我很想她

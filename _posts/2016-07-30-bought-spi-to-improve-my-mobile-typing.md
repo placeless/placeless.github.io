@@ -2,6 +2,8 @@
 layout: post
 title:  "开始使用 SPi"
 date:   2016-07-30 23:06 +0800
+redirect_from:
+  - 2016/07/30/bought-spi-to-improve-my-mobile-typing
 ---
 
 [SPi](http://spiim.com) 是 iOS 上的双拼输入法。

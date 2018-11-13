@@ -2,6 +2,8 @@
 layout: post
 title:  "Excel 数据整理新工具"
 date:   2017-05-18 16:51 +0800
+redirect_from:
+  - 2017/05/18/transform-data-by-example-in-excel-2016
 ---
 
 今天微软推出了一个贴心的 Excel 小工具，名为 **[Transform Data by Example](https://store.office.com/en-us/app.aspx?assetid=WA104380727)**，支持 Window 和 Mac 平台上的 Excel 2016。一句话描述：

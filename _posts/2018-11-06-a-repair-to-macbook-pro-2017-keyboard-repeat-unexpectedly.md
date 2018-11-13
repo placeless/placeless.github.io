@@ -2,6 +2,8 @@
 layout: post
 title:  "2017 款 MacBook Pro 键盘维修"
 date:   2018-11-06 17:00 +0800
+redirect_from:
+  - 2018/11/06/a-repair-to-macbook-pro-2017-keyboard-repeat-unexpectedly
 ---
 
 2017 款 15 寸带 Touch Bar 的高配，当年 6 月份刚出就买了，使用至今。大概在一个月前，感觉 B 键有明显的重复按键问题。体现为：按一次，会不可预料地多出来 1-3 个 B 字符，听着问题不大，实际打字过程中遇到，神烦。

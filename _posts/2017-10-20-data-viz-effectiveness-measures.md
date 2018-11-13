@@ -2,6 +2,8 @@
 layout: post
 title:  "如何衡量可视化的有效性"
 date:   2017-10-20 17:34 +0800
+redirect_from:
+  - 2017/10/20/data-viz-effectiveness-measures
 ---
 
 看到一篇 [GIJN](https://mobile.twitter.com/gijn) 转发的文章，很有意思，作者是 [Stephen Few](http://www.perceptualedge.com/blog/)，标题是《Data Visualization Effectiveness Profile》，[PDF 原文在此](https://www.perceptualedge.com/articles/visual_business_intelligence/data_visualization_effectiveness_profile.pdf)。

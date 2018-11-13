@@ -2,6 +2,8 @@
 layout: post
 title:  "我的番茄时钟"
 date:   2017-09-29 09:06 +0800
+redirect_from:
+  - 2017/09/29/my-tomator-timer
 ---
 
 之前，在 macOS 上使用的番茄时钟，来自网络下载的一个 Alfred Workflow，但是不巧在某次重装系统时丢失了；现在，出于简单即可的心态，所有的 Workflow 都自己写，仅仅是满足自己的需求，轻量又透明。

@@ -2,6 +2,8 @@
 layout: post
 title:  从 Ngnix 服务器端发送 GA Hits
 date:   2018-01-08 19:40 +0800
+redirect_from:
+  - 2018/01/08/nginx-server-side-google-analytics
 ---
 
 为了更可靠的数据采集，之前已经尝试过两种非标准的 GA Hits 发送方式：

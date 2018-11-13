@@ -2,6 +2,8 @@
 layout: post
 title:  微笑曲线
 date:   2018-08-09 14:28 +0800
+redirect_from:
+  - 2018/08/09/the-power-user-curve
 ---
 
 
