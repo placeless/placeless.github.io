@@ -18,7 +18,7 @@ redirect_from:
 
 所用的工具有两个，Kindle Mac App 和 [Calibre](https://calibre-ebook.com/)，外加一个 Calibre 插件 [DeDRM](https://github.com/apprenticeharper/DeDRM_tools)。Kindle Mac App 用于把购买的书同步到本地，Calibre 用于编辑工作，编辑完了，直接拖拽到 iBooks 里。步骤和先后次序如下：
 
-先安装 DeDRM 插件，切到 Calibre 偏好设置，在插件管理界面选择 Load plugin from file，选择 DeDRM_calibre_plugin 目录下的 DeDRM_plugin.zip 即可，重启 Calibre。
+先安装 Kindle for Mac/PC，登录自己的账号，因为 DeDRM 需要读取 Kindle App 的 `.kindle-info` 用作 Key。再安装 Calibre。再安装 DeDRM 插件，切到 Calibre 偏好设置，在插件管理界面选择 Load plugin from file，选择 DeDRM_calibre_plugin 目录下的 DeDRM_plugin.zip 即可，重启 Calibre。
 
 Kindle 的书籍位置，打开偏好设置，即可看到 Content Folder，一般在如下目录。
 
