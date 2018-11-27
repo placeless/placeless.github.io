@@ -132,7 +132,7 @@ export async function canvasEncode(data: ImageData, type: string, quality?: numb
 先看 ImageOptim-CLI 的相关结果。如果要保有 PNG 格式，ImageAlpha 是个不错的工具，其默认编解码器是 pngquant，可选 pngnq。**需要注意的是，前面这俩，这都是有损压缩**，ImageOptim 默认采用 OptiPNG 等无损压缩工具，所以**只是看起来压缩效率低，开启有损模式，差别没那么大的**。
 
 | 方案                    | 压缩结果 | 节省   |
-| ----------------------- | -------- | ------ |
+| :---------------------- | -------: | -----: |
 | ImageOptim              | 851kB    | 5.55%  |
 | ImageAlpha              | 245kB    | 72.81% |
 | ImageOptim + ImageAlpha | 222kB    | 75.38% |
@@ -141,7 +141,7 @@ export async function canvasEncode(data: ImageData, type: string, quality?: numb
 
 
 | 方案                       | 压缩结果 | 节省 |
-| -------------------------- | -------- | ---- |
+| :------------------------- | ------: | ---: |
 | OptiPNG，effort=2          | 872kB    | 3%   |
 | MozJPEG，quality=75        | 52.3kB   | 94%  |
 | WebP，effort=4，quality=75 | 39.6kB   | 96%  |
