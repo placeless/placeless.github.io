@@ -13,7 +13,6 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/zooming/build/zooming.min.js"></script>
     <script>
       (function() {
 
@@ -23,11 +22,6 @@
         for (link of links) {
           if (link.href && link.href.indexOf(origin) != 0) link.setAttribute('target', '_blank')
         }
-
-        // image zooming
-        document.addEventListener('DOMContentLoaded', function () {
-          new Zooming().listen('.post-content img')
-        })
 
         // traffic counting
         // https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
@@ -85,7 +79,9 @@
         }
       })()
     </script>
-
+    <script src="https://unpkg.com/zooming/build/zooming.min.js"></script>
+    <script>window.Zooming || document.write('<script src="js/zooming.min.js"><\/script>') </script>
+    <script>if (window.Zooming) window.addEventListener('load', function () { new Zooming().listen('.post-content img') })</script>
   </body>
 
 </html>
