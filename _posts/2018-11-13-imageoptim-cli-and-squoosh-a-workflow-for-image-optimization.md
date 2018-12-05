@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "图片压缩优化：ImageOptim-CLI 与 Squoosh"
+title:  "图片压缩：ImageOptim-CLI 与 Squoosh"
 date:   2018-11-13 19:26 +0800
 redirect_from:
   - 2018/11/13/imageoptim-cli-a-workflow-for-image-optimization
