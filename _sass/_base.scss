@@ -108,9 +108,13 @@ ul, ol {
     // margin-left: 1.1em;
     // list-style-position: inside;
     // text-indent: -1em;
-    list-style-type: circle;
+    // list-style-type: circle;
     padding-left: 2em;
     margin: 0 0 1.5em;
+}
+
+ul {
+    list-style-type: circle;
 }
 
 li {
