@@ -111,7 +111,7 @@ Navigation Timing Level 2<a title="PerformanceNavigationTiming" href="https://ww
 
 ## 动手实践
 
-这篇文章引用了许多站外图片，本地测试时，W3C 那两张图尤其的慢，所以估计页面加载时间很长，正好拿来做个实验，看看每张图片从开始到下载完成所耗时间。注意：计算 Resource Timing 用到了 Level 2 的接口，可能很多浏览器还不支持，请使用最新版的 Firefox 或 Chrome。
+这篇文章引用了许多站外图片，本地测试时，W3C 那两张图尤其的慢，所以估计页面加载时间很长，正好拿来做个实验，看看每张图片从开始到下载完成所耗时间。注意：计算 Resource Timing 用到了 Level 2 的接口，可能很多浏览器还不支持，请使用最新版的 Firefox 或 Chrome。页面加载进度条走完之后，点击以下按钮，即可看到本页的加载时间都耗在哪个资源身上了。
 
 <section id="example1">
   <details>
@@ -141,6 +141,13 @@ Navigation Timing Level 2<a title="PerformanceNavigationTiming" href="https://ww
         el.innerText = (t/1000).toFixed(2) + " 秒: " + resources[i].name
         fragment.appendChild(el)
       }
+
+      var navigation = performance.getEntriesByType('navigation')[0]
+      var loadTime = navigation.loadEventStart - navigation.startTime
+      var nav = document.createElement('li')
+      nav.innerText = (loadTime/1000).toFixed(2) + " 秒: Page Load Time"
+      fragment.appendChild(nav)
+
       ul.appendChild(fragment)
     }
   </script>
