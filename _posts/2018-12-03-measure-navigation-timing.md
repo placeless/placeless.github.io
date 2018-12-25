@@ -123,7 +123,7 @@ Navigation Timing Level 2<a title="PerformanceNavigationTiming" href="https://ww
   <script>
     if (document.readyState !== 'complete') document.getElementById('placeholder').innerHTML = "😓 网页尚未加载完成，稍等。"
 
-    performance.getEntriesByType('resource') === undefined ? document.getElementById('placeholder').innerHTML = "😢 当前浏览器不支持" : window.addEventListener('load', demo)
+    performance.getEntriesByType('resource') > 0 ? document.getElementById('placeholder').innerHTML = "😢 当前浏览器不支持" : window.addEventListener('load', demo)
 
     function demo() {
       var resources = performance.getEntriesByType('resource')
@@ -142,8 +142,8 @@ Navigation Timing Level 2<a title="PerformanceNavigationTiming" href="https://ww
         fragment.appendChild(el)
       }
 
-      var navigation = performance.getEntriesByType('navigation')[0]
-      var loadTime = navigation.loadEventStart - navigation.startTime
+      var navigation = performance.getEntriesByType('navigation')[0] || performance.timing
+      var loadTime = navigation.startTime ? (navigation.loadEventStart - navigation.startTime) : (navigation.loadEventStart - navigation.navigationStart)
       var nav = document.createElement('li')
       nav.innerText = (loadTime/1000).toFixed(2) + " 秒: Page Load Time"
       fragment.appendChild(nav)
@@ -194,7 +194,13 @@ Ec = function(a) {
 | Document Interactive Time (dit)    | .domInteractive - .navigationStart           | DOM 就绪耗时          |
 | Document Content Loaded Time (clt) | .domContentLoadedEventEnd - .navigationStart | DOM/CSSOM/JS 完成耗时                                |
 
-这个图结合这个表，这样一看，Site Speed 报告就相对容易理解和使用了。很多人喜欢说「数据不会说谎」，但别忘了，数据根本就不会说话，只是人在乱喷。只有理解了它怎么来的，又是怎么加工的，才能借助它还原 真相、验证猜想。
+这个图结合这个表，这样一看，Site Speed 报告就相对容易理解和使用了。很多人喜欢说「数据不会说谎」，但「数据不会说谎，但说谎的人会算计」（查尔斯·格罗夫纳）。只有理解了它怎么来的，又是怎么加工的，才能借助它还原真相、验证猜想。
+
+## 与页面停留时间的关系
+
+Google Analytics 的每个 Hit 请求带时间戳，它的页面停留时间（Time on Page）就是通过这个时间戳来计算的。比如第一个页面的停留时间就等于第二个页面的 Hit 时间戳减去第一个页面 Hit 的时间戳。但是这个有一个问题，即如果没有第二个 Hit，第一个页面的停留时间是统计不到的。
+
+Anyway，页面停留时间与页面加载时间的关系，取决于 GA 的埋点方式，以异步代码为例，在页面的逐步加载过程中，GA 代码越靠前，页面资源越复杂可能影响越大，因为很可能页面还没有呈现在用户眼前，GA Pageview Hit 已经早早触发，这样，有一段加载时间被计入进了停留时间，如果时间是敏感维度，这个问题还是需要考虑的。
 
 ## References
 
