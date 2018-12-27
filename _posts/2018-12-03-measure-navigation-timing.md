@@ -32,7 +32,7 @@ date:   2018-12-03 17:38 +0800
 下图就是上文提及的第一版的 Navigation Timing 的处理模型。自当前浏览器窗口提示卸载旧页面开始，到被访问的新页面装载完成结束，整个过程一共被切分为 9 个小块：提示卸载旧文档、重定向/卸载、应用缓存、DNS 解析、TCP 握手、HTTP 请求处理、HTTP 响应处理、DOM 处理、文档装载完成。每个小块的首尾、中间做事件分界，取 Unix 时间戳，两两搭配计算时间差，获得中间过程的所耗时间，精确到 milliseconds。
 
 <figure>
-  <img src="https://www.w3.org/TR/navigation-timing/timing-overview.png" alt="Performance Timing Processing Model 1">
+  <img src="/files/2018/timing-overview.png" alt="Performance Timing Processing Model 1">
   <figcaption>W3C
 Navigation Timing Level 1<a title="navigation timing" href="https://www.w3.org/TR/navigation-timing/"><cite>(w3.org)</cite></a></figcaption>
 </figure>
@@ -40,7 +40,7 @@ Navigation Timing Level 1<a title="navigation timing" href="https://www.w3.org/T
 上图是 Level 1 的规范，2012 年底进入候选建议阶段，至今仍在日常使用中，但是在 W3C 的议程上，它已经功成身退，让位给了精度更高，功能更强大，层次更分明的 Level 2（处理模型如下图）。比如被单独拎出来的 Resource Timing，使得我们可以去衡量具体的资源耗时。
 
 <figure>
-  <img src="https://www.w3.org/TR/navigation-timing-2/timestamp-diagram.svg" alt="Navigation Timing Processing Model 2">
+  <img src="/files/2018/timestamp-diagram.svg" alt="Navigation Timing Processing Model 2">
   <figcaption>W3C
 Navigation Timing Level 2<a title="PerformanceNavigationTiming" href="https://www.w3.org/TR/navigation-timing-2/"><cite>(w3.org)</cite></a></figcaption>
 </figure>
@@ -90,7 +90,7 @@ Navigation Timing Level 2<a title="PerformanceNavigationTiming" href="https://ww
 现在，再回过头来看 Navigation Timing API 的处理模型，以 Level 2 为例，我们从头至尾来尝试梳理一下这中间的过程和概念：
 
 <figure>
-  <img src="https://www.w3.org/TR/navigation-timing-2/timestamp-diagram.svg" alt="Navigation Timing Processing Model 2">
+  <img src="/files/2018/timestamp-diagram.svg" alt="Navigation Timing Processing Model 2">
   <figcaption>W3C
 Navigation Timing Level 2<a title="PerformanceNavigationTiming" href="https://www.w3.org/TR/navigation-timing-2/"><cite>(w3.org)</cite></a></figcaption>
 </figure>
@@ -116,39 +116,33 @@ Navigation Timing Level 2<a title="PerformanceNavigationTiming" href="https://ww
 <section id="example1">
   <details>
     <summary>点此查看各资源加载耗时</summary>
-    <ul id="results">
-      <li id="placeholder"></li>
-    </ul>
+    <ul id="results"></ul>
   </details>
   <script>
-    if (document.readyState !== 'complete') document.getElementById('placeholder').innerHTML = "😓 网页尚未加载完成，稍等。"
+    const results = document.getElementById('results')
 
-    performance.getEntriesByType('resource') > 0 ? document.getElementById('placeholder').innerHTML = "😢 当前浏览器不支持" : window.addEventListener('load', demo)
+    if (performance.getEntriesByType('resource') === undefined) {
+      results.insertAdjacentHTML("afterbegin", "<li>😢 当前浏览器不支持 Resource Timing</li>")
+    } else {
+      window.addEventListener('load', function(){ setTimeout(demo, 300) })
+    }
+
+    if (document.readyState !== 'complete') {
+      results.insertAdjacentHTML("afterbegin", "<li>😓 网页尚未加载完成，稍等。</li>")
+    }
 
     function demo() {
-      var resources = performance.getEntriesByType('resource')
-      var ul = document.getElementById('results')
-      ul.removeChild(document.getElementById('placeholder'))
-      var fragment = document.createDocumentFragment()
-      var el
-      for (var i=0; i < resources.length; i++) {
-        // https://developer.mozilla.org/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
-        // https://coderwall.com/p/o9ws2g/why-you-should-always-append-dom-elements-using-documentfragments
-        // Start until reponse end
-        var t = (resources[i].startTime > 0) ? (resources[i].responseEnd - resources[i].startTime) : "0"
-        // console.log((t/1000).toFixed(2) + " 秒: " + resources[i].name)
-        el = document.createElement('li')
-        el.innerText = (t/1000).toFixed(2) + " 秒: " + resources[i].name
-        fragment.appendChild(el)
+      let resources = performance.getEntriesByType('resource')
+      results.removeChild(results.firstChild)
+
+      for (let i = 0; i < resources.length; i++) {
+        let resDuration = (resources[i].duration / 1000).toFixed(2) + " 秒: " + resources[i].name
+        results.insertAdjacentHTML("afterbegin", "<li>" + resDuration + "</li>")
       }
 
-      var navigation = performance.getEntriesByType('navigation')[0] || performance.timing
-      var loadTime = navigation.startTime ? (navigation.loadEventStart - navigation.startTime) : (navigation.loadEventStart - navigation.navigationStart)
-      var nav = document.createElement('li')
-      nav.innerText = (loadTime/1000).toFixed(2) + " 秒: Page Load Time"
-      fragment.appendChild(nav)
-
-      ul.appendChild(fragment)
+      let nav = performance.getEntriesByType('navigation')[0]
+      let loadTime = (nav.duration / 1000).toFixed(2) + " 秒: Page Load Time"
+      results.insertAdjacentHTML("beforeend", "<li>" + loadTime + "</li>")
     }
   </script>
 </section>
