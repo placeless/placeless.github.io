@@ -145,3 +145,4 @@ export async function canvasEncode(data: ImageData, type: string, quality?: numb
 | OptiPNG，effort=2          | 872kB    | 3%   |
 | MozJPEG，quality=75        | 52.3kB   | 94%  |
 | WebP，effort=4，quality=75 | 39.6kB   | 96%  |
+
