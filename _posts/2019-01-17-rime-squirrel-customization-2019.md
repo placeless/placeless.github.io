@@ -37,4 +37,4 @@ date:   2019-01-17 03:03 +0800
 - 调整了一些半角符号映射
 - 优化了中文状态下代码和网址等输入
 
-配置文件地址：https://github.com/placeless/squirrel_config
+配置文件地址：[https://github.com/placeless/squirrel_config](https://github.com/placeless/squirrel_config)
