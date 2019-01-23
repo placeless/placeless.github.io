@@ -14,11 +14,15 @@
     </div>
 
     <script>
+      var origin = document.location.origin
+      var links = document.getElementsByTagName('a')
+      for (link of links) {
+        if (link.href && link.href.indexOf(origin) != 0) link.setAttribute('target', '_blank')
+      }
       window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
       ga('create', 'UA-101491967-2', 'auto', {'sampleRate': 100, 'siteSpeedSampleRate': 100}); ga('send', 'pageview')
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-
     <script src="https://unpkg.com/zooming/build/zooming.min.js"></script>
     <script>window.Zooming || document.write('<script src="/js/zooming.min.js"><\/script>') </script>
     <script>if (window.Zooming) window.addEventListener('load', function () { new Zooming().listen('.post-content img') })</script>
