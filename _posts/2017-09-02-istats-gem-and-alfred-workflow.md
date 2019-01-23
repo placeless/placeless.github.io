@@ -41,7 +41,7 @@ EOB
 
 注意：请先在终端运行一下 `which istats` 获得实际路径，替换上边的 YOUR_PATH。另外，也可以单独获得每个设备的温度信息，比如这样：
 
-```sh eesh e
+```sh e
 cpu="CPU: "`/xxxx/istats cpu temp --no-graphs | tr -s ' ' | cut -d ' ' -f3`
 bat="BAT: "`/xxxx/istats battery temp --no-graphs | tr -s ' ' | cut -d ' ' -f3`
 fan=`/xxxx/istats fan speed --no-graphs`
