@@ -27,7 +27,7 @@ gem install iStats
 新建一个无需参数的 Workflow，语言为 Bash，脚本如下。这里只是 grep 出了 CPU 和电池两项，拆分输出成两行（如上图）。
 
 ```shell
-temp=`/usr/local/bin/istats | grep -E '(CPU|Battery)\ temp'`
+temp=`/YOUR_PATH/istats | grep -E '(CPU|Battery)\ temp'`
 cpu=$(echo $temp | cut -f1 -d\°)"°C"
 bat="B"$(echo $temp | cut -f2 -d\B)
 
@@ -37,5 +37,15 @@ cat << EOB
 	{"title": "$bat"}
 ]}
 EOB
+```
+
+注意：请先在终端运行一下 `which istats` 获得实际路径，替换上边的 YOUR_PATH。另外，也可以单独获得每个设备的温度信息，比如这样：
+
+```sh eesh e
+cpu="CPU: "`/xxxx/istats cpu temp --no-graphs | tr -s ' ' | cut -d ' ' -f3`
+bat="BAT: "`/xxxx/istats battery temp --no-graphs | tr -s ' ' | cut -d ' ' -f3`
+fan=`/xxxx/istats fan speed --no-graphs`
+fan0="Fan 0: "$(echo $fan | head -1 | tr -s ' ' | cut -d ' ' -f4)" RPM"
+fan1="Fan 1: "$(echo $fan | tail -1 | tr -s ' ' | cut -d ' ' -f4)" RPM"
 ```
 
