@@ -24,7 +24,7 @@ gem install iStats
 
 ![iStats in Alfred](/files/2017/09/02/istats_in_alfred.png)
 
-新建一个无需参数的 Workflow，语言为 Bash，脚本如下。这里只是 grep 出了 CPU 和电池两项，拆分输出成两行（如上图）。
+新建一个无需参数的 Workflow（Script Filter），语言为 Bash，脚本如下。这里只是 grep 出了 CPU 和电池两项，拆分输出成两行（如上图）。
 
 ```shell
 temp=`/YOUR_PATH/istats | grep -E '(CPU|Battery)\ temp'`
