@@ -36,7 +36,7 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     color: $text-color;
-    background-color: $background-color;
+    background-color: $background-color-gray;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -44,6 +44,8 @@ body {
     font-feature-settings: "kern" 1;
     font-kerning: normal;
     text-rendering: optimizeLegibility;
+    // text-align: justify;
+    // text-justify: auto;
 }
 
 h1 { font-size: 1.5em; }
@@ -64,7 +66,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 iframe, video, hr, details,
-%vertical-rhythm { margin-bottom: $spacing-unit / 2; }
+%vertical-rhythm { margin-bottom: $spacing-unit / 3 * 2; }
 
 iframe {
     display: block;
@@ -110,11 +112,12 @@ ul, ol {
     // text-indent: -1em;
     // list-style-type: circle;
     padding-left: 2em;
-    margin: 0 0 1.5em;
+    // margin: 0 0 1.5em;
 }
 
 ul {
     list-style-type: circle;
+    word-wrap: anywhere;
 }
 
 li {
@@ -177,10 +180,11 @@ code {
     padding: 16px;
     // padding: 8px 12px;
     overflow: auto;
+    text-overflow: ellipsis;
     font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 85%;
     line-height: 1.45;
-    background-color: #f7f7f7;
+    background-color: $background-color-gray;
     // border-radius: 3px;
 }
 
@@ -215,6 +219,7 @@ pre {
     margin-left: auto;
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
+    background-color: $background-color-white;
     @extend %clearfix;
 
     @include media-query-max($on-screen) {
@@ -271,3 +276,18 @@ pre {
  }
 
  cite { margin-left: 1em; }
+
+ /**
+ * Keyboard Key
+ */
+
+kbd {
+    color: #fff;
+    padding: 0 4px;
+    background-color: #333;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.7em;
+    // border: 1px solid #333;
+    border-radius: 3px;
+    display: inline-block;
+}

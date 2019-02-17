@@ -11,13 +11,15 @@ $base-font-family: 'Source Han Serif SC', 'Source Han Serif CN', -apple-system, 
 $base-font-size:   16px;
 $base-font-weight: 300;
 $small-font-size:  $base-font-size * 0.875;
+$meta-font-size:  $base-font-size * 0.7;
 $base-line-height: 2;
 $h1-h6-weight:     700;
 
 $spacing-unit:     40px;
 
 $text-color:       #333;
-$background-color: #fff;
+$background-color-white: #fff;
+$background-color-gray: #f7f7f7;
 $brand-color:      lighten($text-color, 25%);
 
 $grey-color:       #828282;

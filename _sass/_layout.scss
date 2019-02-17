@@ -55,7 +55,7 @@
         position: absolute;
         top: 5px;
         right: $spacing-unit / 2;
-        background-color: $background-color;
+        background-color: $background-color-white;
         // border: 1px solid $grey-color-light;
         // border-radius: 5px;
         text-align: right;
@@ -91,7 +91,7 @@
 //     margin-left: 0;
 // }
 //
-// .footer-col-wrapper {
+// .footer-col-```` {
 //     font-size: 15px;
 //     color: $grey-color;
 //     margin-left: -$spacing-unit / 2;
@@ -146,18 +146,22 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
-    margin-bottom: 40px;
-    // text-align: justify;
+    padding-top: $spacing-unit;
     @include media-query-max($on-screen) {
+        background-color: $background-color-white;
         font-size:1.125em;
         padding-left: 0.3em;
         padding-right: 0.3em;
     }
     @include media-query-min($on-screen) {
-        // font-size: 1.125em;
-        padding-left: 2em;
-        padding-right: 2em;
+        .wrapper {
+            box-shadow: 0px 10px 20px 0px rgba(236, 236, 236, 0.86);
+            article {
+                width: 700px;
+                margin: 0 auto;
+                padding: 60px 0;
+            }
+        }
     }
 }
 
@@ -188,7 +192,7 @@
 }
 
 .post-meta {
-    font-size: $small-font-size;
+    font-size: $meta-font-size;
     color: $grey-color;
 }
 
@@ -204,15 +208,17 @@
 // .post ul li, .post ol li { margin-bottom: $spacing-unit / 6; }
 // .post { letter-spacing: .5px; }
 
-/**
- * Keyboard Key
- */
+div.highlight {
+    margin: 0 -50px;
+    background-color: $background-color-gray;
+    > pre {
+        padding: 20px 50px;
+    }
+}
 
-kbd {
-    color: #fff;
-    padding: 0 3px;
-    background-color: #333;
-    font-size: 0.8em;
-    border: 1px solid #333;
-    border-radius: 2px;
+footer {
+    margin: $spacing-unit 0;
+    text-align: center;
+    font-size: $meta-font-size;
+    color: $grey-color-light;
 }
