@@ -106,21 +106,16 @@ figcaption {
  * Lists
  */
 ul, ol {
-    // margin-left: $spacing-unit + 10;
-    // margin-left: 1.1em;
-    // list-style-position: inside;
-    // text-indent: -1em;
-    // list-style-type: circle;
-    padding-left: 2em;
-    // margin: 0 0 1.5em;
+    padding-left: 20px;
 }
 
 ul {
-    list-style-type: circle;
     word-wrap: anywhere;
 }
 
 li {
+    list-style-position: outside;
+    padding-left: 10px;
     > ul,
     > ol { margin-bottom: 0; }
 }

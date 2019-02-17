@@ -174,8 +174,9 @@
 
 .post-list {
     // margin-left: 2em;
-    list-style: circle;
+    // list-style: circle;
     list-style-position: inside;
+    margin-left: 2em;
     color: $text-color;
     // > li {
     //     margin-bottom: $spacing-unit / 5;
@@ -196,7 +197,9 @@
     color: $grey-color;
 }
 
-.post-link { font-size: 16px; }
+.post-link {
+    font-size: 16px;
+}
 
 
 /**
