@@ -211,10 +211,21 @@
 // .post { letter-spacing: .5px; }
 
 div.highlight {
-    margin: 0 -50px;
     background-color: $background-color-gray;
-    > pre {
-        padding: 20px 50px;
+    @include media-query-max($on-screen) {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+    @include media-query-min($on-screen) {
+        margin: 0 -50px;
+        > pre {
+            padding: 20px 50px;
+
+        }
     }
 }
 
