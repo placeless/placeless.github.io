@@ -8,25 +8,6 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-table {
-    font-size: 0.9em;
-    text-align: start;
-    word-wrap: break-word;
-    border-collapse: collapse;
-    margin-bottom: $spacing-unit / 2;
-    width: 100%;
-}
-
-table td, table th {
-    padding: 0.2em 1em;
-    border: 1px solid rgb(216, 216, 216);
-}
-
-table th {
-    background-color: rgba(0, 0, 0, 0.025);
-}
-
 /**
  * Basic styling
  */
@@ -110,7 +91,7 @@ ul, ol {
 }
 
 ul {
-    word-wrap: anywhere;
+    word-wrap: break-word;
 }
 
 li {
@@ -137,6 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $grey-color;
     text-decoration: none;
+    word-wrap: break-word;
 
     &:visited { color: $grey-color; }
 
@@ -202,7 +184,67 @@ pre {
     }
 }
 
-
+/**
+ * Table
+ */
+table {
+    font-size: 0.9em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: start;
+    word-wrap: break-word;
+    border-collapse: collapse;
+    margin-bottom: $spacing-unit / 2;
+    width: 100%;
+    table-layout: fixed;
+    td, th {
+        padding: 0.2em 1em;
+        border: 1px solid rgb(216, 216, 216);
+    }
+    th {
+        background-color: rgba(0, 0, 0, 0.025);
+    }
+    @include media-query-max($on-screen) {
+        thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+        tr {
+            border: 1px solid #ddd;
+            padding: .35em;
+            border-bottom: 3px solid $grey-color-light;
+            display: block;
+            margin-bottom: .625em;
+        }
+        td, th { padding: 0; }
+        td {
+            border: none;
+            border-bottom: 1px solid $grey-color-light;
+            display: block;
+            // font-size: .8em;
+            text-align: right !important;
+        }
+        td::before {
+            /*
+            * aria-label has no advantage, it won't be read inside a table
+            content: attr(aria-label);
+            */
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            padding-right: 1em;
+            /* text-transform: uppercase; */
+        }
+        td:last-child {
+            border-bottom: 0;
+        }
+    }
+}
 
 /**
  * Wrapper

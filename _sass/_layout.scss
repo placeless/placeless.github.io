@@ -149,7 +149,7 @@
     padding-top: $spacing-unit;
     @include media-query-max($on-screen) {
         background-color: $background-color-white;
-        font-size:1.125em;
+        // font-size:1.125em;
         padding-left: 0.3em;
         padding-right: 0.3em;
     }
