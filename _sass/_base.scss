@@ -319,12 +319,13 @@ table {
  */
 
 kbd {
-    color: #fff;
+    color: $background-color-gray;
     padding: 0 4px;
-    background-color: #333;
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: #444;
+    font-family: "SF Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 0.7em;
-    // border: 1px solid #333;
+    border-bottom: 2px solid #111;
     border-radius: 3px;
     display: inline-block;
+    vertical-align: middle;
 }
