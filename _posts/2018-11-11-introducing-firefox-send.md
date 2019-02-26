@@ -32,7 +32,7 @@ redirect_from:
 
 目标用户需要做的，只是点击你给的链接。原则上，现代浏览器都应该支持，只是国内山寨的、魔改的皮包浏览器过多，兼容这一点，我没那么笃定。最后，它支持中文，根据浏览器语言自适应。
 
-![Firefox Send UI](https://testpilot.firefox.com/static/images/experiments/send/experiments_experimentdetail/send-1.edf8aff2.jpg)
+![Firefox Send UI](/files/2018/firefox_send.png)
 
 官方的 Firefox Send 部署在 AWS S3 上，单个文件的最大限制为 1G，在我自己的使用当中，速度和可靠性都没出过问题，简直是解决临时大文件分享的完美方案。
 
