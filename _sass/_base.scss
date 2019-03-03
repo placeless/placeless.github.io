@@ -329,3 +329,10 @@ kbd {
     display: inline-block;
     vertical-align: middle;
 }
+
+/**
+* Abbreviations
+*/
+abbr[title] {
+  cursor: help;
+}
