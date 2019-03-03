@@ -64,7 +64,7 @@ ss-local -c /usr/local/etc/shadowsocks-libev.json --acl /usr/local/etc/shadowsoc
 
 哪些域名，哪些 IP 直连了，哪些代理了，终端会打印出来，一目了然。之后要新增代理域名或 IP，自己修改 `.acl` 文件即可。再一次，目前 libev 好像只支持 `[bypass_all]` + `[proxy_list]` 以及 `[proxy_all]` + `[bypass_list]` 这两种黑/白名单模式，前者是默认全部直连，你自己指定需代理的域名/IP（支持正则表达式🆒），后者刚好相反。看 issue 回覆，作者暂无扩充计划。
 
-采用 fullgfwlist.acl 省心，但它是一张大表，有域名（网址）有 IP，目前不知道域名和 IP 哪一种查询效率更高，满屏的通用规则之中，大多数的网站是我从不访问的，纠结之后，借鉴了 DarkNode 的思路：少数域名 + 海外 IP 的组合。海外 IP 来自 [x1angli/regional-ip-addresses](https://github.com/x1angli/regional-ip-addresses)，可以通过 git checkout 到 `c116403` 来产出 outwall.txt，即是海外 IP 数据集，直接可以用于 [bypass_list]。
+采用 fullgfwlist.acl 省心，但它是一张大表，有域名（网址）有 IP，目前不知道域名和 IP 哪一种查询效率更高，满屏的通用规则之中，大多数的网站是我从不访问的，纠结之后，借鉴了 DarkNode 的思路：少数域名 + 海外 IP 的组合。海外 IP 来自 [x1angli/regional-ip-addresses](https://github.com/x1angli/regional-ip-addresses)，当前版本不再直接产出海外 IP 数据集，可以自己 import netaddr 包，做 IP 集合运算，以 IPv4 为例，`IPSet(['0.0.0.0']) ^ ( CNIPv4 | Reserved)`，也可以通过 git checkout 到过去的 `c116403` 来产出 outwall.txt，直接用于 [bypass_list]。
 
 流量的混淆与伪装，此前主要靠 [simple-obfs](https://github.com/shadowsocks/simple-obfs)，几年付出之后，作者似乎放弃了维护，转战 [v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin)，作为前作的替代品，被赋予厚望。这可是真 SSL，并非伪装，所以必需域名和 SSL 证书。域名自己注册，免费付费皆可，证书可以通过 [acme.sh](https://github.com/Neilpang/acme.sh) 工具，从 Let's Encrypt 或者 Cloudflare 等地免费获取。
 
