@@ -31,10 +31,10 @@ $ dmesg | grep tg3
 
 [问题根源可能是](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1447664/comments/13)：tg3 驱动使用了虚拟内存去做 DMA 传输。正确的做法应该是使用 `dma_map_page()` 将所有 DMA 传输重新映射到逻辑内存，以便 HIGHDMA 功能正常。
 
-有个兄弟给出了自己的[变通方案](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1447664/comments/9)，他/她博客也有[专门介绍](https://lauri.võsandi.com/2016/02/fixing-broadcom-bcm5762-on-ubuntu.html)，我试了，问题大幅缓解。说起来很简单，直接关闭 HIGHDMA 功能即可。持久关闭的方法是创建一个 /etc/udev/rules.d/80-tg3-fix.rules 文件，内容为：
+有个兄弟给出了自己的[变通方案](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1447664/comments/9)，他/她博客也有[专门介绍](https://lauri.võsandi.com/2016/02/fixing-broadcom-bcm5762-on-ubuntu.html)，我试了，问题并没完全解决，但大幅缓解。大半天下来，有两次断线，勉勉强强算是能挂机下载了。
+
+方法说起来很简单，直接关闭 HIGHDMA 功能即可。持久关闭的方法是创建一个 /etc/udev/rules.d/80-tg3-fix.rules 文件，内容如下，注意替换其中的 ATTRS{device}，比如我的这块 BCM5906M，设备 ID 为 0x1713。：
 
 ```
 ACTION=="add", SUBSYSTEM=="net", ATTRS{vendor}=="0x14e4", ATTRS{device}=="0x1687", RUN+="/sbin/ethtool -K %k highdma off"
 ```
-
-注意替换上边的 ATTRS{device}，比如我的这块 BCM5906M，设备 ID 为 0x1713。
