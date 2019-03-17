@@ -77,7 +77,7 @@ DNS 放到 CloudFlare 解析之后，SS server 填你的域名，可以使用它
 
 ## 遗留问题
 
-终端翻墙的问题，不少终端工具依赖 HTTP 代理，不支持 Socks5，需要 privoxy 等解决，个人目前不太需要。
+终端翻墙的问题，可以使用 Homebrew 安装 [proxychains-ng](https://github.com/rofl0r/proxychains-ng/)，使用简单，但要注意它不支持系统目录下的程序，比如 macOS 自带的 curl 等。另外，不少终端工具依赖 HTTP 代理，不支持 Socks5，还需要配合 privoxy 等解决，个人目前不太需要。
 
 手机端不支持 v2ray-plugin，我的办法是在服务器端启动两个 ss-server 进程，端口和口令各异，一个附带 v2ray-plugin，另一个不带，专门给不支持的设备连接。但是很快发现很多不明 IP 在嗅探，参考这个 issue，在服务器端做了一个 ACL 规则 [reject_all]，然后列举了自己常在的 IP 段，以 CIDR 的形式放在 [white_list] 里，勉勉强强先对付着。
 
