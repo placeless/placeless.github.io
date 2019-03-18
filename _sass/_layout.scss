@@ -2,13 +2,11 @@
  * Site header
  */
  #logo {
-    // padding-top: 8px;
     margin-top: 8px;
     float: left;
  }
 
 .site-header {
-    // border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
@@ -23,14 +21,6 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
-
-    // &,
-    // &:visited {
-    //     color: $grey-color-dark;
-    // }
-    // span {
-    //     margin-left: 8px;
-    // }
 }
 
 .site-nav {
@@ -42,7 +32,6 @@
     .page-link {
         color: $grey-color;
         font-weight: 300;
-        // color: $text-color;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the last one
@@ -56,8 +45,6 @@
         top: 5px;
         right: $spacing-unit / 2;
         background-color: $background-color-white;
-        // border: 1px solid $grey-color-light;
-        // border-radius: 5px;
         text-align: right;
 
         .page-link {
@@ -71,86 +58,20 @@
 }
 
 
-
-/**
- * Site footer
- */
-// .site-footer {
-//     border-top: 1px solid $grey-color-light;
-//     padding: $spacing-unit 0;
-// }
-//
-// .footer-heading {
-//     font-size: 18px;
-//     margin-bottom: $spacing-unit / 2;
-// }
-//
-// .contact-list,
-// .social-media-list {
-//     list-style: none;
-//     margin-left: 0;
-// }
-//
-// .footer-col-```` {
-//     font-size: 15px;
-//     color: $grey-color;
-//     margin-left: -$spacing-unit / 2;
-//     @extend %clearfix;
-// }
-//
-// .footer-col {
-//     float: left;
-//     margin-bottom: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-// }
-//
-// .footer-col-1 {
-//     width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-//     width:         calc(35% - (#{$spacing-unit} / 2));
-// }
-//
-// .footer-col-2 {
-//     width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-//     width:         calc(20% - (#{$spacing-unit} / 2));
-// }
-//
-// .footer-col-3 {
-//     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-//     width:         calc(45% - (#{$spacing-unit} / 2));
-// }
-//
-// @include media-query($on-laptop) {
-//     .footer-col-1,
-//     .footer-col-2 {
-//         width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-//         width:         calc(50% - (#{$spacing-unit} / 2));
-//     }
-//
-//     .footer-col-3 {
-//         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-//         width:         calc(100% - (#{$spacing-unit} / 2));
-//     }
-// }
-//
-// @include media-query($on-palm) {
-//     .footer-col {
-//         float: none;
-//         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-//         width:         calc(100% - (#{$spacing-unit} / 2));
-//     }
-// }
-
-
-
 /**
  * Page content
  */
+ #article {
+    @include media-query-min($on-screen) {
+        padding-bottom: 4em;
+    }
+ }
+
 .page-content {
     padding-top: $spacing-unit;
     @include media-query-max($on-screen) {
         background-color: $background-color-white;
-        // font-size:1.125em;
-        padding-bottom: 5em;
+        padding-bottom: 3em;
     }
     @include media-query-min($on-screen) {
         .wrapper {
@@ -172,19 +93,12 @@
 }
 
 .post-list {
-    // margin-left: 2em;
-    // list-style: circle;
     list-style-position: inside;
     margin-left: 2em;
     color: $text-color;
-    // > li {
-    //     margin-bottom: $spacing-unit / 5;
-    // }
     a {
       color: lighten($text-color, 10%);
-      // border-bottom: solid 1px transparent;
       &:hover { border-bottom: solid 1px $grey-color; }
-      // &:visited { border-bottom: solid 1px transparent; }
     };
     @include media-query-max($on-screen) {
         padding-left: 0;
@@ -206,9 +120,6 @@
  */
 .post-header { margin-bottom: $spacing-unit; }
 .post a:hover { border-bottom: solid 1px $grey-color; }
-// .post ul, { list-style: circle; }
-// .post ul li, .post ol li { margin-bottom: $spacing-unit / 6; }
-// .post { letter-spacing: .5px; }
 
 div.highlight {
     background-color: $background-color-gray;
@@ -227,11 +138,4 @@ div.highlight {
 
         }
     }
-}
-
-footer {
-    margin: $spacing-unit 0;
-    text-align: center;
-    font-size: $meta-font-size;
-    color: $grey-color-light;
 }
