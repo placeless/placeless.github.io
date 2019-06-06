@@ -28,6 +28,9 @@ social:
 webmaster_verifications:
   google: "FXBCg8JJZhpiTTJFHOpZMzP6I1pTetBhPpHMsE-Lvj0"
 
+tracking:
+  ga_id: "UA-101491967-2"
+
 # Build settings
 markdown: kramdown
 kramdown:
