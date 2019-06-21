@@ -75,6 +75,7 @@ figure > img { display: block; }
 figcaption {
     // font-size: $small-font-size * 0.875;
     font-size: 12px;
+    margin-top: $spacing-unit / 2;
     margin-bottom: $spacing-unit / 2;
     text-align: center;
     width: 100%;
