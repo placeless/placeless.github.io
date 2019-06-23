@@ -53,7 +53,7 @@ xxxxxxxx.xxxxxxxx.xxxxxxxx.xx!
 
 ![overseas ip code](/files/2019/overseas_ip_code.png)
 
-总之，个人偏好产物，不怎么好移植，也不值得非 Pandas 玩家借鉴。
+总之，个人偏好产物，不怎么好移植，也不值得非 Pandas 玩家借鉴。另外，如果遇到 Wikipedia 被墙，出现 `connection refused` 之类的报错时，请考虑引入 requests，添加 `proxies` 属性。
 
 ```python
 import numpy as np
