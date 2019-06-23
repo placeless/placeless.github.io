@@ -81,7 +81,16 @@ DNS 放到 CloudFlare 解析之后，SS server 填你的域名，可以使用它
 
 手机端不支持 v2ray-plugin，我的办法是在服务器端启动两个 ss-server 进程，端口和口令各异，一个附带 v2ray-plugin，另一个不带，专门给不支持的设备连接。但是很快发现很多不明 IP 在嗅探，参考这个 issue，在服务器端做了一个 ACL 规则 [reject_all]，然后列举了自己常在的 IP 段，以 CIDR 的形式放在 [white_list] 里，勉勉强强先对付着。
 
-v2ray-plugin 配置错误感觉基本都是权限问题，注意优先尝试这个命令：
+```
+[reject_all]
+
+[white_list]
+x.x.x.x/y
+```
+
+
+
+v2ray-plugin 配置错误感觉基本都是权限和路径问题，注意优先尝试这个命令，且插件配置项填写绝对路径（客户端也是）：
 
 ```
 setcap cap_net_bind_service=+ep /PATH/TO/v2ray-plugin
