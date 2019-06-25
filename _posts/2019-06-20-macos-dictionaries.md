@@ -6,20 +6,22 @@ date:   2019-06-20 21:43 +0800
 
 ESL 用户需要[学习词典](https://www.zhihu.com/question/20961302)，这类好词典有很多，比如柯林斯、朗文等，但 macOS 都没有内置，别人转制的质量又一般，于是我打算自己动手，移植两部。其中《柯林斯高阶英汉双解》已经差不多了，适合那些喜欢使用 macOS 词典，又不满足于自带那几本，又心仪柯林斯的水友。优点，应该就是更好看、更好用了，具体细节可以稍微往后翻一翻。另一部是《朗文5》，还在磨蹭中。注意以下事项：
 
-<ul style="list-style-type:none;padding-left:0;">
-<li>👮‍♀️ 需自购纸书或 App，以缓解版权不安</li>
-<li>🍎 macOS Only，Mojave 测试通过</li>
-<li>🐈 原则上，El Capitan (10.11) 及以上皆可</li>
-<li>🤧 拖拽字典到它旁边的 Dictionaries 目录即可完成安装</li>
+<ul style="list-style-type:none;padding-left:0">
+<li style="padding-left:0;">👮‍♀️&nbsp;&nbsp;需自购纸书或 App，以缓解版权不安</li>
+<li style="padding-left:0;">🍎&nbsp;&nbsp;macOS Only，Mojave 测试通过</li>
+<li style="padding-left:0;">🐈&nbsp;&nbsp;原则上，El Capitan (10.11) 及以上皆可</li>
+<li style="padding-left:0;">🤧&nbsp;&nbsp;拖拽字典到它旁边的 Dictionaries 目录即可完成安装</li>
+<li style="padding-left:0;">🦊&nbsp;&nbsp;自 Firefox Send 下载：<a href="https://send.firefox.com/download/787c9818ed9bd41c/#1NgKsxxssNvRioXLhAsqlw">文字版 ccald_mini.dmg</a>，<a href="https://send.firefox.com/download/149f3f48d1e3c2a1/#v5XMLQ0CUpuE-iNEp-0ZUQ">音图版 ccald_full.dmg</a></li>
+<li style="padding-left:0;">🖼&nbsp;&nbsp;或自微软 One Drive 下载：<a href="https://1drv.ms/u/s!Anfwbyaw226qhihc1YH02W6L7e2L?e=I1i84e">点此，二选一</a></li>
 </ul>
 
-[文字版 📙 ccald_mini.dmg](https://send.firefox.com/download/787c9818ed9bd41c/#1NgKsxxssNvRioXLhAsqlw)，~20M
+文字版，~20M
 
 ```
 SHA256: c764c872be5d7cf2156839e8a136adc786e1570473108a9e616f8b5fcc7128ee
 ```
 
-[音图版 🎉 ccald_full.dmg](https://send.firefox.com/download/149f3f48d1e3c2a1/#v5XMLQ0CUpuE-iNEp-0ZUQ)，~1.2G
+音图版，~1.2G
 
 ```
 SHA256: e5a1e2cfb3a230ea099354dac59e0a5284c08e67323733bbf4170862bf26c224
