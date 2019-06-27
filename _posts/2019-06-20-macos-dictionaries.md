@@ -10,9 +10,12 @@ ESL 用户需要[学习词典](https://www.zhihu.com/question/20961302)，这类
 <li style="padding-left:0;">👮‍♀️&nbsp;&nbsp;需自购纸书或 App，以缓解版权不安</li>
 <li style="padding-left:0;">🍎&nbsp;&nbsp;macOS Only，Mojave 测试通过</li>
 <li style="padding-left:0;">🐈&nbsp;&nbsp;原则上，El Capitan (10.11) 及以上皆可</li>
-<li style="padding-left:0;">🤧&nbsp;&nbsp;拖拽字典到它旁边的 Dictionaries 目录即可完成安装</li>
+<li style="padding-left:0;">👉&nbsp;&nbsp;拖拽字典到它旁边的 Dictionaries 目录即可完成安装</li>
+<li>🤧&nbsp;&nbsp;发现一个 bug，下载稍等</li>
+<!--
 <li style="padding-left:0;">🦊&nbsp;&nbsp;自 Firefox Send 下载：<a href="https://send.firefox.com/download/787c9818ed9bd41c/#1NgKsxxssNvRioXLhAsqlw">文字版 ccald_mini.dmg</a>，<a href="https://send.firefox.com/download/149f3f48d1e3c2a1/#v5XMLQ0CUpuE-iNEp-0ZUQ">音图版 ccald_full.dmg</a></li>
 <li style="padding-left:0;">🖼&nbsp;&nbsp;或自微软 One Drive 下载：<a href="https://1drv.ms/u/s!Anfwbyaw226qhihc1YH02W6L7e2L?e=I1i84e">点此，二选一</a></li>
+-->
 </ul>
 
 文字版，~20M
