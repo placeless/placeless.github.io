@@ -148,6 +148,7 @@ O 版 MDX 转换过来，条目和索引是一样的，依据 macOS 字典规格
 
 <details>
 <summary>中文标点、间隔替换的临时规则如下：</summary>
+<div class="highlight">
 <pre>
 <code>
 def translate_marks(cn):
@@ -177,6 +178,7 @@ def translate_marks(cn):
     return cn
 </code>
 </pre>
+</div>
 </details>
 
 一些内链调整，name 到 id，para 属性转成 id 锚点，一些 XML 标签的合并挪移等等琐碎问题，就略过了。此外，CCALD 内含各种语法标注标签。比如释义开头的 `[N-VAR]` 等，比如当中的 `[FORMAL]` 等，再比如例句末尾的 `[be VERB-ed + to]` 等等，形式很多。在这个方便，O 版有两个问题：一是标签内容不规范，有标注 V 的，也有标注 VERB 的；二是缺失这些标注的说明。
