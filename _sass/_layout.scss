@@ -109,7 +109,7 @@
     font-size: $meta-font-size;
     color: $grey-color;
     margin-top: -20px;
-    a {
+    a:not(:first-child) {
         margin-left: 10px;
     }
 }
