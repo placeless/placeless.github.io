@@ -4,33 +4,28 @@ title:  "《柯林斯双解》与《朗文5》for macOS"
 date:   2019-06-20 21:43 +0800
 ---
 
-ESL 用户需要[学习词典](https://www.zhihu.com/question/20961302)，这类好词典有很多，比如柯林斯、朗文等，但 macOS 都没有内置，别人转制的质量又一般，于是我打算自己动手，移植两部。其中《柯林斯高阶英汉双解》已经差不多了，适合那些喜欢使用 macOS 词典，又不满足于自带那几本，又心仪柯林斯的水友。优点，应该就是更好看、更好用了，具体细节可以稍微往后翻一翻。另一部是《朗文5》，还在磨蹭中。注意以下事项：
+ESL 用户需要[学习词典](https://www.zhihu.com/question/20961302)，这类好词典有很多，比如柯林斯、朗文等，但 macOS 都没有内置，别人转制的质量又一般，于是我打算自己动手，移植两部。其中《柯林斯高阶英汉双解》已经差不多了，适合那些喜欢使用 macOS 词典，又不满足于自带那几本，又心仪柯林斯的水友。优点，应该就是更好看、更好用了，具体细节可以稍微往后翻一翻。另一部是《朗文5》，还在磨蹭中。
+
+### 注意事项：
 
 <ul style="list-style-type:none;padding-left:0">
-<li style="padding-left:0;">👮‍♀️&nbsp;&nbsp;需自购纸书或 App，以缓解版权不安</li>
-<li style="padding-left:0;">🍎&nbsp;&nbsp;macOS Only，Mojave 测试通过</li>
-<li style="padding-left:0;">🐈&nbsp;&nbsp;原则上，El Capitan (10.11) 及以上皆可</li>
-<li style="padding-left:0;">👉&nbsp;&nbsp;拖拽字典到它旁边的 Dictionaries 目录即可完成安装</li>
-<li>🤧&nbsp;&nbsp;发现一个 bug，下载稍等</li>
-<!--
-<li style="padding-left:0;">🦊&nbsp;&nbsp;自 Firefox Send 下载：<a href="https://send.firefox.com/download/787c9818ed9bd41c/#1NgKsxxssNvRioXLhAsqlw">文字版 ccald_mini.dmg</a>，<a href="https://send.firefox.com/download/149f3f48d1e3c2a1/#v5XMLQ0CUpuE-iNEp-0ZUQ">音图版 ccald_full.dmg</a></li>
-<li style="padding-left:0;">🖼&nbsp;&nbsp;或自微软 One Drive 下载：<a href="https://1drv.ms/u/s!Anfwbyaw226qhihc1YH02W6L7e2L?e=I1i84e">点此，二选一</a></li>
--->
+  <li style="padding-left:0;">👮‍♀️&nbsp;&nbsp;需自购纸书或 App，以缓解版权不安</li>
+  <li style="padding-left:0;">🍎&nbsp;&nbsp;macOS Only (≥10.11)，Mojave & Catalina 测试通过</li>
+  <li style="padding-left:0;">👉&nbsp;&nbsp;拖拽字典到它旁边的 Dictionaries 目录即可完成安装</li>
+  <li style="padding-left:0;">✅&nbsp;&nbsp;文字版用户请自行在偏好设置内取消发音图标等选项的勾选</li>
+  <li style="padding-left:0;">☁️&nbsp;&nbsp;微软 One Drive 下载：<a href="https://1drv.ms/u/s!Anfwbyaw226qhihc1YH02W6L7e2L?e=I1i84e">文字（mini，~20MB）、音图（full，~1.3GB），二选一</a></li>
+  <li style="padding-left:0;">✂️&nbsp;&nbsp;旧版用户可下载 mini 版，右键显示包内容，替换 Resources 目录下 img/mp3 以外的内容</li>
 </ul>
 
-文字版，~20M
+### 更新日志：
 
 ```
-SHA256: c764c872be5d7cf2156839e8a136adc786e1570473108a9e616f8b5fcc7128ee
+- 0.2
+  - 修复由于链接词归属算法问题导致的部分词条缺失或指向不准确的问题，比如 slower 越过 slow，指向了 slow-
+- 0.1
+  - 初版，详细改动（略）
+  - 简介，如下文
 ```
-
-音图版，~1.2G
-
-```
-SHA256: e5a1e2cfb3a230ea099354dac59e0a5284c08e67323733bbf4170862bf26c224
-```
-
-
 
 
 🎃 **TL;DR**
@@ -130,6 +125,13 @@ Warm up 是 CCALD 中最长的网络路径了，下表，我们再八卦一下�
 那么，第一名的「-way」到底是何方神圣呢，抽取出来看一看：100 个单词/短语指向了「way」，然后「way」有 1 个 `out_degree` 指向「-way」，画出来如下图。
 
 ![way](/files/2019/ccald/way.svg)
+
+但这里有一个问题需要注意。如果完全按照原先的思路，即找到所有终点词（无 out_degree）及其所有祖先，然后把祖先词们一个个插入到终点词的 index，可能会导致部分链接词指向错误。这是因为前面预设了所有的链接词，都是无义项的词条，它们的存在形式都只是一个指向链接。但事实不是这样的，有些有义项的词条，比如上图的 way，它本身即是义项词，而除了它本身，还有 one-way、two-way
+等 xx-way 的用法，因此词典会单独再给 way 一个去往 -way 的链接，所以，如上图，原先的思路会导致把那一百多个祖先都归到了 -way 的索引，而不是 way。甚至 slower 直接越过 slow 跑去了 slow-，这样就很奇怪了。
+
+![way](/files/2019/ccald/fix_multi-link.png)
+
+有鉴于此，我做了个假想情况，如上图，黄色点是义项词，青色点是单纯的链接词。看下来，实际只需在两个选择当中取舍：方案一，是对于 Graph 上所有的义项词结点，逐级获取其所有的祖先，也就是说 C 包含 B 的所有子结点，D 则包含 C 和 B 及其自己的所有枝叶；方案二，是义项词结点只获取其名下直属的义项词和所有链接词祖先，也就是说 C 只包含 G 和 B，D 只包含 C、H 和 I，权衡之下，还是方案二简明一些。
 
 如此，词的错综关系，通过有向图 DG = LINKS + REFS + PHRVBS + FORMS -> INDEX 得到了清理，增改删的效率也不再是瓶颈，方便快速迭代。需注意几处：一是这几类词的甄别规则不同，需要单独编写帮助方法；二是可以将引用当中 Hashtag 定位标记当作边（edge）的 attribute 传递进去，输出时，统一处理成可识别的 xpointer，既实现了跳转，还附带了高亮效果。
 
