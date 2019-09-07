@@ -10,11 +10,11 @@ ESL 用户需要[学习词典](https://www.zhihu.com/question/20961302)，这类
 
 <ul style="list-style-type:none;padding-left:0">
   <li style="padding-left:0;">👮‍♀️&nbsp;&nbsp;需自购纸书或 App，以缓解版权不安</li>
-  <li style="padding-left:0;">🍎&nbsp;&nbsp;macOS Only (≥10.11)，Mojave & Catalina 测试通过</li>
-  <li style="padding-left:0;">👉&nbsp;&nbsp;拖拽字典到它旁边的 Dictionaries 目录即可完成安装</li>
-  <li style="padding-left:0;">✅&nbsp;&nbsp;文字版用户请自行在偏好设置内取消发音图标等选项的勾选</li>
-  <li style="padding-left:0;">☁️&nbsp;&nbsp;微软 One Drive 下载：<a href="https://1drv.ms/u/s!Anfwbyaw226qhihc1YH02W6L7e2L?e=I1i84e">文字（mini，~20MB）、音图（full，~1.3GB），二选一</a></li>
-  <li style="padding-left:0;">✂️&nbsp;&nbsp;旧版用户可下载 mini 版，右键显示包内容，替换 Resources 目录下 img/mp3 以外的内容</li>
+  <li style="padding-left:0;">🍎&nbsp;&nbsp;macOS ≥10.11，Mojave & Catalina 测试通过</li>
+  <li style="padding-left:0;">👉&nbsp;&nbsp;拖拽字典到 Dictionaries 目录安装</li>
+  <li style="padding-left:0;">✅&nbsp;&nbsp;文字版请自行取消发音图标等偏好设置</li>
+  <li style="padding-left:0;">☁️&nbsp;&nbsp;微软 One Drive 下载：<a href="https://1drv.ms/f/s!AHfwbyaw226qhig">文字（mini，~20MB）、音图（full，~1.3GB），二选一</a></li>
+  <li style="padding-left:0;">✂️&nbsp;&nbsp;之前不小心开放了 Edit 权限，文件老被人删，抱歉。</li>
 </ul>
 
 ### 更新日志：
