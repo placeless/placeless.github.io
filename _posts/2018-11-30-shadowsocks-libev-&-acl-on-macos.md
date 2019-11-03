@@ -68,7 +68,7 @@ ss-local -c /usr/local/etc/shadowsocks-libev.json --acl /usr/local/etc/shadowsoc
 
 流量的混淆与伪装，此前主要靠 [simple-obfs](https://github.com/shadowsocks/simple-obfs)，几年付出之后，作者似乎放弃了维护，转战 [v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin)，作为前作的替代品，被赋予厚望。这可是真 SSL，并非伪装，所以必需域名和 SSL 证书。域名自己注册，免费付费皆可，证书可以通过 [acme.sh](https://github.com/Neilpang/acme.sh) 工具，从 Let's Encrypt 或者 Cloudflare 等地免费获取。
 
-我的 DNS 解析，原本放在国内的服务商 DNSPOD 处，这回由于获取 SSL 证书需要微调 DNS 记录，才发现 DNSPOD 的登录工具 D 令牌年久失修，我陷入了死循环：登录才能解绑 D 令牌，没有 D 令牌又登录不了，附赠的其他选项也尝试了，都是 placeholder，都是看菜，不解决实际问题。
+我的 DNS 解析，原本放在国内的服务商 DNSPOD 处，这回由于获取 SSL 证书需要微调 DNS 记录，才发现 DNSPOD 的登录工具 D 令牌年久失修，我陷入了死循环：登录才能解绑 D 令牌，没有 D 令牌又登录不了，附赠的其他选项也尝试了，都是 placeholder，都是看菜，不解决实际问题。
 
 遇事不决问谷歌，得知还有 CloudFlare 这一选项，迁移过程前后所费不到 10 分钟。修改两个地方，无论是域名注册商 Godaddy 还是 DNS 解析的 CloudFlare，都是简单明了，直击要害，没有废话和误导，完成主要任务之外，更有诸多功能可以开眼，且大部分还能免费体验，要说，还是西方的月亮圆。
 
