@@ -4,7 +4,7 @@ title:  "AirPods Pro 能不能戴来跑步"
 date:   2019-11-03 15:21 +0800
 ---
 
-![Airpods Pro & Airpods](files/2019/airpods_pro.jpg)
+![Airpods Pro & Airpods](/files/2019/airpods_pro.jpg)
 
 入手 AirPods Pro 的初衷有两个：一是跑步听音乐；一是办公室、地铁隔音。使用两天，现在根据自身体验，来回答一下这两个问题。
 
