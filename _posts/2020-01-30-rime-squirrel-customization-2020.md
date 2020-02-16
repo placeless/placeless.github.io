@@ -20,11 +20,15 @@ macOS 自带的 ABC 输入法是不能移除的，与其在 ABC、鼠须管中�
 
 ## 更换词库
 
-从定制的 pinyin_simp 字词库换回到了鼠须管出厂配置的 [luna_pinyin](https://github.com/rime/rime-luna-pinyin)，原因无它，还是因为感觉 pinyin_simp 太弱了，虽然一番折腾，剪裁了很多生僻字，仅保留了 8,000 多个常用字，更小巧轻量，但回头再看再对比，luna_pinyin 词库的个人输入体验好多了。之前积累的自造词稍作调整，完全可以继续用，pinyin_simp.userdb.txt 改名为 luna_pinyin.userdb.txt，再打开，同样编辑一下头部的 @db_name，就可以走鼠须管同步功能，扩充自造词了。
+基于 luna_pinyin.dict 重新定制单字和词库。之前搞的 pinyin_simp 字词库，还是太业余，打字表现羸弱，这次换回到鼠须管出厂配置的 [luna_pinyin](https://github.com/rime/rime-luna-pinyin)，还是结合汉字标准规范，使用 8105 个常用单字，繁简一起，跟 luna_pinyin.dict 对比，剪裁掉这个规范之外的所有生僻字词，由原来的 70670 行，砍去一大半，留下来 33518 个字词条目，依然小巧轻量，输入体验却比之前好多了。
+
+之后，再手工修改一下 opencc 的 TSCharacter 词典，删去那些从没见人用过的简体字，比如「侭、㓰、𢭏、𧹒、𫔭、𫔮」等，重新生成 TSCharacter.ocd，替换掉 /Library/Input Methods/Squirrel/Contents/SharedSupport/opencc 目录下的同名文件，以此回避精简单字之后依然冒出的罕见字。
+
+之前积累的自造词稍作调整，pinyin_simp.userdb.txt 改名为 luna_pinyin.userdb.txt，再编辑一下头部的 @db_name，就可以走鼠须管同步功能，无缝扩充自造词到词库里面。
 
 ## 生僻字的问题
 
-之前选择定制 pinyin_simp 词库的原因之一，是解决生僻字豆腐块的问题，换到 luna_pinyin 词库也不想再折腾了，还是走安装字体的老路，思源宋体搭配[花园明朝](http://fonts.jp/hanazono/)，也算相得益彰。
+之前选择定制 pinyin_simp 词库的原因之一，是为了解决生僻字豆腐块、字符集过滤、emoji 等几个内容的冲突，让它们能同时存在。现在换到 luna_pinyin 词库，做了上面的一番工作之后，依然有效，不用担心字符集过滤导致 emoji 不能全部显示，也不用担心为了 emoji 去忍受过多的生僻字。
 
 
-如感兴趣，还是这个地址：[placeless](https://github.com/placeless)/[squirrel_config](https://github.com/placeless/squirrel_config)
+如感兴趣，还是这个地址：[placeless](https://github.com/placeless)/[squirrel_config](https://github.com/placeless/squirrel_config)，注意两点：这个配置，删除了大量不常用字，请当心使用；默认关闭了 emoji 选项，需要自行修改配置文件，解除相关部分的注释，开启 emoji。
