@@ -20,11 +20,11 @@ macOS 自带的 ABC 输入法是不能移除的，与其在 ABC、鼠须管中�
 
 ## 更换词库
 
-基于 luna_pinyin.dict 重新定制单字和词库。之前搞的 pinyin_simp 字词库，还是太业余，打字表现羸弱，这次换回到鼠须管出厂配置的 [luna_pinyin](https://github.com/rime/rime-luna-pinyin)，还是结合汉字标准规范，使用 8105 个常用单字，繁简一起，跟 luna_pinyin.dict 对比，剪裁掉这个规范之外的所有生僻字词，由原来的 70670 行，砍去一大半，留下来 33518 个字词条目，依然小巧轻量，输入体验却比之前好多了。
+基于 luna_pinyin.dict 重新定制单字和词库。之前搞的 pinyin_simp 字词库，还是太业余，打字表现羸弱，这次换回到鼠须管出厂配置的 [luna_pinyin](https://github.com/rime/rime-luna-pinyin)，还是结合汉字标准规范，使用 8105 个常用单字，繁简一起，跟 luna_pinyin.dict 对比，剪裁掉这个规范之外的所有生僻字词，由原来的 70670 行，砍去一大半，留下来 33518 个字词条目，依然小巧轻量，输入体验却比之前好多了。luna_pinyin.dict.yaml，跟其他补丁文件一起放到 ~/Library/Rime/ 目录下即可。
 
-之后，再手工修改一下 opencc 的 TSCharacter 词典，删去那些从没见人用过的简体字，比如「侭、㓰、𢭏、𧹒、𫔭、𫔮」等，重新生成 TSCharacter.ocd，替换掉 /Library/Input Methods/Squirrel/Contents/SharedSupport/opencc 目录下的同名文件，以此回避精简单字之后依然冒出的罕见字。
+之后，再手工修改一下 opencc 的 TSCharacter 词典，删去那些从没见人用过的简体字，比如「侭、㓰、𢭏、𧹒、𫔭、𫔮」等，重新生成 TSCharacter.ocd，替换掉 /Library/Input Methods/Squirrel/Contents/SharedSupport/opencc/ 目录下的同名文件，以此回避精简单字之后依然冒出的罕见字。
 
-之前积累的自造词稍作调整，pinyin_simp.userdb.txt 改名为 luna_pinyin.userdb.txt，再编辑一下头部的 @db_name，就可以走鼠须管同步功能，无缝扩充自造词到词库里面。
+之前积累的自造词，同步出来，稍作调整，将 pinyin_simp.userdb.txt 改名为 luna_pinyin.userdb.txt，再编辑一下头部的 @db_name，就可以走鼠须管同步功能，无缝扩充自造词到词库里面。
 
 ## 生僻字的问题
 
