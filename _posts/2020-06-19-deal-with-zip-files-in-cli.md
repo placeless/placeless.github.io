@@ -9,7 +9,9 @@ date:   2020-06-19 02:33 +0800
 别人不定期会同步很多 CSV 给我，每个超过 1GB，用不了多久，磁盘见满，批量压缩就很必要：
 
 ```
-for f in *.csv; do 7z a -tgzip "$f.zip" "$f"; done
+# for f in *.csv; do 7z a -tgzip "$f.zip" "$f"; done
+
+for f in *.csv; do gzip $i; done
 ```
 
 7z 的命令行形式，是我在 macOS 上偏好的跟压缩文件打交道的方式。偶尔遇到意外情况，比如解压报错，或是网上下载的字幕 rar，这时候会选择 unar。这两个工具都可以通过 Homebrew 获得。
@@ -72,7 +74,7 @@ zgrep Love a.gz | head -3
 zipgrep Love b.zip | less
 ```
 
-更复杂的一些的数据处理工具，比如 Pandas，可以使用 read_csv 等方法直接读取压缩数据，指定 `compression=` 参数即可，不过 7z 需要其他库的支持。
+更复杂的一些的数据处理工具，比如 Pandas，可以使用 `read_csv` 等方法直接读取压缩数据，指定 `compression=` 参数即可，不过 7z 需要其他库的支持。有一点特别注意：目前 Pandas 不支持 tar，所以不要使用 .tar.gz 的形式来压缩数据文件。
 
 ## 小结
 
