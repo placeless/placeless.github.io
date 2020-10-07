@@ -4,7 +4,7 @@ title:  "鼠须管配置 2020"
 date:   2020-01-30 02:33 +0800
 ---
 
-有一段时间没有使用鼠须管了，由于自带输入法的小问题，今天又把它翻了出来，只在[鼠须管 2019](/blog/rime-squirrel-customization-2019)的基础上，做了几点微调。
+有一段时间没有使用鼠须管了，由于自带输入法的小问题，今天又把它翻了出来，只在[鼠须管 2019](/blog/rime-squirrel-customization-2019) 的基础上，做了几点微调。
 
 ## 鼠须管新版的获取
 
@@ -18,6 +18,10 @@ macOS 自带的 ABC 输入法是不能移除的，与其在 ABC、鼠须管中�
 
 为了方便 VIM 和 HHKB，我把 CapsLock 改为了 Ctrl，输入法切换键是 Ctrl + Space 组合，删除了所有的默认西文设定（感觉不需要了），最近外置 4K 使用多，候选字号、间距略作调整，如此而已。
 
+## 临时英文模式
+
+当处于中文模式时，为了方便输入 v2ex.com 这种文本，我们需要临时切换成西文状态，也就是说，字母 v 之后，数字 2 不是选词上屏，而是直接录入 2。实现这个效果，则需要取消 `ascii_composer` 的注释，打开英文模式，并且将 default.custom.yaml 当中的 Shift_L 变更为 `inline_ascii`。这样设定之后，我们可以通过 v ⇧ 2ex.com ⏎ 这个按键序列，实现比较无缝的 v2ex.com 的输入。
+
 ## 更换词库
 
 基于 luna_pinyin.dict 重新定制单字和词库。之前搞的 pinyin_simp 字词库，还是太业余，打字表现羸弱，这次换回到鼠须管出厂配置的 [luna_pinyin](https://github.com/rime/rime-luna-pinyin)，还是结合汉字标准规范，使用 8105 个常用单字，繁简一起，跟 luna_pinyin.dict 对比，剪裁掉这个规范之外的所有生僻字词，由原来的 70670 行，砍去一大半，留下来 33518 个字词条目，依然小巧轻量，输入体验却比之前好多了。luna_pinyin.dict.yaml，跟其他补丁文件一起放到 ~/Library/Rime/ 目录下即可。
@@ -30,5 +34,8 @@ macOS 自带的 ABC 输入法是不能移除的，与其在 ABC、鼠须管中�
 
 之前选择定制 pinyin_simp 词库的原因之一，是为了解决生僻字豆腐块、字符集过滤、emoji 等几个内容的冲突，让它们能同时存在。现在换到 luna_pinyin 词库，做了上面的一番工作之后，依然有效，不用担心字符集过滤导致 emoji 不能全部显示，也不用担心为了 emoji 去忍受过多的生僻字。
 
+## 新暗色主题
+
+最新开发版鼠须管和 macOS Big Sur 的组合，原 Mojave_dark 主题有个边框线，为了修正这个问题，重新搭配了一个暗色主题，基本上是配色和一些间距的修改。
 
 如感兴趣，还是这个地址：[placeless](https://github.com/placeless)/[squirrel_config](https://github.com/placeless/squirrel_config)，注意两点：这个配置，删除了大量不常用字，请当心使用；默认关闭了 emoji 选项，需要自行修改配置文件，解除相关部分的注释，开启 emoji。
