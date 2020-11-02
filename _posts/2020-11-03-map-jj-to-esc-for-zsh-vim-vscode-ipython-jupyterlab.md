@@ -4,11 +4,11 @@ title:  "Map jj to Esc"
 date:   2020-11-03 00:53 +0800
 ---
 
-带 Touch Bar 的老款 MacBook Pro，它的 <kbd>Esc</kbd> 是不可能习惯的了了，对于喜欢 vi-mode 的用户来说，解决这个问题，有两个办法：一是使用 <kbd>⌃</kbd> + <kbd>[</kbd>；二将其他按键映射成为 <kbd>Esc</kdb>。这里从个人习惯出发，整理一下第二种方式，覆盖了这些 vi-mode：ZSH、VIM、VS Code、iPython、以及 Jupyterlab。
+带 Touch Bar 的老款 MacBook Pro，它的 <kbd>Esc</kbd> 是不可能习惯的了了，对于喜欢 vi-mode 的用户来说，解决这个问题，有两个办法：一是使用 <kbd>⌃</kbd> + <kbd>[</kbd>；二将其他按键映射成为 <kbd>Esc</kbd>。这里从个人习惯出发，整理一下收集到的第二种方式，覆盖了这些 vi-mode：ZSH、VIM、VS Code、iPython、以及 Jupyterlab。
 
 ## ZSH
 
-开启和设定 vi-mode 比较简单，在 .zshrc 当中增加如下内容即可。注意后面的 timeout 不要设置为0。
+在 .zshrc 当中增加如下内容即可，注意后面的 timeout 不要设置为0，不然按键起不了作用。
 
 ```
 bindkey -v
@@ -16,11 +16,11 @@ bindkey -M viins jj vi-cmd-mode
 KEYTIMEOUT=25
 ```
 
-麻烦的是配置响应 vim 模式的光标样式。我的日常情况是这样：Alacritty 终端默认启动一个 Tmux，运行 Zsh。一直以来，Esc 和光标，总有小问题，比如 Esc 突然响应不及时、卡死，光标突然不跟随模式而改变形状了。一番折腾下来，目前最推荐[这个写法](http://micahelliott.com/posts/2015-07-20-vim-zsh-tmux-cursor.html)，使用时间不长，但暂时还没发现什么问题。
+开启和设定 vi 模式比较简单，麻烦的是配置响应 vim 模式的光标样式。我的日常情况是这样：Alacritty 终端默认启动一个 Tmux，运行 Zsh。一直以来，Esc 和光标，总有小问题，比如 Esc 突然响应不及时、卡死，光标突然不跟随模式而改变形状了。一番折腾，目前最推荐[这个写法](http://micahelliott.com/posts/2015-07-20-vim-zsh-tmux-cursor.html)，使用时间不长，但暂时还没发现什么问题。
 
 ## VIM
 
-我用的 Neovim，配置文件名跟 VIM 不一样，但写法是一样的。第二行的目的，是在两个 <kbd>j</kbd> 之间设定一个较短的等待时间，尽量缓解 jj 是正常输入而不是模式切换时的停顿感。
+我用的 Neovim，只是配置文件名跟 Vim 不一样，写法是同样的。注意第二行，它的目的，是在两个 <kbd>j</kbd> 之间设定一个较短的等待时间，尽量缓解 <kbd>j</kbd> <kbd>j</kbd> 是正常输入不是模式切换时的停顿感。
 
 ```
 inoremap jj <Esc>
@@ -68,7 +68,7 @@ if getattr(ip, 'pt_app', None):
 
 ## Jupyterlab
 
-可以使用这个插件 [jupyterlab-vimrc](https://github.com/ianhi/jupyterlab-vimrc) 来自定义需要的键位。比如，在偏好设置的 vimrc 内添加以下内容即可模拟 jj 到 Esc。
+可以使用这个插件 [jupyterlab-vimrc](https://github.com/ianhi/jupyterlab-vimrc) 来自定义需要的键位。比如，在偏好设置的 vimrc 内添加以下内容即可模拟 <kbd>j</kbd> <kbd>j</kbd> 到 <kbd>Esc</kbd>。
 
 ```
 "imap": 
