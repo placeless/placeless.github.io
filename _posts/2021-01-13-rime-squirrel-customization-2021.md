@@ -6,7 +6,7 @@ date:   2020-01-13 01:43 +0800
 
 今年的主题是放飞自我，做更多尝试，实现更高效的输入，获得量身定般的成就感。
 
-<img src="/files/2021/rime_squirrel_2021.png" alt="squirrel_screenshot_2021" width="50%">
+<img src="/files/2021/squirrel_config_2021.png" alt="squirrel_screenshot_2021" width="50%">
 
 先尝试了[小鹤双拼的形码方案](https://bbs.flypy.com/forum.php?mod=viewthread&tid=184)，发现并不适合自己。鹤形，在拼音的基础上，引入了类似五笔的拆字规则，以期通过双拼加形码来解决重码问题，这就要求我们需要熟记几乎所有单字和词组的音、形编码，输入过程拼音、五笔双重袭脑，相互角力，堪比一心二用，对于习惯于读音思考的我来说，起点实在有些高。玩起来很有意思，只是坚持不下去。
 
@@ -196,7 +196,7 @@ extended.dict.yaml
 八股文简化字 + 袖珍简化字，个人暂时够用。如外挂其它网络词库，遇到繁简混合，可能会编译错误，需要在上边的方案里，加入对应的 switcher 和 filters 调用 opencc 进行繁简处理。
 
 <img src="/files/2021/rime_octagram_1.png" alt="squirrel_octagram_screenshot_1" width="50%">
-<img src="/files/2021/rime_octagram_2.png" alt="squirrel_octagram_screenshot_2" width="50%">
+<img src="/files/2021/rime_octagram_2.png" alt="squirrel_octagram_screenshot_2" width="70%">
 
 ```yaml
 # Rime dictionary
