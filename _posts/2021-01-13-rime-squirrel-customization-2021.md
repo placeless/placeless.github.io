@@ -6,7 +6,10 @@ date:   2021-01-13 01:43 +0800
 
 今年的主题是放飞自我，做更多尝试，实现更高效的输入，获得量身定做般的成就感。
 
-<img src="/files/2021/squirrel_config_2021.png" alt="squirrel_screenshot_2021" width="50%">
+<img src="/files/2021/squirrel_config_2021.png" alt="squirrel_screenshot_2021" width="46%">
+<img src="/files/2021/punct_4.png" alt="squirrel_screenshot_2021" width="60%">
+<img src="/files/2021/punct_3.png" alt="squirrel_screenshot_2021" width="40%">
+<img src="/files/2021/emoji_1.png" alt="squirrel_screenshot_2021" width="25%">
 
 先尝试了[小鹤双拼的形码方案](https://bbs.flypy.com/forum.php?mod=viewthread&tid=184)，发现并不适合自己。鹤形，在拼音的基础上，引入了类似五笔的拆字规则，以期通过双拼加形码来解决重码问题，这就要求我们需要熟记几乎所有单字和词组的音、形编码，输入过程拼音、五笔双重袭脑，相互角力，堪比一心二用，对于习惯于读音思考的我来说，起点实在有些高。玩起来很有意思，只是坚持不下去。
 
@@ -31,6 +34,7 @@ date:   2021-01-13 01:43 +0800
 - 基础词库2：[简化字八股文](https://github.com/rime/rime-essay-simp)
 - 配置管理：[东风破](https://github.com/rime/plum)
 - 长句模型：[八股文语言模型](https://github.com/lotem/rime-octagram-data)
+- Rime详解：[LEOYoon-Tsaw/Rime_collections](https://github.com/LEOYoon-Tsaw/Rime_collections)
 
 Python 生态，做前期数据处理，大致路径如下：
 
@@ -95,8 +99,10 @@ engine:
 
 # 增加了 :./-=_+ 作为输入码
 # 便于在打字中，不中断地输入 3.14、2:00-3:00 等
+# 始码限制为：仅字母和数字
 speller:
-  alphabet: 'zyxwvutsrqponmlkjihgfedcba0987654321:./-=_+'
+  alphabet: 'zyxwvutsrqponmlkjihgfedcba0987654321:,.!()/-=_+'
+  initials: 'zyxwvutsrqponmlkjihgfedcba0987654321'
   algebra:
     - erase/^xx$/
     - derive/^([jqxy])u$/$1v/
@@ -206,18 +212,19 @@ extended.dict.yaml
 ---
 name: extended
 version: "2020.12.30"
-sort: by_weight  # original, by_weight
+sort: by_weight
 vocabulary: essay-zh-hans
 use_preset_vocabulary: true
 
 import_tables:
   - pinyin_simp
+  - placeless_punct
 ...
 ```
 
 pinyin_simp.dict.yaml 
 
-为了在长句中文中顺畅输入数字和常用符号，加入了一些土方。其中的..是双击句号输入全角句号。
+基于 8105 个常用标准汉字匹配、剪裁自带的袖珍简体字词库
 
 ```yaml
 # Rime dictionary
@@ -230,15 +237,36 @@ version: "0.2"
 sort: by_weight
 ...
 
+# zh_simp 精简 -> 8105
+```
+
+placeless_punct.dict.yaml 
+
+<img src="/files/2021/punct_1.png" alt="squirrel_screenshot_2021" width="22%">
+<img src="/files/2021/punct_5.png" alt="squirrel_screenshot_2021" width="50%">
+<img src="/files/2021/candidate_1.png" alt="squirrel_screenshot_2021" width="55%">
+
+为了方便混和输入符号和中文，将以下个人常用符号编入了码表。通常来讲鼠须管的默认状态下，像逗号、句号等，输入即触发上屏动作的，现在就不行了，需要在词语或整句输入完成之后单独敲一下。不需要选词，单个的逗号句号会直接作为中文标点上屏。
+
+```yaml
+# Rime dictionary
+# encoding: utf-8
+#
+
+---
+name: placeless_punct
+version: "0.2"
+sort: by_weight
+...
+
 # 个人土方
-.	.	2
-。	..	1
-:	:	2
-：	::		1
+.	.	1
+,	,	1
+:	:	1
 /	/	1
--	-	2
+-	-	1
 _	_	1
-=	=	2
+=	=	1
 +	+	1
 0	0	1
 1	1	1
@@ -250,9 +278,7 @@ _	_	1
 7	7	1
 8	8	1
 9	9	1
-# zh_simp 精简 -> 8105
 ```
-
 
 
 ### 方案选单 
@@ -271,6 +297,8 @@ patch:
 
 squirrel.custom.yaml
 
+因为只有两个候选，这里隐藏掉了候选词序号，并适当调整了元素间距，让只有两个候选词的候选框看着尽可能舒服一些。
+
 ```yaml
 patch:
   # 通知栏显示方式以及 ascii_mode 应用，与外观无关
@@ -285,25 +313,22 @@ patch:
 
   preset_color_schemes:
     apathy:
-      author: "LIANG Hai"
-      border_height: 6
-      border_width: 4
+      author: "LIANG Hai | placeless"
       candidate_list_layout: linear # stacked | linear
       text_orientation: horizontal
       inline_preedit: true
-      candidate_format: "%c\u2005%@\u2005"
+      candidate_format: "%c'%@''"
       comment_text_color: 0x999999
       corner_radius: 5
       font_face: PingFangSC
       font_point: 17
-      label_font_point: 1
+      label_font_point: 17
       back_color: 0xFFFFFF
       text_color: 0x424242
       label_color: 0xFFFFFF
       hilited_candidate_back_color: 0xFFF0E4
       hilited_candidate_text_color: 0xEE6E00
       hilited_candidate_label_color: 0xFFF0E4
-      # alpha: 0.95
       name: "冷漠／Apathy"
 ```
 
