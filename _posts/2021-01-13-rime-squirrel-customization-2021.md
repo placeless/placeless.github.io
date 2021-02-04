@@ -10,6 +10,8 @@ date:   2021-01-13 01:43 +0800
 <img src="/files/2021/punct_4.png" alt="squirrel_screenshot_2021" width="60%">
 <img src="/files/2021/punct_3.png" alt="squirrel_screenshot_2021" width="40%">
 <img src="/files/2021/emoji_1.png" alt="squirrel_screenshot_2021" width="25%">
+<img src="/files/2021/squirrel_pill.png" alt="dark theme" width="25%">
+<img src="/files/2021/squirrel_pill_2.png" alt="dark theme screenshot 2" width="40%">
 
 先尝试了[小鹤双拼的形码方案](https://bbs.flypy.com/forum.php?mod=viewthread&tid=184)，发现并不适合自己。鹤形，在拼音的基础上，引入了类似五笔的拆字规则，以期通过双拼加形码来解决重码问题，这就要求我们需要熟记几乎所有单字和词组的音、形编码，输入过程拼音、五笔双重袭脑，相互角力，堪比一心二用，对于习惯于读音思考的我来说，起点实在有些高。玩起来很有意思，只是坚持不下去。
 
