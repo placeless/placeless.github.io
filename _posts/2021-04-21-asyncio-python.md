@@ -43,28 +43,29 @@ import aiofiles
 from tqdm.asyncio import tqdm
 
 def read(file):
-	pass
+    pass
 
 def getToken():
-	pass
-	
+    pass
+    
 async def update(token, session, id, msg):
-	async with session.put('url', json={"id": id, "msg": msg}) as response:
-		text = await response.text()
-		async with aiofiles.open(log_file, 'a') as f:
-			await f.write(f'{text}\n')
-		
+    async with session.put('url', json={"id": id, "msg": msg}) as response:
+        text = await response.text()
+        async with aiofiles.open(log_file, 'a') as f:
+            await f.write(f'{text}\n')
+        
 async def main():
-	data = read(argv[1])
-	print(data.tail(5))
-	print('Press Enter to continue...')
-	token = getToken()
-	
-	async with aiohttp.ClientSession() as session:
-		tasks = [update(token, session, row['id'], row['msg']) for _, row in data.iterrows()]
-		results = [await t for t in tqdm.as_completed(tasks, leave=False)]
-		return results
-		
+    data = read(argv[1])
+    print(data.tail(5))
+    print('Press Enter to continue...')
+    token = getToken()
+    
+    async with aiohttp.ClientSession() as session:
+        tasks = [update(token, session, row['id'], row['msg']) 
+				 for _, row in data.iterrows()]
+        results = [await t for t in tqdm.as_completed(tasks, leave=False)]
+        return results
+        
 asyncio.run(main())
 ```
 
