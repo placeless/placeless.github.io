@@ -19,7 +19,7 @@
 
       // google analytics
       window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-ga('create', '{{ site.tracking.ga_id }}', 'auto', {'sampleRate': 100, 'siteSpeedSampleRate': 100}); ga('send', 'pageview')
+      ga('create', '{{ site.tracking.ga_id }}', 'auto', {'sampleRate': 100, 'siteSpeedSampleRate': 100}); ga('send', 'pageview')
 
       // responsive table
       let tables = document.getElementsByTagName('table')
@@ -33,6 +33,7 @@ ga('create', '{{ site.tracking.ga_id }}', 'auto', {'sampleRate': 100, 'siteSpeed
         }
       }
     </script>
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "86295a8275e447edbc782a5067fb085d"}'></script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
     <script src="/js/zooming.min.js"></script>
     <script>if (window.Zooming) window.addEventListener('load', function () { new Zooming().listen('.post-content img') })</script>
