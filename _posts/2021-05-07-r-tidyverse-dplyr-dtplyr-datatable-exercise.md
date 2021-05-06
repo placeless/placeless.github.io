@@ -191,8 +191,10 @@ unique(`_DT2`[created_at >= "2020-07-01" & created_at < "2021-01-01" &
 使用 dtplyr 和 data.table 前后的火焰图，也能看得出大不同：
 
 ![data.table flame graph](/files/2021/data_table_flame.png)
+*dtplyr + data.table 火焰图*
 
 ![dplyr flame graph](/files/2021/dplyr_flame.png)
+*dplyr 火焰图*
 
 ## 小结
 
@@ -213,4 +215,4 @@ Unit: milliseconds
 对于数十万及以上规模的数据集，dtplyr + data.table 速度提升明显。
 
 ![interval plot](/files/2021/plot.png)
-
+*样例结果绘图*
