@@ -30,6 +30,7 @@ webmaster_verifications:
 
 tracking:
   ga_id: "UA-101491967-2"
+  ga4_id: "G-H16HEB80DT"
 
 # Build settings
 markdown: kramdown
