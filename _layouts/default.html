@@ -10,8 +10,6 @@
       </div>
     </div>
     <script>
-      // cf indicator
-      let cfurm = false;
       
       // open outbound links in new tab
       let origin = document.location.origin
@@ -19,10 +17,6 @@
       for (let link of links) {
         if (link.href && link.href.indexOf(origin) != 0 && !link.href.includes('mailto:')) link.setAttribute('target', '_blank')
       }
-
-      // google analytics
-      window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-      ga('create', '{{ site.tracking.ga_id }}', 'auto', {'sampleRate': 100, 'siteSpeedSampleRate': 100}); ga('send', 'pageview')
 
       // responsive table
       let tables = document.getElementsByTagName('table')
@@ -36,9 +30,7 @@
         }
       }
     </script>
-    <script src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "86295a8275e447edbc782a5067fb085d"}' onload="cfurm=true;"></script>
-    <script>if (!cfurm) document.write('<script defer src="/js/cfb.min.js" data-cf-beacon=\'{"token": "86295a8275e447edbc782a5067fb085d"}\'><\/script>')</script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <script src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "86295a8275e447edbc782a5067fb085d"}' onerror="cfb=true;"></script>
     <script src="/js/zooming.min.js"></script>
     <script>if (window.Zooming) window.addEventListener('load', function () { new Zooming().listen('.post-content img') })</script>
 
