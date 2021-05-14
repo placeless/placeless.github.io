@@ -20,4 +20,45 @@
 
     gtag('config', '{{ site.tracking.ga4_id }}', {'transport_url': 'https://placeless.net'});
   </script>
+  <script>
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://unpkg.zhimg.com/web-vitals';
+      script.onload = function () {
+        const thresholds = {
+          CLS: [0.1, 0.25],
+          FCP: [1800, 3000],
+          FID: [100, 300],
+          LCP: [2500, 4000],
+        };
+
+        function getRating(value, thresholds) {
+          if (value > thresholds[1]) {
+            return 'poor';
+          }
+          if (value > thresholds[0]) {
+            return 'ni';
+          }
+          return 'good';
+        }
+
+        function sendToGoogleAnalytics({name, delta, value, id}) {
+          gtag('event', name, {
+            value: delta, // Use `delta` so the value can be summed.
+            metric_id: id, // Needed to aggregate events.
+            metric_value: value, // Optional.
+            metric_delta: delta, // Optional.
+            metric_rating: getRating(value, thresholds[name]),
+          });
+        }
+
+        webVitals.getCLS(sendToGoogleAnalytics);
+        webVitals.getFID(sendToGoogleAnalytics);
+        webVitals.getLCP(sendToGoogleAnalytics);
+        webVitals.getFID(sendToGoogleAnalytics);
+        webVitals.getTTFB(sendToGoogleAnalytics);
+      };
+      document.head.appendChild(script);
+    }());
+  </script>
 </head>
