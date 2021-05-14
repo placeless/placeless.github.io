@@ -47,6 +47,7 @@ plugins:
   - jekyll-redirect-from
 
 permalink: /blog/:title
+exclude: [/ma]
 
 # paginate: 10
 # paginate_path: "/page:num/"
