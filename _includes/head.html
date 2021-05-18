@@ -1,24 +1,54 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{% if page.title %}{{ page.title | escape_once }}{% else %}{{ site.title | escape_once }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>
+    {% if page.title %}{{ page.title | escape_once }}{% else %}{{ site.title |
+    escape_once }}{% endif %}
+  </title>
+  <meta
+    name="description"
+    content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
+  href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}"> {% seo
+  %}
 
-  {% seo %}
-  
   <script async src="/js/ag.js"></script>
   <script>
+    function pcs() {
+      if (
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      ) {
+        return 'Dark';
+      } else if (
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+      ) {
+        return 'Light';
+      }
+      return 'No Preference';
+    }
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
-    gtag('config', '{{ site.tracking.ga4_id }}', {'transport_url': 'https://placeless.net'});
+    gtag('config', '{{ site.tracking.ga4_id }}', {
+      transport_url: 'https://placeless.net',
+    });
+    gtag('set', 'user_properties', {
+      color_mode: pcs(),
+    });
   </script>
   <script>
     (function () {
@@ -42,7 +72,7 @@
           return 'good';
         }
 
-        function sendToGoogleAnalytics({name, delta, value, id}) {
+        function sendToGoogleAnalytics({ name, delta, value, id }) {
           gtag('event', name, {
             value: delta, // Use `delta` so the value can be summed.
             metric_id: id, // Needed to aggregate events.
@@ -59,6 +89,6 @@
         webVitals.getTTFB(sendToGoogleAnalytics);
       };
       document.head.appendChild(script);
-    }());
+    })();
   </script>
 </head>

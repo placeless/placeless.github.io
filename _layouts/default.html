@@ -1,39 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-cmn-Hans">
-
   {% include head.html %}
 
   <body>
     <div class="page-content" id="article">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+      <div class="wrapper">{{ content }}</div>
     </div>
     <script>
-      
       // open outbound links in new tab
-      let origin = document.location.origin
-      let links = document.getElementsByTagName('a')
+      let origin = document.location.origin;
+      let links = document.getElementsByTagName('a');
       for (let link of links) {
-        if (link.href && link.href.indexOf(origin) != 0 && !link.href.includes('mailto:')) link.setAttribute('target', '_blank')
+        if (
+          link.href &&
+          link.href.indexOf(origin) != 0 &&
+          !link.href.includes('mailto:')
+        )
+          link.setAttribute('target', '_blank');
       }
 
       // responsive table
-      let tables = document.getElementsByTagName('table')
+      let tables = document.getElementsByTagName('table');
       for (let table of tables) {
-        let ths = table.tHead.rows[0].cells
-        let trs = table.tBodies[0].rows
+        let ths = table.tHead.rows[0].cells;
+        let trs = table.tBodies[0].rows;
         for (let row of trs) {
           for (let i = 0; i < row.cells.length; i++) {
-            row.cells[i].setAttribute('data-label', ths[i].textContent)
+            row.cells[i].setAttribute('data-label', ths[i].textContent);
           }
         }
       }
     </script>
-    <script src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "86295a8275e447edbc782a5067fb085d"}' onerror="gtag('set', 'user_properties', {blocker: 'true'});"></script>
+    <script
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "86295a8275e447edbc782a5067fb085d"}'
+      onerror="gtag('set', 'user_properties', {blocker: 'true'});"
+    ></script>
     <script src="/js/zooming.min.js"></script>
-    <script>if (window.Zooming) window.addEventListener('load', function () { new Zooming().listen('.post-content img') })</script>
-
+    <script>
+      if (window.Zooming)
+        window.addEventListener('load', function () {
+          new Zooming().listen('.post-content img');
+        });
+    </script>
   </body>
-
 </html>
