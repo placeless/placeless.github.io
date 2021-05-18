@@ -38,7 +38,7 @@
     ></script>
     <script src="/js/zooming.min.js"></script>
     <script>
-      if (window.Zooming)
+      if (window.Zooming && typeof screen.orientation == 'undefined')
         window.addEventListener('load', function () {
           new Zooming().listen('.post-content img');
         });
