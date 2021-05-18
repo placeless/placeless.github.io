@@ -1,76 +1,117 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
 }
 
 /**
  * Basic styling
  */
 body {
-    /*font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;*/
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    color: $text-color;
-    background-color: $background-color-gray;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
-    text-rendering: optimizeLegibility;
-    // text-align: justify;
-    // text-justify: auto;
+  /*font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;*/
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $text-color;
+  background-color: $background-color-gray;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: 'kern' 1;
+  -moz-font-feature-settings: 'kern' 1;
+  -o-font-feature-settings: 'kern' 1;
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  // text-align: justify;
+  // text-justify: auto;
 }
 
-h1 { font-size: 1.5em; }
-h2 { font-size: 1.25em; }
-h3 { font-size: 1.125em; }
-h2, h3 { margin: 2em 0; }
-h4, h5, h6 {
-    font-size: 1em;
-    margin: 1em 0;
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.25em;
+}
+h3 {
+  font-size: 1.125em;
+}
+h2,
+h3 {
+  margin: 2em 0;
+}
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  margin: 1em 0;
 }
 
-strong { font-weight: 600; }
+strong {
+  font-weight: 600;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-iframe, video, hr, details,
-%vertical-rhythm { margin-bottom: $spacing-unit / 3 * 2; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
+iframe,
+video,
+hr,
+details,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 3 * 2;
+}
 
 iframe {
-    display: block;
-    margin: $spacing-unit / 2 auto;
+  display: block;
+  margin: $spacing-unit / 2 auto;
 }
 
 /**
  * Images
  */
 img {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-    // vertical-align: middle;
-    // margin-bottom: $spacing-unit / 2;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  // vertical-align: middle;
+  // margin-bottom: $spacing-unit / 2;
 }
-
-
 
 /**
  * Figures
  */
-figure > img { display: block; }
+figure > img {
+  display: block;
+}
 figure.feel_good img {
   margin-left: 1em;
   margin-top: 1em;
@@ -82,262 +123,272 @@ figure.feel_good img + figcaption {
 }
 
 figcaption {
-    // font-size: $small-font-size * 0.875;
-    font-size: 12px;
-    margin-top: $spacing-unit / 2;
-    margin-bottom: $spacing-unit / 2;
-    text-align: center;
-    width: 100%;
-    color: $grey-color;
+  // font-size: $small-font-size * 0.875;
+  font-size: 12px;
+  margin-top: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 2;
+  text-align: center;
+  width: 100%;
+  color: $grey-color;
 }
-
-
 
 /**
  * Lists
  */
-ul, ol {
-    padding-left: 20px;
+ul,
+ol {
+  padding-left: 20px;
 }
 
 ul {
-    word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 li {
-    list-style-position: outside;
-    padding-left: 10px;
-    > ul,
-    > ol { margin-bottom: 0; }
+  list-style-position: outside;
+  padding-left: 10px;
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
 }
-
-
 
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: $h1-h6-weight;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $h1-h6-weight;
 }
-
-
 
 /**
  * Links
  */
 a {
+  color: $grey-color;
+  text-decoration: none;
+  word-wrap: break-word;
+
+  &:visited {
+    color: $grey-color;
+  }
+
+  &:hover {
     color: $grey-color;
     text-decoration: none;
-    word-wrap: break-word;
-
-    &:visited { color: $grey-color; }
-
-    &:hover {
-        color: $grey-color;
-        text-decoration: none;
-    }
+  }
 }
-
 
 /**
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    // padding-left: $spacing-unit / 2;
-    padding-left: 1em;
-    font-size: 1em;
-    // letter-spacing: -1px;
-    // font-style: italic;
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
+  // padding-left: $spacing-unit / 2;
+  padding-left: 1em;
+  font-size: 1em;
+  // letter-spacing: -1px;
+  // font-style: italic;
 
-    > :last-child { margin-bottom: 0; }
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
-
-
 
 /**
  * Code formatting
  */
 pre,
 code {
-    // font-size: 12px;
-    // // border: 1px solid $grey-color-light;
-    // border-radius: 3px;
-    padding: 16px;
-    // padding: 8px 12px;
-    overflow: auto;
-    text-overflow: ellipsis;
-    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: $background-color-gray;
-    // border-radius: 3px;
+  // font-size: 12px;
+  // // border: 1px solid $grey-color-light;
+  // border-radius: 3px;
+  padding: 16px;
+  // padding: 8px 12px;
+  overflow: auto;
+  text-overflow: ellipsis;
+  font: 12px Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: $background-color-gray;
+  // border-radius: 3px;
 }
 
-code { padding: 1px 5px; }
+code {
+  padding: 1px 5px;
+}
 
 pre {
-    // padding: 16px;
-    // // padding: 8px 12px;
-    // overflow: auto;
-    // font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    // font-size: 85%;
-    // line-height: 1.45;
-    // background-color: #f7f7f7;
-    // border-radius: 3px;
+  // padding: 16px;
+  // // padding: 8px 12px;
+  // overflow: auto;
+  // font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  // font-size: 85%;
+  // line-height: 1.45;
+  // background-color: #f7f7f7;
+  // border-radius: 3px;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 /**
  * Table
  */
 table {
-    font-size: 0.9em;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: start;
-    word-wrap: break-word;
-    border-collapse: collapse;
-    margin-bottom: $spacing-unit / 2;
-    width: 100%;
-    table-layout: fixed;
-    td, th {
-        padding: 0.2em 1em;
-        border: 1px solid rgb(216, 216, 216);
+  font-size: 0.9em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: start;
+  word-wrap: break-word;
+  border-collapse: collapse;
+  margin-bottom: $spacing-unit / 2;
+  width: 100%;
+  table-layout: fixed;
+  td,
+  th {
+    padding: 0.2em 1em;
+    border: 1px solid rgb(216, 216, 216);
+  }
+  th {
+    background-color: rgba(0, 0, 0, 0.025);
+  }
+  @include media-query-max($on-screen) {
+    thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
     }
+    tr {
+      border: 1px solid #ddd;
+      padding: 0.35em;
+      border-bottom: 3px solid $grey-color-light;
+      display: block;
+      margin-bottom: 0.625em;
+    }
+    td,
     th {
-        background-color: rgba(0, 0, 0, 0.025);
+      padding: 0;
     }
-    @include media-query-max($on-screen) {
-        thead {
-            border: none;
-            clip: rect(0 0 0 0);
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-            padding: 0;
-            position: absolute;
-            width: 1px;
-        }
-        tr {
-            border: 1px solid #ddd;
-            padding: .35em;
-            border-bottom: 3px solid $grey-color-light;
-            display: block;
-            margin-bottom: .625em;
-        }
-        td, th { padding: 0; }
-        td {
-            border: none;
-            border-bottom: 1px solid $grey-color-light;
-            display: block;
-            // font-size: .8em;
-            text-align: right !important;
-        }
-        td::before {
-            /*
+    td {
+      border: none;
+      border-bottom: 1px solid $grey-color-light;
+      display: block;
+      // font-size: .8em;
+      text-align: right !important;
+    }
+    td::before {
+      /*
             * aria-label has no advantage, it won't be read inside a table
             content: attr(aria-label);
             */
-            content: attr(data-label);
-            float: left;
-            font-weight: bold;
-            padding-right: 1em;
-            /* text-transform: uppercase; */
-        }
-        td:last-child {
-            border-bottom: 0;
-        }
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      padding-right: 1em;
+      /* text-transform: uppercase; */
     }
+    td:last-child {
+      border-bottom: 0;
+    }
+  }
 }
 
 /**
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    background-color: $background-color-white;
-    @extend %clearfix;
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  background-color: $background-color-white;
+  @extend %clearfix;
 
-    @include media-query-max($on-screen) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
+  @include media-query-max($on-screen) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
 }
-
-
 
 /**
  * Clearfix
  */
 %clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
-
-
 
 /**
  * Icons
  */
 .icon {
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    padding-bottom: 4px;
 
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-        padding-bottom: 4px;
-
-        path { fill: $grey-color; }
+    path {
+      fill: $grey-color;
     }
+  }
 }
 
 /**
  * Video Tag
  */
- video { width: 100%; }
+video {
+  width: 100%;
+}
 
- /**
+/**
  * hr Tag
  */
- hr {
-    border: 0 none;
-    border-bottom: 1px solid $grey-color;
- }
+hr {
+  border: 0 none;
+  border-bottom: 1px solid $grey-color;
+}
 
- cite { margin-left: 1em; }
+cite {
+  margin-left: 1em;
+}
 
- /**
+/**
  * Keyboard Key
  */
 
 kbd {
-    color: $background-color-gray;
-    padding: 0 4px;
-    background-color: #444;
-    font-family: "SF Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 0.7em;
-    border-bottom: 2px solid #111;
-    border-radius: 3px;
-    display: inline-block;
-    vertical-align: middle;
+  color: $background-color-gray;
+  padding: 0 4px;
+  background-color: #444;
+  font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 0.7em;
+  border-bottom: 2px solid #111;
+  border-radius: 3px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /**
@@ -345,4 +396,38 @@ kbd {
 */
 abbr[title] {
   cursor: help;
+}
+
+/**
+ * Dark Mode
+ */
+
+@media (prefers-color-scheme: dark) {
+  /* Overrides for dark mode. */
+  body,
+  .wrapper {
+    // color: #bcbcbc;
+    color: rgb(110, 118, 125);
+    background: #141414;
+  }
+
+  .wrapper {
+    box-shadow: none !important;
+  }
+
+  img {
+    opacity: 0.65;
+    background-color: $background-color-gray;
+  }
+
+  div.highlight {
+    @include media-query-min($on-screen) {
+      margin: 0 !important;
+    }
+  }
+
+  pre,
+  code {
+    background-color: #242424;
+  }
 }
