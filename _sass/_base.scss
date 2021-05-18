@@ -405,10 +405,11 @@ abbr[title] {
 @media (prefers-color-scheme: dark) {
   /* Overrides for dark mode. */
   body,
+  .page-content,
   .wrapper {
     // color: #bcbcbc;
-    color: rgb(110, 118, 125);
-    background: #141414;
+    color: rgb(110, 118, 125) !important;
+    background: #141414 !important;
   }
 
   .wrapper {
