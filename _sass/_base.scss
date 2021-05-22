@@ -406,9 +406,10 @@ abbr[title] {
   /* Overrides for dark mode. */
   body,
   .page-content,
+  .post-link,
   .wrapper {
-    // color: #bcbcbc;
-    color: rgb(110, 118, 125) !important;
+    // color: rgb(110, 118, 125) !important;
+    color: $text-color-dark !important;
     background: #141414 !important;
   }
 
