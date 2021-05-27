@@ -42,12 +42,13 @@
       dataLayer.push(arguments);
     }
     gtag('js', new Date());
+    gtag('set', 'user_properties', {
+      color_mode: pcs(),
+    });
 
     gtag('config', '{{ site.tracking.ga4_id }}', {
       transport_url: 'https://placeless.net',
-    });
-    gtag('set', 'user_properties', {
-      color_mode: pcs(),
+      viewport_size: `${Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)}x${Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)}`,
     });
   </script>
   <script>
