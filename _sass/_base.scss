@@ -211,7 +211,7 @@ code {
   padding: 16px;
   // padding: 8px 12px;
   overflow: auto;
-  // text-overflow: ellipsis;
+  text-overflow: clip ellipsis;
   font: 12px Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   font-size: 85%;
   line-height: 1.45;
