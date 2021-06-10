@@ -80,8 +80,8 @@ big_mac |>
 
 
 Source：
-- https://github.com/TheEconomist/big-mac-data
-- https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-12-22
-- https://www.economist.com/big-mac-index
-- https://en.wikipedia.org/wiki/Big_Mac_Index
-- https://github.com/theeconomist/big-mac-data/blob/master/Big%20Mac%20data%20generator.ipynb
+- [https://github.com/TheEconomist/big-mac-data](https://github.com/TheEconomist/big-mac-data)
+- [https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-12-22](https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-12-22)
+- [https://www.economist.com/big-mac-index](https://www.economist.com/big-mac-index)
+- [https://en.wikipedia.org/wiki/Big_Mac_Index](https://en.wikipedia.org/wiki/Big_Mac_Index)
+- [https://github.com/theeconomist/big-mac-data/blob/master/Big%20Mac%20data%20generator.ipynb](https://github.com/theeconomist/big-mac-data/blob/master/Big%20Mac%20data%20generator.ipynb)
