@@ -417,6 +417,9 @@ abbr[title] {
 
   .wrapper {
     box-shadow: none !important;
+    > article {
+      padding: 0;
+    }
   }
 
   img {
