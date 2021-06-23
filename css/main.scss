@@ -5,15 +5,12 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: 'Source Han Serif SC', 'Source Han Serif CN', -apple-system,
-  BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
-  sans-serif;
-// $base-font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Lantinghei SC', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
-$base-font-size: 17px;
+$base-font-family: Palatino, "Palatino Linotype", "Palatino LT STD", 'source-han-serif-sc', 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif TC', 'Source Han Serif TW', 'Source Han Serif', 'Songti SC', 'Microsoft YaHei', serif;
+$base-font-size: 16px;
 $base-font-weight: 300;
 $small-font-size: $base-font-size * 0.875;
 $meta-font-size: $base-font-size * 0.7;
-$base-line-height: 2;
+$base-line-height: 1.75;
 $h1-h6-weight: 700;
 
 $spacing-unit: 40px;
