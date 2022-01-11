@@ -401,23 +401,24 @@ abbr[title] {
 /**
  * Dark Mode
  */
+#toggle-lights {
+  cursor: pointer;
+  margin-left: 5px;
+}
 
-@media (prefers-color-scheme: dark) {
-  /* Overrides for dark mode. */
-  body,
-  .page-content,
-  .post-link,
-  .wrapper {
-    // color: rgb(110, 118, 125) !important;
-    // color: $text-color-dark !important;
-    // background: #141414 !important;
+.dark-mode {
+  background: #202124 !important;
+  color: #bdc1c6 !important;
+
+  .post-list a {
     color: #bdc1c6 !important;
-    background: #202124 !important;
   }
 
   .wrapper {
     box-shadow: none !important;
-    > article {
+    background: #202124 !important;
+    
+    article {
       padding: 0;
     }
   }
@@ -435,7 +436,39 @@ abbr[title] {
 
   pre,
   code {
-    // background-color: #242424;
     background-color: #303134;
   }
 }
+
+// @media (prefers-color-scheme: dark) {
+//   body,
+//   .page-content,
+//   .post-link,
+//   .wrapper {
+//     color: #bdc1c6 !important;
+//     background: #202124 !important;
+//   }
+
+//   .wrapper {
+//     box-shadow: none !important;
+//     > article {
+//       padding: 0;
+//     }
+//   }
+
+//   img {
+//     opacity: 0.85;
+//     background-color: $background-color-gray;
+//   }
+
+//   div.highlight {
+//     @include media-query-min($on-screen) {
+//       margin: 0 !important;
+//     }
+//   }
+
+//   pre,
+//   code {
+//     background-color: #303134;
+//   }
+// }

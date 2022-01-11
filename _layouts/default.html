@@ -30,6 +30,19 @@
           }
         }
       }
+
+      // dark mode
+      let lightsOn = localStorage.getItem('lights') == 'true' ? true : false
+      let useDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+      if (useDark && !lightsOn) document.body.classList.add('dark-mode')
+
+      let toggleLights = document.getElementById('toggle-lights')
+      toggleLights.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode')
+        let hasClass = document.body.classList.contains("dark-mode")
+        localStorage.setItem('lights', !hasClass)
+        console.log(localStorage.getItem('lights'))
+      })
     </script>
     {% comment %} 
     <script src="/js/zooming.min.js"></script>
