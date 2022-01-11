@@ -419,7 +419,7 @@ abbr[title] {
     background: #202124 !important;
     
     article {
-      padding: 0;
+      padding: 0 !important;
     }
   }
 
@@ -439,36 +439,3 @@ abbr[title] {
     background-color: #303134;
   }
 }
-
-// @media (prefers-color-scheme: dark) {
-//   body,
-//   .page-content,
-//   .post-link,
-//   .wrapper {
-//     color: #bdc1c6 !important;
-//     background: #202124 !important;
-//   }
-
-//   .wrapper {
-//     box-shadow: none !important;
-//     > article {
-//       padding: 0;
-//     }
-//   }
-
-//   img {
-//     opacity: 0.85;
-//     background-color: $background-color-gray;
-//   }
-
-//   div.highlight {
-//     @include media-query-min($on-screen) {
-//       margin: 0 !important;
-//     }
-//   }
-
-//   pre,
-//   code {
-//     background-color: #303134;
-//   }
-// }
