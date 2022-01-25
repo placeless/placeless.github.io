@@ -2,8 +2,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <title>
-    {% if page.title %}{{ page.title | escape_once }}{% else %}{{ site.title |
-    escape_once }}{% endif %}
+    {% if page.title %}{{ page.title | escape_once }}{% else %}{{ site.title | escape_once }}{% endif %}
   </title>
   <meta
     name="description"
@@ -18,9 +17,10 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
-  href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}"> {% seo
-  %}
+  href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}"> 
+  {% seo %}
 
+  {% comment %}
   <script async src="/js/ag.js"></script>
   <script>
     function pcs() {
@@ -51,7 +51,6 @@
       viewport_size: `${Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)}x${Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)}`,
     });
   </script>
-  {% comment %} 
   <script>
     (function () {
       var script = document.createElement('script');
