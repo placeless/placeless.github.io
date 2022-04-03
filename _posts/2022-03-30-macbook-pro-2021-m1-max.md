@@ -70,7 +70,9 @@ cd /Library/Frameworks/R.framework/Resources/lib
 ln -sf libRblas.vecLib.dylib libRblas.dylib
 ```
 
-而 Python numpy 则需要自行制定一下编译参数，详情可参考这个 [gist](https://gist.github.com/MarkDana/a9481b8134cf38a556cf23e1e815dafb)。
+而对于 Python numpy 则有：
+
+方案一：pip 源码安装，指定编译参数，详情可参考这个 [gist](https://gist.github.com/MarkDana/a9481b8134cf38a556cf23e1e815dafb)。
 
 ```bash
 conda install cython pybind11
@@ -90,4 +92,10 @@ pip_interop_enabled: true
 repodata_threads: 4
 pkgs_dirs:
   - ~/.local/python
+```
+
+方案二（个人推荐）：指定 conda 安装参数 `libblas=*=*accelerate`，比如我现在用 [micromamba](https://mamba.readthedocs.io/en/latest/installation.html)：
+
+```
+micromamba install numpy "libblas=*=*accelerate"
 ```
