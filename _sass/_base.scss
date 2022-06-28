@@ -438,4 +438,8 @@ abbr[title] {
   code {
     background-color: #303134;
   }
+
+  blockquote {
+    border-left: 4px solid $grey-color;
+  }
 }

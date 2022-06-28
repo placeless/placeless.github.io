@@ -70,7 +70,7 @@
 .page-content {
     padding-top: $spacing-unit;
     @include media-query-max($on-screen) {
-        background-color: $background-color-white;
+        // background-color: $background-color-white;
         padding-bottom: 3em;
     }
     @include media-query-min($on-screen) {
