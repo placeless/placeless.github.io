@@ -15,7 +15,7 @@ ESL 用户需要[学习词典](https://www.zhihu.com/question/20961302)，这类
   <li style="padding-left:0;">✅&nbsp;&nbsp;文字版请自行取消发音图标等偏好设置</li>
   <li style="padding-left:0;">☁️&nbsp;&nbsp;微软 One Drive 下载：<a href="https://1drv.ms/f/s!AHfwbyaw226qhig">文字（mini，~20MB）、音图（full，~1.3GB），二选一</a></li>
   <li style="padding-left:0;">✂️&nbsp;&nbsp;之前不小心开放了 Edit 权限，文件老被人删，抱歉。</li>
-  <li style="padding-left:0;">✂️&nbsp;&nbsp;附别人搬运的<a href="https://pan.baidu.com/s/1B6N1Z_sk_tMckw3yNlvuNA">百度盘链接：ejee</a></li>
+  <li style="padding-left:0;">☁️&nbsp;&nbsp;附别人搬运的<a href="https://pan.baidu.com/s/1B6N1Z_sk_tMckw3yNlvuNA">百度盘链接：ejee</a></li>
 </ul>
 
 ### 更新日志：
