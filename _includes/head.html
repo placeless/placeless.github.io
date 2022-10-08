@@ -2,7 +2,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <title>
-    {% if page.title %}{{ page.title | escape_once }}{% else %}{{ site.title | escape_once }}{% endif %}
+    {% if page.title %}{{ page.title | escape_once }}{% else %}{{ site.title |
+    escape_once }}{% endif %}
   </title>
   <meta
     name="description"
@@ -15,46 +16,50 @@
     href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
   />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
-  href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}"> 
-  {% seo %}
-
-  {% comment %}
+  <link rel="preload" as="style" href="{{ "/css/main.css" | prepend:
+  site.baseurl }}"> <link rel="alternate" type="application/rss+xml" title="{{
+  site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend:
+  site.url }}"> {% seo %} {% comment %}
   <script async src="/js/ag.js"></script>
   <script>
     function pcs() {
       if (
         window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches
+        window.matchMedia("(prefers-color-scheme: dark)").matches
       ) {
-        return 'Dark';
+        return "Dark";
       } else if (
         window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: light)').matches
+        window.matchMedia("(prefers-color-scheme: light)").matches
       ) {
-        return 'Light';
+        return "Light";
       }
-      return 'No Preference';
+      return "No Preference";
     }
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag('js', new Date());
-    gtag('set', 'user_properties', {
+    gtag("js", new Date());
+    gtag("set", "user_properties", {
       color_mode: pcs(),
     });
 
-    gtag('config', '{{ site.tracking.ga4_id }}', {
-      transport_url: 'https://placeless.net',
-      viewport_size: `${Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)}x${Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)}`,
+    gtag("config", "{{ site.tracking.ga4_id }}", {
+      transport_url: "https://placeless.net",
+      viewport_size: `${Math.max(
+        document.documentElement.clientWidth || 0,
+        window.innerWidth || 0
+      )}x${Math.max(
+        document.documentElement.clientHeight || 0,
+        window.innerHeight || 0
+      )}`,
     });
   </script>
   <script>
     (function () {
-      var script = document.createElement('script');
-      script.src = 'https://unpkg.zhimg.com/web-vitals';
+      var script = document.createElement("script");
+      script.src = "https://unpkg.zhimg.com/web-vitals";
       script.onload = function () {
         const thresholds = {
           CLS: [0.1, 0.25],
@@ -65,16 +70,16 @@
 
         function getRating(value, thresholds) {
           if (value > thresholds[1]) {
-            return 'poor';
+            return "poor";
           }
           if (value > thresholds[0]) {
-            return 'ni';
+            return "ni";
           }
-          return 'good';
+          return "good";
         }
 
         function sendToGoogleAnalytics({ name, delta, value, id }) {
-          gtag('event', name, {
+          gtag("event", name, {
             value: delta, // Use `delta` so the value can be summed.
             metric_id: id, // Needed to aggregate events.
             metric_value: value, // Optional.
