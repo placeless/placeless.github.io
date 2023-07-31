@@ -87,12 +87,12 @@ video,
 hr,
 details,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 3 * 2;
+  margin-bottom: calc($spacing-unit / 3) * 2;
 }
 
 iframe {
   display: block;
-  margin: $spacing-unit / 2 auto;
+  margin: calc($spacing-unit / 2) auto;
 }
 
 /**
@@ -125,8 +125,8 @@ figure.feel_good img + figcaption {
 figcaption {
   // font-size: $small-font-size * 0.875;
   font-size: 12px;
-  margin-top: $spacing-unit / 2;
-  margin-bottom: $spacing-unit / 2;
+  margin-top: calc($spacing-unit / 2);
+  margin-bottom: calc($spacing-unit / 2);
   text-align: center;
   width: 100%;
   color: $grey-color;
@@ -250,7 +250,7 @@ table {
   text-align: start;
   word-wrap: break-word;
   border-collapse: collapse;
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: calc($spacing-unit / 2);
   width: 100%;
   table-layout: fixed;
   td,
@@ -323,8 +323,8 @@ table {
   @include media-query-max($on-screen) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
     max-width: calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    padding-right: calc($spacing-unit / 2);
+    padding-left: calc($spacing-unit / 2);
   }
 }
 
