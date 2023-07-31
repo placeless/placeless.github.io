@@ -43,7 +43,7 @@
     @include media-query-min($on-screen) {
         position: absolute;
         top: 5px;
-        right: $spacing-unit / 2;
+        right: calc($spacing-unit / 2);
         background-color: $background-color-white;
         text-align: right;
 
@@ -145,5 +145,5 @@ div.highlight {
 }
 
 summary + .highlight {
-    margin-top: $spacing-unit / 1.5;
+    margin-top: calc($spacing-unit / 1.5);
 }
