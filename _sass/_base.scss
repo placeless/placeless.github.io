@@ -87,7 +87,7 @@ video,
 hr,
 details,
 %vertical-rhythm {
-  margin-bottom: calc($spacing-unit / 3) * 2;
+  margin-bottom: calc($spacing-unit / 3 * 2);
 }
 
 iframe {
