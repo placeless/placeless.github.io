@@ -99,3 +99,4 @@ pkgs_dirs:
 ```
 micromamba install numpy "libblas=*=*accelerate"
 ```
+需要注意的是，为了防止运行 `conda update --all` 升级导致 accelerate 失效，得固定住这个设定，让 conda 记住它。以 micromamba 为例，编辑 `~/micromamba/envs/env_name/conda-meta/pinned`，加入一行 `libblas=*=*accelerate`。
