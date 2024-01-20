@@ -129,7 +129,7 @@ fig1
 
 
 
-<iframe id="fig1" frameborder=0 src="/files/charts/fig1.html></iframe>
+<iframe id="fig1" frameborder=0 src="/files/charts/fig1.html"></iframe>
 
 
 
@@ -160,7 +160,7 @@ fig2
 
 
 
-<iframe id="fig2" frameborder=0 src="/files/charts/fig2.html></iframe>
+<iframe id="fig2" frameborder=0 src="/files/charts/fig2.html"></iframe>
 
 
 
@@ -183,7 +183,7 @@ fig3
 
 
 
-<iframe id="fig3" frameborder=0 src="/files/charts/fig3.html></iframe>
+<iframe id="fig3" frameborder=0 src="/files/charts/fig3.html"></iframe>
 
 
 
@@ -284,7 +284,7 @@ fig6
 
 
 
-<iframe id="fig6" frameborder=0 src="/files/charts/fig6.html></iframe>
+<iframe id="fig6" frameborder=0 src="/files/charts/fig6.html"></iframe>
 
 
 如上可见，图+图的堆叠及操控尤其方便，直出画面的效果简洁大方。缺点就是数据量一大（5000）就报警。
@@ -351,7 +351,7 @@ fig7
 ```
 
 
-<iframe id="fig7" frameborder=0 src="/files/charts/fig7.html></iframe>
+<iframe id="fig7" frameborder=0 src="/files/charts/fig7.html"></iframe>
 
 
 在 Plotly 里边实现 Bump Chart 也需要我们自行设计实现方式，这时候就需要从 express 切换到 graphic_objects。这一切换过程往往会给我们造成一些困扰，主要来源于 API 设计上的不完全兼容，比如同样是绘制散点图，这两套 API 散点图方法提供的参数可能就不一致，从而造成理解偏差。
@@ -399,7 +399,7 @@ fig8
 ```
 
 
-<iframe id="fig8" frameborder=0 src="/files/charts/fig8.html></iframe>
+<iframe id="fig8" frameborder=0 src="/files/charts/fig8.html"></iframe>
 
 
 可见，Plotly 设计的 figure、trace、layout, 及其各项属性都是自成一派的，它有自己鲜明的特色，默认的交互效果也非常好，只不过 ggplot2 这一脉的用户，需要一个习惯的过程。快速分析时我很喜欢用 Plotly 做可视化，但是遇到自定义场景时又很头痛，往往需要耗费很多时间去搜索、查阅。
@@ -461,7 +461,7 @@ fig9
 ```
 
 
-<iframe id="fig9" frameborder=0 src="/files/charts/fig9.html></iframe>
+<iframe id="fig9" frameborder=0 src="/files/charts/fig9.html"></iframe>
 
 
 花了不少时间让上面的两幅图表排在一起，结论暂时只有一个：不要折腾 Plotly 的 subplots，会变得不幸。
@@ -559,7 +559,7 @@ show(fig10)
 
 
 
-<iframe id="fig10" frameborder=0 src="/files/charts/fig10.html></iframe>
+<iframe id="fig10" frameborder=0 src="/files/charts/fig10.html"></iframe>
 
 
 
@@ -662,7 +662,7 @@ show(fig11)
 
 
 
-<iframe id="fig11" frameborder=0 src="/files/charts/fig11.html></iframe>
+<iframe id="fig11" frameborder=0 src="/files/charts/fig11.html"></iframe>
 
 
 
@@ -675,7 +675,7 @@ show(fig12)
 ```
 
 
-<iframe id="fig12" frameborder=0 src="/files/charts/fig12.html></iframe>
+<iframe id="fig12" frameborder=0 src="/files/charts/fig12.html"></iframe>
 
 
 
