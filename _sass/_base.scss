@@ -32,10 +32,10 @@ body {
   color: $text-color;
   // background-color: $background-color-gray;
   -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: 'kern' 1;
-  -moz-font-feature-settings: 'kern' 1;
-  -o-font-feature-settings: 'kern' 1;
-  font-feature-settings: 'kern' 1;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
   font-kerning: normal;
   text-rendering: optimizeLegibility;
   // text-align: justify;
@@ -212,7 +212,12 @@ code {
   // padding: 8px 12px;
   overflow: auto;
   text-overflow: clip ellipsis;
-  font: 12px Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font:
+    12px Consolas,
+    "Liberation Mono",
+    Menlo,
+    Courier,
+    monospace;
   font-size: 85%;
   line-height: 1.45;
   background-color: $background-color-gray;
@@ -245,8 +250,8 @@ pre {
  */
 table {
   font-size: 0.9em;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: start;
   word-wrap: break-word;
   border-collapse: collapse;
@@ -333,7 +338,7 @@ table {
  */
 %clearfix {
   &:after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
@@ -383,7 +388,7 @@ kbd {
   color: $background-color-gray;
   padding: 0 4px;
   background-color: #444;
-  font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-family: "SF Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 0.7em;
   border-bottom: 2px solid #111;
   border-radius: 3px;
@@ -417,7 +422,7 @@ abbr[title] {
   .wrapper {
     box-shadow: none !important;
     background: #202124 !important;
-    
+
     article {
       padding: 0 !important;
     }
