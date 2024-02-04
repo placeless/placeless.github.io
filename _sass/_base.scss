@@ -408,7 +408,7 @@ abbr[title] {
  */
 #toggle-lights {
   cursor: pointer;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .dark-mode {
@@ -423,9 +423,9 @@ abbr[title] {
     box-shadow: none !important;
     background: #202124 !important;
 
-    article {
-      padding: 0 !important;
-    }
+    // article {
+    //   padding: 0 !important;
+    // }
   }
 
   img {
