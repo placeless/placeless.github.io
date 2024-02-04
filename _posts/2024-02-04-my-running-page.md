@@ -4,7 +4,7 @@ title: "Running Page"
 date: 2024-02-04 16:00 +0800
 ---
 
-心仪 [@yihong618](https://twitter.com/yihong0618) 的 [Running Page](https://github.com/yihong0618/running_page) 久已，最近终于用上了❤️。优哉游哉跑步好几年，但数据维护基本没做，NRC 退出中国之后，更没导出保存，找出 Endomondo，记录不多，且它的 GPX 奇葩不带时间戳没法用。盘点下来，也就剩 Apple Watch 健康数据还能导出用一用。
+心仪 [@yihong618](https://twitter.com/yihong0618) 的 [Running Page](https://github.com/yihong0618/running_page) 久已，最近终于用上了❤️。优哉游哉跑步好几年，但数据维护基本没做，NRC 退出中国之后，更没导出保存，找出 Endomondo，记录不多，且它的 GPX 奇葩不带时间戳没法用。盘点下来，也就剩 Apple Watch 健康数据还能导出用一用。下图是结果，[明细在这里](https://m.placeless.net/)。
 
 ![running page](/files/2024/running_page.png)
 
