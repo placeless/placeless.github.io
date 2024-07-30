@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-cmn-Hans">
   {% include head.html %}
 
@@ -9,49 +9,56 @@
     <script>
       // open outbound links in new tab
       let origin = document.location.origin;
-      let links = document.getElementsByTagName('a');
+      let links = document.getElementsByTagName("a");
       for (let link of links) {
         if (
           link.href &&
           link.href.indexOf(origin) != 0 &&
-          !link.href.includes('mailto:')
+          !link.href.includes("mailto:")
         )
-          link.setAttribute('target', '_blank');
+          link.setAttribute("target", "_blank");
       }
 
       // responsive table
-      let tables = document.getElementsByTagName('table');
+      let tables = document.getElementsByTagName("table");
       for (let table of tables) {
         let ths = table.tHead.rows[0].cells;
         let trs = table.tBodies[0].rows;
         for (let row of trs) {
           for (let i = 0; i < row.cells.length; i++) {
-            row.cells[i].setAttribute('data-label', ths[i].textContent);
+            row.cells[i].setAttribute("data-label", ths[i].textContent);
           }
         }
       }
 
       // dark mode
-      let lightsOn = localStorage.getItem('lights') == 'true' ? true : false
-      let useDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-      if (useDark && !lightsOn) document.body.classList.add('dark-mode')
+      let lightsOn = localStorage.getItem("lights") == "true" ? true : false;
+      let useDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (useDark && !lightsOn) document.body.classList.add("dark-mode");
 
-      let toggleLights = document.getElementById('toggle-lights')
+      let toggleLights = document.getElementById("toggle-lights");
       if (toggleLights) {
-        toggleLights.addEventListener('click', () => {
-          document.body.classList.toggle('dark-mode')
-          let hasClass = document.body.classList.contains("dark-mode")
-          localStorage.setItem('lights', !hasClass)
-          console.log(localStorage.getItem('lights'))
-        })
+        toggleLights.addEventListener("click", () => {
+          document.body.classList.toggle("dark-mode");
+          let hasClass = document.body.classList.contains("dark-mode");
+          localStorage.setItem("lights", !hasClass);
+          console.log(localStorage.getItem("lights"));
+        });
       }
     </script>
-    {% comment %} 
+
+    <script
+      defer
+      src="/js/cf.js"
+      data-cf-beacon='{"token": "8c631e081d224d2795353530267e2104", "spa": false}'
+    ></script>
+
+    {% comment %}
     <script src="/js/zooming.min.js"></script>
     <script>
-      if (window.Zooming && typeof screen.orientation == 'undefined')
-        window.addEventListener('load', function () {
-          new Zooming().listen('.post-content img');
+      if (window.Zooming && typeof screen.orientation == "undefined")
+        window.addEventListener("load", function () {
+          new Zooming().listen(".post-content img");
         });
     </script>
     {% endcomment %}
