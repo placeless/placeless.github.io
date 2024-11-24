@@ -34,7 +34,9 @@ Unversal Actions 是真好用，不知道 Raycast 现在有类似功能了没。
 
 ## 配置
 
-$$ Magic 🔥 = Wand 🥢 + Gesture 🖖 + Spell 📖 $$
+> Magic = Wand + Gesture + Spell
+>
+> 🔥 = 🪄 + 🖖 + 📖
 
 一个应用场景就是一个魔法（Magic），一个魔法由三部分组成，即：魔杖（Wand）、手势（Gesture）、和咒语（Spell），它们依次分别对应：API 平台（Provider）、模型及参数（Model & Parameters）、系统提示词（System Prompts）。用户消息则取决于使用场景，可以是选中的文字，也可以是键盘输入，是获取的一部分，不用放在配置里。
 
