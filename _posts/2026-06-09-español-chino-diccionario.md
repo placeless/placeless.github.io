@@ -96,6 +96,10 @@ Español-Chino 做的事情很直接：把西汉词典装进 macOS 自带的词�
 
 如果你只是想装来查词，上面已经够了。下面是给在意实现细节的读者看的。
 
+**数据来源**
+
+@winn 在 forum.freemdict.com 发的[这个帖子](https://forum.freemdict.com/t/topic/3622/42)。词典内容偏老，数据结构上有不少地方要修复。
+
 **四阶段构建流水线**
 
 整个工程按 Convert → Preprocess → Refine → Package 四段执行。转换、结构清洗、语义整理和打包各自独立，便于定位问题，也避免把一次性处理逻辑混进最终展示层。
