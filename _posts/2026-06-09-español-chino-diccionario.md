@@ -38,7 +38,7 @@ Español-Chino 做的事情很直接：把西汉词典装进 macOS 自带的词�
 
 搜索时也不用只记不定式。输入变位形式，macOS 可以通过索引找回原动词；如果想直接跳到变位表，输入动词原形加冒号，例如 `hablar:`。
 
-![查动词变位 hablar:](/files/2026/escn-hablar-conjugación.webp)
+![查动词变位 hablar:](/files/2026/escn-hablar-conjugacion.webp)
 
 **查性数和复数形式**
 
