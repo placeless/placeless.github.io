@@ -1,7 +1,9 @@
 ---
 layout: post
-title: "《柯林斯双解》for macOS"
+title: "📚《柯林斯双解》for macOS"
 date: 2019-06-20 21:43 +0800
+redirect_from:
+    - /macos-dictionaries
 ---
 
 ESL 用户需要[学习词典](https://www.zhihu.com/question/20961302)，这类好词典有很多，比如柯林斯、朗文等，但 macOS 都没有内置，别人转制的质量又一般，于是我打算自己动手，移植两部。其中《柯林斯高阶英汉双解》已经差不多了，适合那些喜欢使用 macOS 词典，又不满足于自带那几本，又心仪柯林斯的水友。优点，应该就是更好看、更好用了，具体细节可以稍微往后翻一翻。另一部是《朗文 5》，放弃了。

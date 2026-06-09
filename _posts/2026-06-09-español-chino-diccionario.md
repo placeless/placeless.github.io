@@ -2,6 +2,8 @@
 layout: post
 title: "📚 Español-Chino：macOS 西班牙语-中文词典"
 date: 2026-06-09 15:23 +0200
+redirect_from:
+    - /macos-spanish-dictionaries
 ---
 
 Español-Chino 做的事情很直接：把西汉词典装进 macOS 自带的词典系统。装好之后，你可以在「词典」App 里查，也可以在 Safari、Mail、备忘录等支持系统查询的 App 里选中西班牙语词语，右键或三指轻点，直接看到西中释义、例句、短语和变位。
