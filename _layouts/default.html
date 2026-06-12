@@ -44,10 +44,12 @@
 
       const toggleLights = document.getElementById("toggle-lights");
       if (toggleLights) {
+        toggleLights.setAttribute("aria-pressed", document.body.classList.contains("dark-mode"));
         toggleLights.addEventListener("click", () => {
           document.body.classList.toggle("dark-mode");
           const hasClass = document.body.classList.contains("dark-mode");
           localStorage.setItem("lights", !hasClass);
+          toggleLights.setAttribute("aria-pressed", hasClass);
         });
       }
     </script>
