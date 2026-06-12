@@ -356,12 +356,13 @@ abbr[title] {
   vertical-align: baseline;
 }
 
+.post-meta a:focus-visible,
 #toggle-lights:focus-visible {
   outline: 2px solid var(--color-muted);
   outline-offset: 3px;
 }
 
-#toggle-lights svg {
+.nav-icon {
   color: var(--color-muted);
   margin-right: 5px;
   vertical-align: -2px;

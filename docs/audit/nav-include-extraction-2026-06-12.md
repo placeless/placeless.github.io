@@ -45,6 +45,9 @@ Reviewed the active navigation markup in:
 - Replaced the theme toggle's lightbulb-style `span` with a semantic button
   using moon/sun icons, the visible desktop label `Theme`, and `aria-pressed`
   state updates.
+- Replaced the remaining nav icons with one simple current-color outline style.
+- Kept the `Running` label because the destination is a running-stats site, and
+  changed its icon to suggest activity data rather than a generic runner.
 - Removed the unused page-specific nav includes from the implementation to
   avoid maintaining two parallel page/post nav systems.
 - Kept the structural `</p>` tags in the parent templates.
@@ -67,12 +70,13 @@ Checked generated pages through a local static server:
 
 Confirmed:
 
-- Post nav links remained `Home`, `Email`, `Projects`, and `Running`.
+- Post nav links are `Home`, `Email`, `Projects`, and `Running`.
 - Page nav links now match post nav controls: `Home`, `Email`, `Projects`,
   `Running`, and `Theme`, without rendering a post date.
 - Hrefs remained stable.
-- Post nav still rendered six SVG icons.
-- Page nav now renders five SVG icons.
+- Post nav renders seven SVG icons, including the date icon and the two theme
+  state icons.
+- Page nav renders six SVG icons, including the two theme state icons.
 - No horizontal overflow at the default viewport.
 - No horizontal overflow at a 390px mobile viewport for post and page nav.
 - Desktop nav labels remained visible.
