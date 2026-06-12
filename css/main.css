@@ -56,9 +56,6 @@ body {
   font-kerning: normal;
   line-height: 2;
   text-rendering: optimizeLegibility;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  -webkit-font-feature-settings: "kern" 1;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -300,12 +297,6 @@ table th {
     padding-left: var(--space-half);
     padding-right: var(--space-half);
   }
-}
-
-.wrapper::after {
-  clear: both;
-  content: "";
-  display: table;
 }
 
 .icon > svg {
