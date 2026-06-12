@@ -59,3 +59,16 @@ rg -n "seo|canonical|description|schema.org|itemprop|itemscope|x-ua-compatible|g
 mise exec -- bundle exec jekyll build
 rg -n "canonical|description|schema.org|itemprop|google-site-verification|/feed.xml|cf.js" _site/index.html _site/about/index.html _site/projects.html _site/blog/asyncio-python.html
 ```
+
+## Implementation Notes
+
+- Removed the obsolete `x-ua-compatible` meta tag from `_includes/head.html`.
+- Removed manual `description` and `canonical` output from `_includes/head.html`
+  so those values are emitted only by `jekyll-seo-tag`.
+- Kept the manual `<title>` in `_includes/head.html` for now. Removing it would
+  change current browser-title behavior from the simple page/post title to the
+  SEO title format emitted by `jekyll-seo-tag`.
+- Removed stale `BlogPosting` microdata from the home-page archive wrapper in
+  `index.html`.
+- Removed orphaned `itemprop="name headline"` from standalone page headings in
+  `_layouts/page.html`.
