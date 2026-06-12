@@ -1,22 +1,11 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
 title: minefield
 email: placeless@outlook.com
 author: "Jietang Xu"
 logo: "./apple-touch-icon.png"
 lang: "zh-cmn-Hans"
-# description: "question came and went, like a helicopter over head..."
 description: "with great power comes great explosion"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://placeless.net" # the base hostname & protocol for your site
-# twitter_username: jekyllrb
-# github_username:  jekyll
 timezone: Asia/Shanghai
 encoding: UTF-8
 
@@ -32,7 +21,6 @@ tracking:
   ga_id: "UA-101491967-2"
   ga4_id: "G-S5C5VTY5KX"
 
-# Build settings
 markdown: kramdown
 kramdown:
   input: GFM
@@ -43,9 +31,3 @@ plugins:
   - jekyll-redirect-from
 
 permalink: /blog/:title
-
-# paginate: 10
-# paginate_path: "/page:num/"
-#
-#
-# gems: [jekyll-paginate]
