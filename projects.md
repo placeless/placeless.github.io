@@ -49,7 +49,7 @@ permalink: /projects
 
 ### Mi Home Tools
 
-给小米自动喂食器补上更顺手的手动控制方式，主要服务自己的家庭自动化需求。
+给小米自动喂食器补上更顺手的手动控制方式。提供 macOS/Linux 命令行工具，以及可直接在 iPhone 上运行的 Scriptable 客户端，支持手动喂食、历史统计、快捷指令和桌面 widget。
 
 - 介绍: [解决小米自动喂食器的残废的手动控制问题](/blog/mihome-tools)
 - GitHub: [placeless/mihome-tools](https://github.com/placeless/mihome-tools)
