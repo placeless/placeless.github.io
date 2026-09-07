@@ -136,8 +136,8 @@ Español-Chino 做的事情很直接：把西汉词典装进 macOS 自带的词�
 ## 下载
 
 - [OneDrive](https://1drv.ms/f/c/aa6edbb0266ff077/IgDkO0c-StvGQ6rB_7malpWHAVwBKNruyGPn7_UGTdgwhkM)
-- [百度网盘 8e8v](https://pan.baidu.com/s/18oHUVEYC5DPcb-KgmOemkQ?pwd=8e8v)
-- [夸克网盘](https://pan.quark.cn/s/7aba9aa607fc)
+- [百度网盘](https://pan.baidu.com/s/18oHUVEYC5DPcb-KgmOemkQ?pwd=8e8v)
+- [夸克网盘](https://pan.quark.cn/s/3f5f1a161316)
 - sha256: 2f5c567c5b84b41229021f6f8c4b094ad9d3ea517f32f1c5cdbac6910b8a979d
 - 加油 **¡Tú puedes!**
 
